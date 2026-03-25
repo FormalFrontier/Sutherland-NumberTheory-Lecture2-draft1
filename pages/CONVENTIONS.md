@@ -80,3 +80,5 @@ The lecture cites:
 - Preserve the lecture's result numbering (Theorem 2.1, Definition 2.7, etc.).
 - Commutative diagrams: use display-math with `\xrightarrow`, `\downarrow`, `\nearrow` etc. on separate lines; do not attempt complex TikZ.
 - Page 1 ends mid-sentence at the start of §2.2; the continuation belongs to page 2.
+- Page 2 ends mid-example (Example 2.4); Example 2.5 begins page 3.
+- Footnotes: use `$^1$` in the text and a horizontal rule (`---`) before the footnote block at the end of the page.
