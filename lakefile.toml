@@ -1,7 +1,7 @@
-name = "Sutherland-NumberTheory-Lecture2-draft1"
+name = "Sutherland-NumberTheory-Lecture2"
 version = "0.1.0"
 keywords = ["math"]
-defaultTargets = ["SutherlandNumberTheoryLecture2Draft1"]
+defaultTargets = ["SutherlandNumberTheoryLecture2"]
 
 [leanOptions]
 pp.unicode.fun = true # pretty-prints `fun a ↦ b`
@@ -15,4 +15,4 @@ scope = "leanprover-community"
 rev = "v4.28.0"
 
 [[lean_lib]]
-name = "SutherlandNumberTheoryLecture2Draft1"
+name = "SutherlandNumberTheoryLecture2"
