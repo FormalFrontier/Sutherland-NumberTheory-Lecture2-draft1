@@ -84,4 +84,5 @@ The lecture cites:
 - Page 4 ends mid-proof (Proposition 2.9); the continuation belongs to page 5.
 - Page 5 ends after Lemma 2.14 (start of §2.5 Fractional ideals).
 - Page 6 ends mid-discussion after stating Lemma 2.20 and a remark before its proof; the proof belongs to page 7.
-- Footnotes: use `$^1$` in the text and a horizontal rule (`---`) before the footnote block at the end of the page.
+- Page 7 is the last content page. It begins with the proof of Lemma 2.20, continues through §2.6 (Invertible fractional ideals and the ideal class group), and ends with Remark 2.25. It has a footnote ($^3$).
+- Footnotes: use `$^1$`, `$^2$`, `$^3$` etc. in the text and a horizontal rule (`---`) before the footnote block at the end of the page.
