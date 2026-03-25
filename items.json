@@ -1,0 +1,353 @@
+[
+  {
+    "id": "Lecture2/02_00_Introduction",
+    "type": "introduction",
+    "title": "Localization and Dedekind domains",
+    "start_page": "1",
+    "end_page": "1",
+    "start_line": 1,
+    "end_line": 4
+  },
+  {
+    "id": "Lecture2/02_00a_Discussion",
+    "type": "discussion",
+    "title": "Localization of rings (\u00a72.1)",
+    "start_page": "1",
+    "end_page": "1",
+    "start_line": 5,
+    "end_line": 24
+  },
+  {
+    "id": "Lecture2/02_00b_Discussion",
+    "type": "discussion",
+    "title": "Ideals in localizations \u2014 contraction and extension (\u00a72.2 introduction)",
+    "start_page": "1",
+    "end_page": "2",
+    "start_line": 25,
+    "end_line": 8
+  },
+  {
+    "id": "Lecture2/02_01_Theorem",
+    "type": "theorem",
+    "title": "Theorem 2.1: Prime ideal correspondence for localizations",
+    "start_page": "2",
+    "end_page": "2",
+    "start_line": 9,
+    "end_line": 12
+  },
+  {
+    "id": "Lecture2/02_02_Remark",
+    "type": "remark",
+    "title": "Remark 2.2: Noetherian and PID preserved by localization",
+    "start_page": "2",
+    "end_page": "2",
+    "start_line": 13,
+    "end_line": 14
+  },
+  {
+    "id": "Lecture2/02_02a_Discussion",
+    "type": "discussion",
+    "title": "Localization at a prime ideal",
+    "start_page": "2",
+    "end_page": "2",
+    "start_line": 15,
+    "end_line": 20
+  },
+  {
+    "id": "Lecture2/02_03_Remark",
+    "type": "remark",
+    "title": "Warning 2.3: Notation for elements of localization at \ud835\udd2d",
+    "start_page": "2",
+    "end_page": "2",
+    "start_line": 21,
+    "end_line": 22
+  },
+  {
+    "id": "Lecture2/02_04_Example",
+    "type": "example",
+    "title": "Example 2.4: Localization of k[x] at (x\u22122)",
+    "start_page": "2",
+    "end_page": "2",
+    "start_line": 23,
+    "end_line": 31
+  },
+  {
+    "id": "Lecture2/02_05_Example",
+    "type": "example",
+    "title": "Example 2.5: Localization \u2124_(p)",
+    "start_page": "3",
+    "end_page": "3",
+    "start_line": 1,
+    "end_line": 2
+  },
+  {
+    "id": "Lecture2/02_05a_Discussion",
+    "type": "discussion",
+    "title": "Localization of modules (\u00a72.3)",
+    "start_page": "3",
+    "end_page": "3",
+    "start_line": 3,
+    "end_line": 16
+  },
+  {
+    "id": "Lecture2/02_06_Proposition",
+    "type": "proposition",
+    "title": "Proposition 2.6: Module is intersection of its localizations",
+    "start_page": "3",
+    "end_page": "3",
+    "start_line": 17,
+    "end_line": 29
+  },
+  {
+    "id": "Lecture2/02_06a_Discussion",
+    "type": "discussion",
+    "title": "Localization of ideals as modules",
+    "start_page": "4",
+    "end_page": "4",
+    "start_line": 1,
+    "end_line": 6
+  },
+  {
+    "id": "Lecture2/02_07_Corollary",
+    "type": "corollary",
+    "title": "Corollary 2.7: Ideal is intersection of its localizations",
+    "start_page": "4",
+    "end_page": "4",
+    "start_line": 7,
+    "end_line": 8
+  },
+  {
+    "id": "Lecture2/02_08_Example",
+    "type": "example",
+    "title": "Example 2.8: \u2124 = \u2229 \u2124_(p) in \u211a",
+    "start_page": "4",
+    "end_page": "4",
+    "start_line": 9,
+    "end_line": 10
+  },
+  {
+    "id": "Lecture2/02_08a_Discussion",
+    "type": "discussion",
+    "title": "Local-global principle and Dedekind domains (\u00a72.4 introduction)",
+    "start_page": "4",
+    "end_page": "4",
+    "start_line": 11,
+    "end_line": 14
+  },
+  {
+    "id": "Lecture2/02_09_Proposition",
+    "type": "proposition",
+    "title": "Proposition 2.9: Equivalent characterizations of Dedekind domains",
+    "start_page": "4",
+    "end_page": "5",
+    "start_line": 15,
+    "end_line": 4
+  },
+  {
+    "id": "Lecture2/02_10_Definition",
+    "type": "definition",
+    "title": "Definition 2.10: Dedekind domain",
+    "start_page": "5",
+    "end_page": "5",
+    "start_line": 5,
+    "end_line": 6
+  },
+  {
+    "id": "Lecture2/02_11_Corollary",
+    "type": "corollary",
+    "title": "Corollary 2.11: Every PID is a Dedekind domain",
+    "start_page": "5",
+    "end_page": "5",
+    "start_line": 7,
+    "end_line": 8
+  },
+  {
+    "id": "Lecture2/02_12_Remark",
+    "type": "remark",
+    "title": "Remark 2.12: PID, UFD, and Dedekind domain relationships",
+    "start_page": "5",
+    "end_page": "5",
+    "start_line": 9,
+    "end_line": 10
+  },
+  {
+    "id": "Lecture2/02_12a_Discussion",
+    "type": "discussion",
+    "title": "Integral closure of Dedekind domains in separable extensions",
+    "start_page": "5",
+    "end_page": "5",
+    "start_line": 11,
+    "end_line": 12
+  },
+  {
+    "id": "Lecture2/02_12b_Discussion",
+    "type": "discussion",
+    "title": "Fractional ideals (\u00a72.5 introduction)",
+    "start_page": "5",
+    "end_page": "5",
+    "start_line": 13,
+    "end_line": 16
+  },
+  {
+    "id": "Lecture2/02_13_Definition",
+    "type": "definition",
+    "title": "Definition 2.13: Fractional ideal",
+    "start_page": "5",
+    "end_page": "5",
+    "start_line": 17,
+    "end_line": 18
+  },
+  {
+    "id": "Lecture2/02_13a_Discussion",
+    "type": "discussion",
+    "title": "Fractional ideals generalize ideals",
+    "start_page": "5",
+    "end_page": "5",
+    "start_line": 19,
+    "end_line": 20
+  },
+  {
+    "id": "Lecture2/02_14_Lemma",
+    "type": "lemma",
+    "title": "Lemma 2.14: Characterization of finitely generated A-submodules of K",
+    "start_page": "5",
+    "end_page": "5",
+    "start_line": 21,
+    "end_line": 23
+  },
+  {
+    "id": "Lecture2/02_15_Remark",
+    "type": "remark",
+    "title": "Remark 2.15: Alternative definition of fractional ideals for non-noetherian domains",
+    "start_page": "6",
+    "end_page": "6",
+    "start_line": 1,
+    "end_line": 2
+  },
+  {
+    "id": "Lecture2/02_16_Corollary",
+    "type": "corollary",
+    "title": "Corollary 2.16: Fractional ideal as (1/a)I",
+    "start_page": "6",
+    "end_page": "6",
+    "start_line": 3,
+    "end_line": 4
+  },
+  {
+    "id": "Lecture2/02_17_Definition",
+    "type": "definition",
+    "title": "Definition 2.17: Principal fractional ideal",
+    "start_page": "6",
+    "end_page": "6",
+    "start_line": 5,
+    "end_line": 6
+  },
+  {
+    "id": "Lecture2/02_17a_Discussion",
+    "type": "discussion",
+    "title": "Operations on fractional ideals: sum, product, and quotient",
+    "start_page": "6",
+    "end_page": "6",
+    "start_line": 7,
+    "end_line": 18
+  },
+  {
+    "id": "Lecture2/02_18_Lemma",
+    "type": "lemma",
+    "title": "Lemma 2.18: Quotient of fractional ideals is a fractional ideal",
+    "start_page": "6",
+    "end_page": "6",
+    "start_line": 19,
+    "end_line": 22
+  },
+  {
+    "id": "Lecture2/02_19_Definition",
+    "type": "definition",
+    "title": "Definition 2.19: Invertible fractional ideal",
+    "start_page": "6",
+    "end_page": "6",
+    "start_line": 23,
+    "end_line": 26
+  },
+  {
+    "id": "Lecture2/02_20_Lemma",
+    "type": "lemma",
+    "title": "Lemma 2.20: Invertibility criterion via A \u00f7 I",
+    "start_page": "6",
+    "end_page": "7",
+    "start_line": 27,
+    "end_line": 2
+  },
+  {
+    "id": "Lecture2/02_20a_Discussion",
+    "type": "discussion",
+    "title": "Preview: invertibility in Dedekind domains",
+    "start_page": "7",
+    "end_page": "7",
+    "start_line": 3,
+    "end_line": 4
+  },
+  {
+    "id": "Lecture2/02_21_Example",
+    "type": "example",
+    "title": "Example 2.21: Non-invertible ideal in \u2124 + 2i\u2124",
+    "start_page": "7",
+    "end_page": "7",
+    "start_line": 5,
+    "end_line": 6
+  },
+  {
+    "id": "Lecture2/02_21a_Discussion",
+    "type": "discussion",
+    "title": "Invertible fractional ideals and ideal class group (\u00a72.6 introduction)",
+    "start_page": "7",
+    "end_page": "7",
+    "start_line": 7,
+    "end_line": 16
+  },
+  {
+    "id": "Lecture2/02_22_Definition",
+    "type": "definition",
+    "title": "Definition 2.22: Ideal group",
+    "start_page": "7",
+    "end_page": "7",
+    "start_line": 17,
+    "end_line": 18
+  },
+  {
+    "id": "Lecture2/02_22a_Discussion",
+    "type": "discussion",
+    "title": "Principal fractional ideals form a subgroup",
+    "start_page": "7",
+    "end_page": "7",
+    "start_line": 19,
+    "end_line": 20
+  },
+  {
+    "id": "Lecture2/02_23_Definition",
+    "type": "definition",
+    "title": "Definition 2.23: Ideal class group",
+    "start_page": "7",
+    "end_page": "7",
+    "start_line": 21,
+    "end_line": 22
+  },
+  {
+    "id": "Lecture2/02_24_Example",
+    "type": "example",
+    "title": "Example 2.24: Ideal class group of a DVR is trivial",
+    "start_page": "7",
+    "end_page": "7",
+    "start_line": 23,
+    "end_line": 24
+  },
+  {
+    "id": "Lecture2/02_25_Remark",
+    "type": "remark",
+    "title": "Remark 2.25: Ideal class group measures failure of unique factorization",
+    "start_page": "7",
+    "end_page": "7",
+    "start_line": 25,
+    "end_line": 29
+  }
+]
