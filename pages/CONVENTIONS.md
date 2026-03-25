@@ -25,7 +25,8 @@ Transcription agents should use the following conventions when converting PDF co
 | $S$ | A multiplicative subset of $A$ (closed under finite products, $1 \in S$, $0 \notin S$) |
 | $S^{-1}A$ | Localization of $A$ with respect to $S$ |
 | $\iota\colon A \to S^{-1}A$ | Canonical ring homomorphism into the localization |
-| $K$ | Fraction field of an integral domain $A$ |
+| $K$, $\operatorname{Frac} A$ | Fraction field of an integral domain $A$ |
+| $A_{\neq 0}$ | The set of nonzero elements of $A$ (a multiplicative subset) |
 | $M$ | An $A$-module |
 | $S^{-1}M$ | Localization of module $M$ with respect to $S$ |
 
@@ -77,4 +78,5 @@ The lecture cites:
 - Use `\operatorname{...}` for named operators (cl, Frac, Pic, etc.).
 - Preserve the lecture's equation numbering (1), (2), (3).
 - Preserve the lecture's result numbering (Theorem 2.1, Definition 2.7, etc.).
-- Commutative diagrams: describe in prose or use a simple text layout; do not attempt complex TikZ.
+- Commutative diagrams: use display-math with `\xrightarrow`, `\downarrow`, `\nearrow` etc. on separate lines; do not attempt complex TikZ.
+- Page 1 ends mid-sentence at the start of §2.2; the continuation belongs to page 2.
