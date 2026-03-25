@@ -81,4 +81,6 @@ The lecture cites:
 - Commutative diagrams: use display-math with `\xrightarrow`, `\downarrow`, `\nearrow` etc. on separate lines; do not attempt complex TikZ.
 - Page 1 ends mid-sentence at the start of §2.2; the continuation belongs to page 2.
 - Page 2 ends mid-example (Example 2.4); Example 2.5 begins page 3.
+- Page 4 ends mid-proof (Proposition 2.9); the continuation belongs to page 5.
+- Page 5 ends after Lemma 2.14 (start of §2.5 Fractional ideals).
 - Footnotes: use `$^1$` in the text and a horizontal rule (`---`) before the footnote block at the end of the page.
