@@ -1,0 +1,2 @@
+Fractional ideals generalize the notion of an ideal: when $A$ is noetherian the ideals of $A$ are precisely the finitely generated $A$-submodules of $A$, and when $A$ is also a domain we can extend this notion to its fraction field. Every ideal of $A$ is also a fractional ideal of $A$, but fractional ideals are typically not ideals because they need not be contained in $A$. Some authors use the term *integral ideal* to distinguish the fractional ideals that lie in $A$ (and are thus ideals) but we will not use this terminology.
+

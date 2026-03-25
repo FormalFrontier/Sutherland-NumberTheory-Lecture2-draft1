@@ -1,0 +1,4 @@
+**Lemma 2.18.** *Let $I$ and $J$ be fractional ideals of a noetherian domain $A$ with $J$ nonzero. Then $(I \div J)$ is a fractional ideal of $A$.*
+
+*Proof.* It is clear from the definition that $I \div J$ is closed under addition and multiplication by elements of $A$ (since $I$ is), so $I \div J$ is an $A$-module of the fraction field of $A$. To show that $I \div J$ is finitely generated, we first suppose that $I, J \subseteq A$ are ideals. For any nonzero $j \in J \subseteq A$ we have $j(I \div J) \subseteq I \subseteq A$, so $(I \div J)$ is finitely generated, by Lemma 2.14. For the general case, choose $a$ and $b$ so that $aI \subseteq A$ and $bJ \subseteq A$ via Lemma 2.14. Then $I \div J = abI \div abJ$ with $abI, abJ \subseteq A$, which we have already shown is finitely generated. $\square$
+

@@ -1,0 +1,2 @@
+**Example 2.5.** Let $p \in \mathbb{Z}$ be a prime. Then $\mathbb{Z}_{(p)} = \{a/b : a, b \in \mathbb{Z}, p \nmid b\}$. As in the previous example, $\mathbb{Z}$ is a PID and $\mathbb{Z}_{(p)}$ is a DVR; the valuation on $\mathbb{Q}$ is the $p$-adic valuation. The residue field is $\mathbb{Z}_{(p)}/p\mathbb{Z}_{(p)} \simeq \mathbb{F}_p$ and the quotient map $\mathbb{Z}_{(p)} \twoheadrightarrow \mathbb{F}_p$ is reduction modulo $p$.
+
