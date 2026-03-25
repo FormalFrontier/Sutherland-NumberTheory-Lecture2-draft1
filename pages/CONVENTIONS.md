@@ -80,7 +80,7 @@ The lecture cites:
 - Preserve the lecture's result numbering (Theorem 2.1, Definition 2.7, etc.).
 - Commutative diagrams: use display-math with `\xrightarrow`, `\downarrow`, `\nearrow` etc. on separate lines; do not attempt complex TikZ.
 - Page 1 ends mid-sentence at the start of §2.2; the continuation belongs to page 2.
-- Page 2 ends mid-example (Example 2.4); Example 2.5 begins page 3.
+- Page 2 ends after Example 2.4; Example 2.5 begins page 3.
 - Page 4 ends mid-proof (Proposition 2.9); the continuation belongs to page 5.
 - Page 5 ends after Lemma 2.14 (start of §2.5 Fractional ideals).
 - Page 6 ends mid-discussion after stating Lemma 2.20 and a remark before its proof; the proof belongs to page 7.
