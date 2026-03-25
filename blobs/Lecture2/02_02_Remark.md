@@ -1,0 +1,2 @@
+**Remark 2.2.** An immediate consequence of (2) is that if $a_1, \ldots, a_n \in A$ generate $\mathfrak{a}$ as an $A$-ideal, then they also generate $\mathfrak{a}^e = \mathfrak{a}B$ as a $B$-ideal. As noted above, when $B = S^{-1}A$ we have $\mathfrak{b} = \mathfrak{b}^{ce}$, so every $B$-ideal is of the form $\mathfrak{a}^e$ (take $\mathfrak{a} = \mathfrak{b}^c$). It follows that if $A$ is noetherian then so are all its localizations, and if $A$ is a PID then so are all of its localizations.
+

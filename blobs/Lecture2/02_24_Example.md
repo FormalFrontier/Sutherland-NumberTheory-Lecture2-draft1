@@ -1,0 +1,2 @@
+**Example 2.24.** If $A$ is a DVR with uniformizer $\pi$ then its nonzero fractional ideals are the principal fractional ideals $(\pi^n)$ with $n \in \mathbb{Z}$ (including $n \leq 0$). We have $(\pi^m)(\pi^n) = (\pi^{m+n})$, thus the ideal group of $A$ is isomorphic to $\mathbb{Z}$ (under addition). In this case $\mathcal{P}_A = \mathcal{I}_A$ and the ideal class group $\operatorname{cl}(A)$ is trivial.
+
