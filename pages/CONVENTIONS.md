@@ -68,8 +68,11 @@ The lecture numbers equations as (1), (2), (3), etc. Theorems, propositions, def
 ### References
 
 The lecture cites:
-- [1] M. F. Atiyah and I. G. MacDonald, *Introduction to Commutative Algebra*, Addison-Wesley, 1969.
-- [2] P. Samuel, *Algebraic Theory of Numbers*, Hermann/Dover, 1970.
+- [1] Allen Altman and Steven Kleiman, *A term of commutative algebra*, Worldwide Center of Mathematics, 2013.
+- [2] Michael Atiyah and Ian MacDonald, *Introduction to commutative algebra*, Addison–Wesley, 1969.
+- [3] Pete L. Clark, *Commutative algebra*, 2015.
+- [4] Anthony W. Knapp, *Advanced Algebra*, Digital Second Edition, 2016.
+- [5] Max D. Larsen and Paul J. McCarthy, *Multiplicative theory of ideals*, Academic Press, 1971.
 
 ### Formatting notes
 
