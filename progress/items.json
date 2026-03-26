@@ -7,16 +7,16 @@
     "reason": "Motivational paragraph introducing Lecture 2 topics (localization, Dedekind domains). Claims: none. Pure narrative overview with no precise mathematical statements."
   },
   "Lecture2/02_00a_Discussion": {
-    "status": "scaffolding_ready",
+    "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Section 2.1 body. Claims: (1) universal property of localization, (2) equivalence relation construction of S⁻¹A, (3) ι(S) ⊆ (S⁻¹A)×, (4) uniqueness of factoring map, (5) for integral domains: (a,s)~(b,t) iff at-bs=0, (6) S⁻¹A embeds in Frac(A), (7) S⊆T implies S⁻¹A ⊆ T⁻¹A, (8) ι injective when A integral domain, (9) A ⊆ S⁻¹A ⊆ Frac(A). Most are in Mathlib but formalizable."
+    "notes": "Section 2.1 body. All 9 claims covered: (1) IsLocalization.lift, (2) IsLocalization.mk' + IsLocalization.eq, (3) IsLocalization.map_units, (4) IsLocalization.lift_unique, (5) IsLocalization.mk'_eq_iff_eq, (6) IsFractionRing + FractionRing, (7) IsLocalization.of_le, (8) IsLocalization.injective, (9) IsFractionRing.injective. All recall pattern, no sorries."
   },
   "Lecture2/02_00b_Discussion": {
-    "status": "scaffolding_ready",
+    "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Section 2.2 body. Claims: (1) contraction φ⁻¹(b) is an A-ideal, (2) extension aB = (ab : a∈a, b∈B) for injective φ, (3) a ⊆ a^ec, (4) b^ce ⊆ b, (5) if a∩S ≠ ∅ then a^e = B, (6) when B = S⁻¹A: b^ce = b."
+    "notes": "Section 2.2 body. All 6 claims covered: (1) Ideal.comap, (2) Ideal.map, (3) Ideal.le_comap_map, (4) Ideal.map_comap_le, (5) IsLocalization.map_algebraMap_ne_top_iff_disjoint + ideal_ext_eq_top_of_meets_submonoid, (6) IsLocalization.map_comap. 1 original theorem (ideal_ext_eq_top_of_meets_submonoid), rest recall pattern."
   },
   "Lecture2/02_01_Theorem": {
     "status": "definition_verified",
