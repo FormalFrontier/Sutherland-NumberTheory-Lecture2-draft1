@@ -6,6 +6,18 @@ This document describes the pipeline for formalizing a mathematics textbook into
 - **`items.json`** (repo root) — The **catalog**: every item's ID, type, title, page range, and line range. Created in Stage 1.6 (Structure Analysis). Read-only after creation (except to fix errors found by the contiguity check).
 - **`progress/items.json`** — The **workflow status tracker**: which pipeline stage each item has reached, when it was last updated, which PR touched it. Updated throughout Phases 2–3 as items progress.
 
+### Project Dependencies (check `lakefile.toml`)
+
+**At the start of every session**, read `lakefile.toml` and check for `[[require]]` entries beyond Mathlib. These are **sibling formalization projects** — typically earlier lectures, chapters, or volumes in the same series — whose definitions and theorems are available for import.
+
+For each non-Mathlib `[[require]]` entry:
+
+1. **Browse its source code.** After `lake exe cache get` downloads dependencies, find the package under `.lake/packages/<package-name>/`. Read its Lean source files to understand what definitions, theorems, and instances it provides.
+2. **Import from it preferentially.** If a concept needed by this project is already formalized in a required package, import and use it — do not re-formalize it. This applies to definitions, theorems, type class instances, and notation.
+3. **Treat it like Mathlib.** Required packages are first-class dependencies, just like Mathlib. Use `recall` for definitions/theorems that exist there, `example` for instances, and build on their API.
+
+If `lakefile.toml` has no non-Mathlib requires, skip this section — the project is self-contained.
+
 ## Phase 1: Source Preparation
 
 ### Stage 1.1: Page Extraction
@@ -256,13 +268,14 @@ Can begin as soon as the corresponding Stage 2.1 and 2.2 issues are merged. Stag
 
 Create issues, each covering roughly 50 blobs. For items and dependencies not covered by Mathlib, each agent searches for:
 
+- **Required packages first.** Check `lakefile.toml` for non-Mathlib `[[require]]` entries. These are the highest-priority external sources — browse their Lean source under `.lake/packages/` to catalog every definition, theorem, and instance they provide. Map each to the items in this project that can use it.
 - Other FormalFrontier artifacts that cover this material
 - External Lean libraries
 - Natural language sources with detailed proofs (useful for formalization agents)
 
 Runs in parallel with Stage 2.3.
 
-**Output:** `research/external-sources.json`
+**Output:** `research/external-sources.json` — must include an entry for each required package with a full inventory of what it provides and which items benefit.
 
 ### Stage 2.5: Formalization Planning Report
 
@@ -337,8 +350,9 @@ The orchestrating agent creates the file structure and then creates issues for w
 Each agent assigned to a scaffolding issue:
 1. Reads the blob file for its item
 2. Reads `research/mathlib-coverage.json` and `research/external-sources.json` for Mathlib API references and other background
-3. Creates the `.lean` file following the conventions below
-4. Submits a PR with auto-merge enabled (see PR lifecycle above)
+3. **Checks required packages.** For each non-Mathlib `[[require]]` in `lakefile.toml`, search `.lake/packages/<name>/` for definitions and theorems relevant to this item. If a concept is already formalized there, use `recall` or import it directly — do not re-define it.
+4. Creates the `.lean` file following the conventions below
+5. Submits a PR with auto-merge enabled (see PR lifecycle above)
 
 #### Import chain
 
