@@ -61,10 +61,10 @@
     "notes": "Section 2.3 body. Claims: (1) universal property of S\u207b\u00b9M, (2) S\u207b\u00b9M \u2245 M \u2297_A S\u207b\u00b9A, (3) \u03b9 injective iff \u00d7s injective for all s\u2208S, (4) for A subring of field K with M \u2286 K-vector space, M embeds in S\u207b\u00b9M."
   },
   "Lecture2/02_06_Proposition": {
-    "status": "scaffolding_ready",
+    "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": ""
+    "notes": "Defines Submodule.localizedAtPrime (M_p in ambient V), conductor ideal, states M = ⨅_p M_p and M = ⨅_m M_m. Helper lemmas: le_localizedAtPrime, localizedAtPrime_anti, conductor_not_le. 4 sorries remain (all proof-level)."
   },
   "Lecture2/02_06a_Discussion": {
     "status": "scaffolding_ready",
