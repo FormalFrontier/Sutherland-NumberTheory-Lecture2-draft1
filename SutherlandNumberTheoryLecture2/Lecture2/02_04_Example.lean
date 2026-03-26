@@ -90,10 +90,6 @@ instance kx_loc_x_sub_2_isDVR :
   IsLocalization.AtPrime.isDiscreteValuationRing_of_dedekind_domain
     k[X] (polyPrimeIdeal_x_sub_2_ne_bot k) (kx_loc_x_sub_2 k)
 
-/-- k[x]_(x-2) is a DVR in the sense of Sutherland Def 1.10 (Lecture 1). -/
-theorem kx_loc_x_sub_2_isDVR' : IsDVR (kx_loc_x_sub_2 k) :=
-  kx_loc_x_sub_2_isDVR k
-
 /-! ### Maximal ideal characterization
 
 The maximal ideal of k[x]_(x-2) is the extension of (x-2) to the localization.
@@ -145,9 +141,11 @@ theorem kx_loc_x_sub_2_quotientMap_eq_eval :
       (algebraMap k[X] (kx_loc_x_sub_2 k) (f - C (Polynomial.eval 2 f))) = 0 := by
     rw [IsLocalRing.residue_eq_zero_iff, kx_loc_x_sub_2_maximalIdeal]
     exact Ideal.mem_map_of_mem _ hmem
-  -- Expand and rearrange
-  rw [map_sub, map_sub, sub_eq_zero] at hzero
-  rw [hzero]
+  -- Expand and rearrange to get residue(algebraMap f) = residue(algebraMap(C(eval 2 f)))
+  rw [map_sub] at hzero
+  rw [map_sub] at hzero
+  have hzero' := sub_eq_zero.mp hzero
+  rw [hzero']
   -- Goal: residue(algebraMap(C(eval 2 f))) = algebraMap k ResidueField (eval 2 f)
   -- This follows from the scalar tower k → k[X] → loc → ResidueField
   -- Goal: residue(algebraMap_{k[X]}(C(eval 2 f))) = residue(algebraMap_{k}(eval 2 f))

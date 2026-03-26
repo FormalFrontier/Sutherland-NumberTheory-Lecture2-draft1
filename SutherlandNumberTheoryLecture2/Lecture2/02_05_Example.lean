@@ -55,8 +55,8 @@ instance intPrimeIdeal_p_isPrime : (intPrimeIdeal_p p).IsPrime := by
 noncomputable abbrev Z_loc_p : Type :=
   Localization.AtPrime (intPrimeIdeal_p p)
 
--- Recall from Lecture 1: ℤ_(p) is a local ring
-#check @zLocAtP_isLocalRing
+-- ℤ_(p) is a local ring (automatic from localization at a prime)
+example : IsLocalRing (Z_loc_p p) := inferInstance
 
 /-! ### ℤ is a PID
 
@@ -83,9 +83,6 @@ instance Z_loc_p_isDVR : IsDiscreteValuationRing (Z_loc_p p) :=
   IsLocalization.AtPrime.isDiscreteValuationRing_of_dedekind_domain
     ℤ (intPrimeIdeal_p_ne_bot p) (Z_loc_p p)
 
-/-- ℤ_(p) is a DVR in the sense of Sutherland Def 1.10 (Lecture 1). -/
-theorem Z_loc_p_isDVR' : IsDVR (Z_loc_p p) :=
-  Z_loc_p_isDVR p
 
 /-! ### The p-adic valuation
 
@@ -93,7 +90,7 @@ The valuation on ℚ = Frac(ℤ) corresponding to the valuation ring ℤ_(p) is 
 p-adic valuation. Recall from Lecture 1 (Definition 1.7): -/
 
 -- Recall: p-adic valuation on ℚ
-#check @padicValuation
+#check @padicValRat
 
 /-! ### Residue field
 
