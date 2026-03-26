@@ -43,16 +43,16 @@
     "notes": "Warning 2.3. Claims: (1) a/b \u2208 A_p does not require b \u2209 p (counterexample: Z, p=(3), 9/3=3/1)."
   },
   "Lecture2/02_04_Example": {
-    "status": "scaffolding_ready",
+    "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": ""
+    "notes": "k[x]_(x-2) is a DVR. Route: PID → Dedekind → DVR localization. DVR instance proven (no sorry). Residue field ≃ k sorry'd. Imports Lecture1 for IsDVR."
   },
   "Lecture2/02_05_Example": {
-    "status": "scaffolding_ready",
+    "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": ""
+    "notes": "ℤ_(p) is a DVR. Route: PID → Dedekind → DVR localization. DVR instance proven (no sorry). Residue field ≃ 𝔽_p sorry'd. Imports Lecture1 for IsDVR, primeIdealZ_isPrime, zLocAtP_isLocalRing, padicValuation."
   },
   "Lecture2/02_05a_Discussion": {
     "status": "scaffolding_ready",
