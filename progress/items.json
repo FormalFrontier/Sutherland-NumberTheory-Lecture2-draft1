@@ -19,10 +19,10 @@
     "notes": "Section 2.2 body. Claims: (1) contraction φ⁻¹(b) is an A-ideal, (2) extension aB = (ab : a∈a, b∈B) for injective φ, (3) a ⊆ a^ec, (4) b^ce ⊆ b, (5) if a∩S ≠ ∅ then a^e = B, (6) when B = S⁻¹A: b^ce = b."
   },
   "Lecture2/02_01_Theorem": {
-    "status": "scaffolding_ready",
+    "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": ""
+    "notes": "Fully covered by Mathlib. Uses recall for orderIsoOfPrime, isPrime_of_isPrime_disjoint, map_comap, comap_map_of_isPrime_disjoint."
   },
   "Lecture2/02_02_Remark": {
     "status": "scaffolding_ready",
