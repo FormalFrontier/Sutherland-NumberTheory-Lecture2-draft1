@@ -55,10 +55,10 @@
     "notes": "Stage 3.2 review passed (re-reviewed). All claims mapped: (1) intPrimeIdeal_p_isPrime, (2) PID via inferInstance, (3) Z_loc_p_isDVR proved, (4) padicValuation recalled, (5) Z_loc_p_residueField (sorry) — residue field ≃ 𝔽_p, (6) Z_loc_p_quotientMap_eq_mod (sorry) — quotient map = reduction mod p. No definition-level sorries."
   },
   "Lecture2/02_05a_Discussion": {
-    "status": "definition_verified",
+    "status": "sorry_free",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All 5 claims mapped: (1) S⁻¹M type via LocalizedModule + mk + mkLinearMap, (2) universal property via IsLocalizedModule, (3) tensor product equiv via LocalizedModule.equivTensorProduct, (4) injectivity iff via custom theorem (sorry), (5) embedding for torsion-free via custom theorem (sorry). Notation M_𝔭 documented. 2 proof-level sorries. No definition-level sorries. No gaps."
+    "notes": "All 5 claims formalized. 2 proof-level sorries eliminated: (4) localizedModule_mkLinearMap_injective_iff proved using mem_ker_mkLinearMap_iff, (5) localizedModule_mkLinearMap_injective_of_noZeroSMulDivisors proved using NoZeroSMulDivisors. Sorry-free."
   },
   "Lecture2/02_06_Proposition": {
     "status": "sorry_free",

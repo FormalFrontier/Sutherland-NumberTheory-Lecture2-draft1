@@ -66,7 +66,16 @@ s ∈ S is injective on M. -/
 theorem localizedModule_mkLinearMap_injective_iff :
     Function.Injective (LocalizedModule.mkLinearMap S M) ↔
       ∀ s : S, Function.Injective (HSMul.hSMul (α := A) s.1 : M → M) := by
-  sorry
+  rw [← LinearMap.ker_eq_bot, LinearMap.ker_eq_bot']
+  constructor
+  · intro h s a b hab
+    have hsub : s.1 • (a - b) = 0 := by rw [smul_sub, hab, sub_self]
+    have := h _ (LocalizedModule.mem_ker_mkLinearMap_iff.mpr ⟨s.1, s.2, hsub⟩)
+    exact sub_eq_zero.mp this
+  · intro h m hm
+    have hm' := LocalizedModule.mem_ker_mkLinearMap_iff.mp (LinearMap.mem_ker.mpr hm)
+    obtain ⟨r, hr, hrm⟩ := hm'
+    exact h ⟨r, hr⟩ (show r • m = r • (0 : M) by rwa [smul_zero])
 
 /-! ### Claim 5: Embedding when A is a subring of a field
 
@@ -79,6 +88,9 @@ M → S⁻¹M is injective (the book's "A subring of a field" case). -/
 theorem localizedModule_mkLinearMap_injective_of_noZeroSMulDivisors
     [IsDomain A] [NoZeroSMulDivisors A M] (hS : ∀ s : S, (s : A) ≠ 0) :
     Function.Injective (LocalizedModule.mkLinearMap S M) := by
-  sorry
+  rw [localizedModule_mkLinearMap_injective_iff]
+  intro s a b hab
+  have hsub : s.1 • (a - b) = 0 := by rw [smul_sub, hab, sub_self]
+  exact sub_eq_zero.mp ((smul_eq_zero.mp hsub).resolve_left (hS s))
 
 end Discussion_02_05a
