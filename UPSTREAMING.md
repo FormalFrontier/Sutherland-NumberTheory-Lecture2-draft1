@@ -12,8 +12,8 @@
 | 02_05a_Discussion | `localizedModule_mkLinearMap_injective_of_noZeroSMulDivisors` | `02_05a_Discussion.lean:86` | **Reject — Mathlib covered** | Follows from chaining: `NoZeroSMulDivisors R M` → `Module.IsTorsionFree R M` (instance at `NoZeroSMulDivisors/Defs.lean:56`) → `IsTorsionFree.isSMulRegular` → `injective_iff_isRegular`. No new content. |
 | 02_06_Proposition | `Submodule.localizedAtPrime` | `02_06_Proposition.lean:51` | **Include** | Phase 2 confirmed: submodule generalization genuinely absent from Mathlib. See Phase 2 notes below. |
 | 02_07_Corollary | `Ideal.localizedAtPrime`, `Ideal.eq_iInf_localizedAtPrime` | `02_07_Corollary.lean:34` | **Include** | Phase 2 confirmed: Mathlib has `ideal_eq_iInf_comap_map_away` (finite generating set, localization-away version) and `PrimeSpectrum.iInf_localization_eq_bot` (ring version A = ⋂ A_𝔭), but **no** result stating I = ⋂_𝔭 I_𝔭 for arbitrary ideals at all primes/maximal ideals. The conductor-based proof is self-contained and works for arbitrary CommRing (no IsDomain needed). If 02_06 is also included, this should be refactored as a corollary; if 02_06 is excluded, the standalone proof is clean and correct. Ideal upstream target: `Mathlib/RingTheory/Localization/Ideal.lean` alongside `ideal_eq_iInf_comap_map_away`. |
-| 02_12_Remark | `not_isDedekindDomain_polynomial_polynomial` | `02_12_Remark.lean:54` | **Candidate** | Proves k[x,y] is not a Dedekind domain (dimension argument: (X) is prime but not maximal). |
-| 02_12_Remark | `not_uniqueFactorizationMonoid_Zsqrtd_neg13` | `02_12_Remark.lean:79` | **Candidate** | Proves ℤ[√-13] is not a UFD via norm argument (2 is irreducible but not prime). ~50 lines of substantive proof. |
+| 02_12_Remark | `not_isDedekindDomain_polynomial_polynomial` | `02_12_Remark.lean:54` | **Include** | Phase 2 confirmed: no equivalent in Mathlib. See Phase 2 notes below. |
+| 02_12_Remark | `not_uniqueFactorizationMonoid_Zsqrtd_neg13` | `02_12_Remark.lean:79` | **Include** | Phase 2 confirmed: no equivalent in Mathlib. See Phase 2 notes below. |
 | 02_20a_Discussion | `exists_noninvertible_fractionalIdeal` | `02_20a_Discussion.lean:49` | **Candidate** | Exhibits a domain (ℤ[X]) with a non-invertible nonzero fractional ideal, using the ¬IsDedekindDomain → ¬IsDedekindDomainInv characterization. |
 | 02_21_Example | `SubringA`, `idealI_of_A`, various | `02_21_Example.lean` | **Candidate** | Full worked example: ℤ + 2iℤ ⊂ ℤ[i], I = 2ℤ[i] is non-invertible over A. ~120 lines of substantive constructions and proofs. Specific to the textbook, but the constructions are original. |
 
@@ -126,3 +126,22 @@
 **Why this is not a corollary of the ring version:** The ring version proves R = ⋂ R_𝔭 as subalgebras. The submodule version proves M = ⋂ M_𝔭 for an arbitrary A-submodule M of a K-vector space V. The proof uses the same conductor strategy but applied to the submodule setting — it's structurally parallel but not derivable from the ring result.
 
 **Upstream potential:** ~40 lines of substantive proof. Self-contained. Natural generalization of an existing Mathlib result. Would fit in `Mathlib/RingTheory/Localization/Submodule.lean` or alongside the existing `Spectrum/Maximal/Localization.lean`.
+
+### 02_12_Remark — `not_isDedekindDomain_polynomial_polynomial`, `not_uniqueFactorizationMonoid_Zsqrtd_neg13`
+
+**Verdict: Include — both counterexamples absent from Mathlib**
+
+**Research findings:**
+
+**Declaration 1: `not_isDedekindDomain_polynomial_polynomial`**
+- Searched Mathlib for `not_isDedekindDomain`, `¬.*IsDedekindDomain`, `Polynomial.*Dedekind` — no results
+- Searched `Counterexamples/` for `Dedekind` — no results
+- Mathlib has `Polynomial.not_isField` (the key helper used in our proof) but not the Dedekind non-example
+- ~12 lines. Proof: (X) is prime but not maximal in k[x,y]; in a Dedekind domain every nonzero prime is maximal, contradiction. Uses `quotientSpanXSubCAlgEquiv` to show k[x,y]/(Y) ≅ k[x] is not a field.
+
+**Declaration 2: `not_uniqueFactorizationMonoid_Zsqrtd_neg13`**
+- Searched Mathlib for `Zsqrtd.*UniqueFactorizationMonoid`, `Zsqrtd.*Irreducible`, `not_uniqueFactorization` — no results
+- Searched `Counterexamples/` for `Zsqrtd` — no results
+- ~50 lines. Proof: 2 is irreducible in ℤ[√-13] (norm argument: no elements of norm 2 or 3) but not prime (2 | (1+√-13)(1-√-13) but 2 ∤ either factor).
+
+**Upstream potential:** Both would fit in `Counterexamples/` or `Mathlib/RingTheory/DedekindDomain/`. The ℤ[√-13] result is the more substantial contribution (~50 lines of original norm-based proof). The k[x,y] result is shorter but equally absent. Together they complete the standard textbook picture: PID ⊊ UFD, PID ⊊ Dedekind, UFD ∩ Dedekind = PID.
