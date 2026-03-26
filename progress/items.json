@@ -10,79 +10,92 @@
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. 9/9 claims mapped: (1) IsLocalization.lift, (2) IsLocalization.mk' + IsLocalization.eq, (3) IsLocalization.map_units, (4) IsLocalization.lift_unique, (5) IsLocalization.mk'_eq_iff_eq, (6) IsFractionRing + FractionRing, (7) IsLocalization.of_le, (8) IsLocalization.injective, (9) IsFractionRing.injective. All recall pattern, no sorries. No definition-level sorries. No gaps."
+    "notes": "Stage 3.2 review passed. 9/9 claims mapped: (1) IsLocalization.lift, (2) IsLocalization.mk' + IsLocalization.eq, (3) IsLocalization.map_units, (4) IsLocalization.lift_unique, (5) IsLocalization.mk'_eq_iff_eq, (6) IsFractionRing + FractionRing, (7) IsLocalization.of_le, (8) IsLocalization.injective, (9) IsFractionRing.injective. All recall pattern, no sorries. No definition-level sorries. No gaps.",
+    "upstreaming_status": "rejected"
   },
   "Lecture2/02_00b_Discussion": {
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. 6/6 claims mapped: (1) Ideal.comap, (2) Ideal.map, (3) Ideal.le_comap_map, (4) Ideal.map_comap_le, (5) IsLocalization.map_algebraMap_ne_top_iff_disjoint + ideal_ext_eq_top_of_meets_submonoid (proved), (6) IsLocalization.map_comap. 1 original theorem, rest recall. No definition-level sorries. No gaps."
+    "notes": "Stage 3.2 review passed. 6/6 claims mapped: (1) Ideal.comap, (2) Ideal.map, (3) Ideal.le_comap_map, (4) Ideal.map_comap_le, (5) IsLocalization.map_algebraMap_ne_top_iff_disjoint + ideal_ext_eq_top_of_meets_submonoid (proved), (6) IsLocalization.map_comap. 1 original theorem, rest recall. No definition-level sorries. No gaps.",
+    "upstreaming_status": "candidate"
   },
   "Lecture2/02_01_Theorem": {
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All 4 claims mapped: (1) bijection via orderIsoOfPrime, (2) forward map via comap_map_of_isPrime_disjoint, (3) inverse map via isPrime_of_isPrime_disjoint, (4) round-trip via map_comap. No definition-level sorries. No gaps."
+    "notes": "Stage 3.2 review passed. All 4 claims mapped: (1) bijection via orderIsoOfPrime, (2) forward map via comap_map_of_isPrime_disjoint, (3) inverse map via isPrime_of_isPrime_disjoint, (4) round-trip via map_comap. No definition-level sorries. No gaps.",
+    "upstreaming_status": "rejected"
   },
   "Lecture2/02_02_Remark": {
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Proved isPrincipalIdealRing_localization_of_isPrincipalIdealRing: PID preserved under localization."
+    "notes": "Proved isPrincipalIdealRing_localization_of_isPrincipalIdealRing: PID preserved under localization.",
+    "upstreaming_status": "candidate"
   },
   "Lecture2/02_02a_Discussion": {
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All 4 claims mapped: (1) A_𝔭 = S⁻¹A via Localization.AtPrime + IsLocalization.AtPrime, (2) prime ideal bijection via IsLocalization.orderIsoOfPrime + AtPrime.orderIsoOfPrime, (3) 𝔭A_𝔭 unique maximal via IsLocalRing.maximalIdeal + AtPrime.map_eq_maximalIdeal, (4) local ring via inferInstance example. No sorries. No definition-level sorries. No gaps."
+    "notes": "Stage 3.2 review passed. All 4 claims mapped: (1) A_𝔭 = S⁻¹A via Localization.AtPrime + IsLocalization.AtPrime, (2) prime ideal bijection via IsLocalization.orderIsoOfPrime + AtPrime.orderIsoOfPrime, (3) 𝔭A_𝔭 unique maximal via IsLocalRing.maximalIdeal + AtPrime.map_eq_maximalIdeal, (4) local ring via inferInstance example. No sorries. No definition-level sorries. No gaps.",
+    "upstreaming_status": "rejected"
   },
   "Lecture2/02_03_Remark": {
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. Counterexample fully proved: primeIdeal3 defined, three_mem_primeIdeal3 proved, nine_div_three_eq_three proved, warning_2_3_counterexample existential proved. Meta-remark about lowest terms in non-UFDs correctly not formalized. No sorries at all. No definition-level sorries. No gaps."
+    "notes": "Stage 3.2 review passed. Counterexample fully proved: primeIdeal3 defined, three_mem_primeIdeal3 proved, nine_div_three_eq_three proved, warning_2_3_counterexample existential proved. Meta-remark about lowest terms in non-UFDs correctly not formalized. No sorries at all. No definition-level sorries. No gaps.",
+    "upstreaming_status": "rejected"
   },
   "Lecture2/02_04_Example": {
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Proved kx_loc_x_sub_2_maximalIdeal (maximal ideal = image of (x-2)), polyPrimeIdeal_x_sub_2_isMaximal, kx_loc_x_sub_2_residueField (residue field ≃ k). 2 sorries remain: kx_loc_x_sub_2_quotientMap_eq_eval (lower priority)."
+    "notes": "Proved kx_loc_x_sub_2_maximalIdeal (maximal ideal = image of (x-2)), polyPrimeIdeal_x_sub_2_isMaximal, kx_loc_x_sub_2_residueField (residue field ≃ k). 2 sorries remain: kx_loc_x_sub_2_quotientMap_eq_eval (lower priority).",
+    "upstreaming_status": "rejected"
   },
   "Lecture2/02_05_Example": {
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Proved intPrimeIdeal_p_isMaximal, Z_loc_p_residueField (residue field ≃ ZMod p). 1 sorry remains: Z_loc_p_quotientMap_eq_mod (lower priority)."
+    "notes": "Proved intPrimeIdeal_p_isMaximal, Z_loc_p_residueField (residue field ≃ ZMod p). 1 sorry remains: Z_loc_p_quotientMap_eq_mod (lower priority).",
+    "upstreaming_status": "rejected"
   },
   "Lecture2/02_05a_Discussion": {
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "#198",
-    "notes": "Polished: consolidated intermediate `have` steps into direct function application chains; eliminated redundant bindings."
+    "notes": "Polished: consolidated intermediate `have` steps into direct function application chains; eliminated redundant bindings.",
+    "upstreaming_status": "candidate"
   },
   "Lecture2/02_06_Proposition": {
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "#198",
-    "notes": "Polished: simplified conductor def with inline intros; replaced verbose comment blocks with direct tactic chains; used le_iInf₂/le_iInf for forward directions."
+    "notes": "Polished: simplified conductor def with inline intros; replaced verbose comment blocks with direct tactic chains; used le_iInf₂/le_iInf for forward directions.",
+    "upstreaming_status": "candidate"
   },
   "Lecture2/02_06a_Discussion": {
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. 1 claim mapped: I_𝔭 = IA_𝔭 via Algebra.idealMap_isLocalizedModule recall + inferInstance example. No sorries. No definition-level sorries. No gaps."
+    "notes": "Stage 3.2 review passed. 1 claim mapped: I_𝔭 = IA_𝔭 via Algebra.idealMap_isLocalizedModule recall + inferInstance example. No sorries. No definition-level sorries. No gaps.",
+    "upstreaming_status": "rejected"
   },
   "Lecture2/02_07_Corollary": {
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "All 3 proofs complete: conductor argument for prime/maximal versions, bridge by rewriting."
+    "notes": "All 3 proofs complete: conductor argument for prime/maximal versions, bridge by rewriting.",
+    "upstreaming_status": "candidate"
   },
   "Lecture2/02_08_Example": {
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All claims mapped: (1) Int.eq_iInf_localization_atPrime proves ℤ = ⋂_p ℤ_(p) in ℚ via PrimeSpectrum.iInf_localization_eq_bot (fully proved), (2) Int.eq_iInf_localization_atMaximal gives maximal ideals version (fully proved). No sorries at all. No gaps."
+    "notes": "Stage 3.2 review passed. All claims mapped: (1) Int.eq_iInf_localization_atPrime proves ℤ = ⋂_p ℤ_(p) in ℚ via PrimeSpectrum.iInf_localization_eq_bot (fully proved), (2) Int.eq_iInf_localization_atMaximal gives maximal ideals version (fully proved). No sorries at all. No gaps.",
+    "upstreaming_status": "rejected"
   },
   "Lecture2/02_08a_Discussion": {
     "status": "non_formalizable",
@@ -95,31 +108,36 @@
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.5: No proofs to polish — file contains only #check, recall, and inferInstance statements. Already minimal."
+    "notes": "Stage 3.5: No proofs to polish — file contains only #check, recall, and inferInstance statements. Already minimal.",
+    "upstreaming_status": "rejected"
   },
   "Lecture2/02_10_Definition": {
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.5: No proofs to polish — file contains only #check, recall, and inferInstance statements. Already minimal."
+    "notes": "Stage 3.5: No proofs to polish — file contains only #check, recall, and inferInstance statements. Already minimal.",
+    "upstreaming_status": "rejected"
   },
   "Lecture2/02_11_Corollary": {
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.5: No proofs to polish — file contains only #check, recall, and inferInstance statements. Already minimal."
+    "notes": "Stage 3.5: No proofs to polish — file contains only #check, recall, and inferInstance statements. Already minimal.",
+    "upstreaming_status": "rejected"
   },
   "Lecture2/02_12_Remark": {
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "All 5 claims fully proved. (1) PID→UFD via inferInstance, (2) PID→Dedekind via inferInstance, (3) k[x,y] not Dedekind — via DimensionLEOne contradiction (span{X} is nonzero prime but not maximal since quotient ≅ k[X] is not a field), (4) ℤ[√-13] not UFD — 2 is irreducible (norm argument) but not prime (2∤(1+√-13) and 2∤(1-√-13) yet 2|14), (5) Dedekind+UFD→PID via Mathlib. Zero sorries."
+    "notes": "All 5 claims fully proved. (1) PID→UFD via inferInstance, (2) PID→Dedekind via inferInstance, (3) k[x,y] not Dedekind — via DimensionLEOne contradiction (span{X} is nonzero prime but not maximal since quotient ≅ k[X] is not a field), (4) ℤ[√-13] not UFD — 2 is irreducible (norm argument) but not prime (2∤(1+√-13) and 2∤(1-√-13) yet 2|14), (5) Dedekind+UFD→PID via Mathlib. Zero sorries.",
+    "upstreaming_status": "candidate"
   },
   "Lecture2/02_12a_Discussion": {
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All formalizable claims mapped: (1) integral closure of Dedekind domain in finite separable extension is Dedekind — IsIntegralClosure.isDedekindDomain #check, (2) ℤ is Dedekind — inferInstance example, (3) k[X] is Dedekind — inferInstance example. Forward ref to global fields correctly omitted. No sorries. No definition-level sorries. No gaps."
+    "notes": "Stage 3.2 review passed. All formalizable claims mapped: (1) integral closure of Dedekind domain in finite separable extension is Dedekind — IsIntegralClosure.isDedekindDomain #check, (2) ℤ is Dedekind — inferInstance example, (3) k[X] is Dedekind — inferInstance example. Forward ref to global fields correctly omitted. No sorries. No definition-level sorries. No gaps.",
+    "upstreaming_status": "rejected"
   },
   "Lecture2/02_12b_Discussion": {
     "status": "non_formalizable",
@@ -132,109 +150,127 @@
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All claims mapped: (1) FractionalIdeal type, (2) IsFractional predicate, (3) fg_of_isNoetherianRing bridge, (4) coeIdeal coercion from ideals, (5) coeIdeal_le_one, (6) spanSingleton_mul_spanSingleton witness for exceeding A, (7) CommSemiring and Lattice instances. No definition-level sorries. No gaps."
+    "notes": "Stage 3.2 review passed. All claims mapped: (1) FractionalIdeal type, (2) IsFractional predicate, (3) fg_of_isNoetherianRing bridge, (4) coeIdeal coercion from ideals, (5) coeIdeal_le_one, (6) spanSingleton_mul_spanSingleton witness for exceeding A, (7) CommSemiring and Lattice instances. No definition-level sorries. No gaps.",
+    "upstreaming_status": "rejected"
   },
   "Lecture2/02_13a_Discussion": {
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.5: Already minimal — proof terms and #check statements only, no tactic sequences to simplify. (Status corrected from dependency_trimmed — polished in PR #203)"
+    "notes": "Stage 3.5: Already minimal — proof terms and #check statements only, no tactic sequences to simplify. (Status corrected from dependency_trimmed — polished in PR #203)",
+    "upstreaming_status": "rejected"
   },
   "Lecture2/02_14_Lemma": {
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Already minimal \u2014 proof terms and #check statements only, no tactic sequences to simplify."
+    "notes": "Already minimal — proof terms and #check statements only, no tactic sequences to simplify.",
+    "upstreaming_status": "rejected"
   },
   "Lecture2/02_15_Remark": {
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Already minimal \u2014 proof terms and #check statements only, no tactic sequences to simplify."
+    "notes": "Already minimal — proof terms and #check statements only, no tactic sequences to simplify.",
+    "upstreaming_status": "rejected"
   },
   "Lecture2/02_16_Corollary": {
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Polished: inlined intermediate have bindings into single rw chain."
+    "notes": "Polished: inlined intermediate have bindings into single rw chain.",
+    "upstreaming_status": "rejected"
   },
   "Lecture2/02_17_Definition": {
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "All #check statements. No proofs to polish."
+    "notes": "All #check statements. No proofs to polish.",
+    "upstreaming_status": "rejected"
   },
   "Lecture2/02_17a_Discussion": {
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "All recall statements. No proofs to polish."
+    "notes": "All recall statements. No proofs to polish.",
+    "upstreaming_status": "rejected"
   },
   "Lecture2/02_18_Lemma": {
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.5: One-liner proof (fg_of_isNoetherianRing), #check documentation. Already minimal — no changes needed."
+    "notes": "Stage 3.5: One-liner proof (fg_of_isNoetherianRing), #check documentation. Already minimal — no changes needed.",
+    "upstreaming_status": "rejected"
   },
   "Lecture2/02_19_Definition": {
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.5: All #check/recall statements + one-liner Dedekind example. Already minimal — no changes needed."
+    "notes": "Stage 3.5: All #check/recall statements + one-liner Dedekind example. Already minimal — no changes needed.",
+    "upstreaming_status": "rejected"
   },
   "Lecture2/02_20_Lemma": {
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.5: 2-line proof (rw + exact), recall statements. Already minimal — no changes needed."
+    "notes": "Stage 3.5: 2-line proof (rw + exact), recall statements. Already minimal — no changes needed.",
+    "upstreaming_status": "rejected"
   },
   "Lecture2/02_20a_Discussion": {
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Sorry-free. exists_noninvertible_fractionalIdeal proved using ℤ[X] as witness: (X) is prime but not maximal (ℤ[X]/(X) ≅ ℤ not a field), so ¬IsDedekindDomain, then via isDedekindDomain_iff_isDedekindDomainInv extract non-invertible fractional ideal."
+    "notes": "Sorry-free. exists_noninvertible_fractionalIdeal proved using ℤ[X] as witness: (X) is prime but not maximal (ℤ[X]/(X) ≅ ℤ not a field), so ¬IsDedekindDomain, then via isDedekindDomain_iff_isDedekindDomainInv extract non-invertible fractional ideal.",
+    "upstreaming_status": "candidate"
   },
   "Lecture2/02_21_Example": {
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "All 4 sorries proved. smul_mem re/im, conductor_eq_full, idealI_of_ZI_ne_bot + IsPrincipalIdealRing instance. Corrected invertibility statement from impossible integral ideal formulation to ne_bot + PID instance."
+    "notes": "All 4 sorries proved. smul_mem re/im, conductor_eq_full, idealI_of_ZI_ne_bot + IsPrincipalIdealRing instance. Corrected invertibility statement from impossible integral ideal formulation to ne_bot + PID instance.",
+    "upstreaming_status": "candidate"
   },
   "Lecture2/02_21a_Discussion": {
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All 3 claims mapped: (1) invertible iff I(A÷I)=A via mul_inv_cancel_iff recall, (2) nonzero fractional ideals form abelian monoid via CommSemiring instance, (3) invertible fractional ideals form abelian group via CommGroup units instance. No sorries. No definition-level sorries. No gaps."
+    "notes": "Stage 3.2 review passed. All 3 claims mapped: (1) invertible iff I(A÷I)=A via mul_inv_cancel_iff recall, (2) nonzero fractional ideals form abelian monoid via CommSemiring instance, (3) invertible fractional ideals form abelian group via CommGroup units instance. No sorries. No definition-level sorries. No gaps.",
+    "upstreaming_status": "rejected"
   },
   "Lecture2/02_22_Definition": {
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.5: Already minimal — file consists of #check statements, doc comments, and inferInstance examples. No proofs to polish."
+    "notes": "Stage 3.5: Already minimal — file consists of #check statements, doc comments, and inferInstance examples. No proofs to polish.",
+    "upstreaming_status": "rejected"
   },
   "Lecture2/02_22a_Discussion": {
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.5: Already minimal — file consists of #check statements, doc comments, and inferInstance examples. No proofs to polish."
+    "notes": "Stage 3.5: Already minimal — file consists of #check statements, doc comments, and inferInstance examples. No proofs to polish.",
+    "upstreaming_status": "rejected"
   },
   "Lecture2/02_23_Definition": {
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.5: Already minimal — file consists of #check statements, doc comments, and inferInstance examples. No proofs to polish."
+    "notes": "Stage 3.5: Already minimal — file consists of #check statements, doc comments, and inferInstance examples. No proofs to polish.",
+    "upstreaming_status": "rejected"
   },
   "Lecture2/02_24_Example": {
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All 3 claims mapped: (1) fractional ideals are (πⁿ) via IsPrincipalIdealRing.principal + eq_unit_mul_pow_irreducible + ideal_eq_span_pow_irreducible, (2) multiplicativity via spanSingleton_mul_spanSingleton, (3) trivial class group via card_classGroup_eq_one. No sorries. No definition-level sorries. No gaps."
+    "notes": "Stage 3.2 review passed. All 3 claims mapped: (1) fractional ideals are (πⁿ) via IsPrincipalIdealRing.principal + eq_unit_mul_pow_irreducible + ideal_eq_span_pow_irreducible, (2) multiplicativity via spanSingleton_mul_spanSingleton, (3) trivial class group via card_classGroup_eq_one. No sorries. No definition-level sorries. No gaps.",
+    "upstreaming_status": "rejected"
   },
   "Lecture2/02_25_Remark": {
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All 3 claims mapped: (1a) Dedekind+UFD→PID via of_isDedekindDomain_of_uniqueFactorizationMonoid + card_classGroup_eq_one, (1b) trivial class group↔PID via card_classGroup_eq_one_iff + PID→UFD via PrincipalIdealRing.to_uniqueFactorizationMonoid, (2) conceptual remark documented, (3) Picard ≅ ClassGroup via ClassGroup.equivPic. No sorries. No definition-level sorries. No gaps."
+    "notes": "Stage 3.2 review passed. All 3 claims mapped: (1a) Dedekind+UFD→PID via of_isDedekindDomain_of_uniqueFactorizationMonoid + card_classGroup_eq_one, (1b) trivial class group↔PID via card_classGroup_eq_one_iff + PID→UFD via PrincipalIdealRing.to_uniqueFactorizationMonoid, (2) conceptual remark documented, (3) Picard ≅ ClassGroup via ClassGroup.equivPic. No sorries. No definition-level sorries. No gaps.",
+    "upstreaming_status": "rejected"
   },
   "Backmatter/Bibliography": {
     "status": "non_formalizable",
