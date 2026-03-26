@@ -94,6 +94,18 @@ instance kx_loc_x_sub_2_isDVR :
 theorem kx_loc_x_sub_2_isDVR' : IsDVR (kx_loc_x_sub_2 k) :=
   kx_loc_x_sub_2_isDVR k
 
+/-! ### Maximal ideal characterization
+
+The maximal ideal of k[x]_(x-2) is the extension of (x-2) to the localization.
+It consists of rational functions that vanish at 2. -/
+
+/-- The maximal ideal of k[x]_(x-2) is the extension of (x-2) to the localization.
+This is the unique nonzero maximal ideal of the DVR. -/
+theorem kx_loc_x_sub_2_maximalIdeal :
+    IsLocalRing.maximalIdeal (kx_loc_x_sub_2 k) =
+      (polyPrimeIdeal_x_sub_2 k).map (algebraMap k[X] (kx_loc_x_sub_2 k)) := by
+  sorry
+
 /-! ### Residue field
 
 The residue field of k[x]_(x-2) is isomorphic to k. The quotient map sends f to f(2).
@@ -103,6 +115,16 @@ a degree-1 polynomial over a field k is k itself. -/
 /-- The residue field of k[x]_(x-2) is isomorphic to k. -/
 theorem kx_loc_x_sub_2_residueField :
     Nonempty (IsLocalRing.ResidueField (kx_loc_x_sub_2 k) ≃+* k) := by
+  sorry
+
+/-- The quotient map k[x]_(x-2) → k sends f to its evaluation at 2.
+More precisely, the composition k[x] → k[x]_(x-2) → residue field ≃ k
+agrees with evaluation at 2. -/
+theorem kx_loc_x_sub_2_quotientMap_eq_eval :
+    ∀ f : k[X],
+      IsLocalRing.residue (kx_loc_x_sub_2 k)
+        (algebraMap k[X] (kx_loc_x_sub_2 k) f) =
+      algebraMap k (IsLocalRing.ResidueField (kx_loc_x_sub_2 k)) (Polynomial.eval 2 f) := by
   sorry
 
 end Example_2_4

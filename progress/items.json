@@ -47,13 +47,13 @@
     "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All core claims mapped: (1) polyPrimeIdeal_x_sub_2 defines (x-2), (2) x_sub_2_prime + isPrime instance, (3) PID via inferInstance, (4) kx_loc_x_sub_2_isDVR proved, (5) kx_loc_x_sub_2_isDVR' bridges to book's IsDVR, (6) kx_loc_x_sub_2_residueField states residue field ≃ k (sorry). Informal characterizations (set-theoretic description, eval-at-2 map) appropriately omitted. No definition-level sorries."
+    "notes": "Stage 3.2 review passed (re-reviewed). All claims mapped: (1) polyPrimeIdeal_x_sub_2 defines (x-2), (2) x_sub_2_prime + isPrime, (3) PID via inferInstance, (4) kx_loc_x_sub_2_isDVR proved, (5) kx_loc_x_sub_2_isDVR' bridges to IsDVR, (6) kx_loc_x_sub_2_maximalIdeal (sorry) — maximal ideal = image of (x-2), (7) kx_loc_x_sub_2_residueField (sorry) — residue field ≃ k, (8) kx_loc_x_sub_2_quotientMap_eq_eval (sorry) — quotient map = eval at 2. No definition-level sorries."
   },
   "Lecture2/02_05_Example": {
     "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All core claims mapped: (1) intPrimeIdeal_p_isPrime, (2) PID via inferInstance, (3) Z_loc_p_isDVR proved, (4) padicValuation recalled, (5) Z_loc_p_residueField states residue field ≃ 𝔽_p (sorry). Quotient map = reduction mod p appropriately informal. No definition-level sorries."
+    "notes": "Stage 3.2 review passed (re-reviewed). All claims mapped: (1) intPrimeIdeal_p_isPrime, (2) PID via inferInstance, (3) Z_loc_p_isDVR proved, (4) padicValuation recalled, (5) Z_loc_p_residueField (sorry) — residue field ≃ 𝔽_p, (6) Z_loc_p_quotientMap_eq_mod (sorry) — quotient map = reduction mod p. No definition-level sorries."
   },
   "Lecture2/02_05a_Discussion": {
     "status": "scaffolded",
