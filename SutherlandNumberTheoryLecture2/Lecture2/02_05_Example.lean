@@ -122,6 +122,8 @@ theorem Z_loc_p_quotientMap_eq_mod
     (φ : IsLocalRing.ResidueField (Z_loc_p p) ≃+* ZMod p) :
     ∀ n : ℤ,
       φ (IsLocalRing.residue (Z_loc_p p) (algebraMap ℤ (Z_loc_p p) n)) = (n : ZMod p) := by
-  sorry
+  intro n
+  exact eq_intCast
+    (φ.toRingHom.comp ((IsLocalRing.residue (Z_loc_p p)).comp (algebraMap ℤ (Z_loc_p p)))) n
 
 end Example_2_5
