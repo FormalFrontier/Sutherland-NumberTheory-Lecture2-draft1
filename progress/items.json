@@ -10,13 +10,13 @@
     "status": "scaffolding_ready",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Section 2.1 body. Claims: (1) universal property of localization, (2) equivalence relation construction of S⁻¹A, (3) ι(S) ⊆ (S⁻¹A)×, (4) uniqueness of factoring map, (5) for integral domains: (a,s)~(b,t) iff at-bs=0, (6) S⁻¹A embeds in Frac(A), (7) S⊆T implies S⁻¹A ⊆ T⁻¹A, (8) ι injective when A integral domain, (9) A ⊆ S⁻¹A ⊆ Frac(A). Most are in Mathlib but formalizable."
+    "notes": "Section 2.1 body. Claims: (1) universal property of localization, (2) equivalence relation construction of S\u207b\u00b9A, (3) \u03b9(S) \u2286 (S\u207b\u00b9A)\u00d7, (4) uniqueness of factoring map, (5) for integral domains: (a,s)~(b,t) iff at-bs=0, (6) S\u207b\u00b9A embeds in Frac(A), (7) S\u2286T implies S\u207b\u00b9A \u2286 T\u207b\u00b9A, (8) \u03b9 injective when A integral domain, (9) A \u2286 S\u207b\u00b9A \u2286 Frac(A). Most are in Mathlib but formalizable."
   },
   "Lecture2/02_00b_Discussion": {
     "status": "scaffolding_ready",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Section 2.2 body. Claims: (1) contraction φ⁻¹(b) is an A-ideal, (2) extension aB = (ab : a∈a, b∈B) for injective φ, (3) a ⊆ a^ec, (4) b^ce ⊆ b, (5) if a∩S ≠ ∅ then a^e = B, (6) when B = S⁻¹A: b^ce = b."
+    "notes": "Section 2.2 body. Claims: (1) contraction \u03c6\u207b\u00b9(b) is an A-ideal, (2) extension aB = (ab : a\u2208a, b\u2208B) for injective \u03c6, (3) a \u2286 a^ec, (4) b^ce \u2286 b, (5) if a\u2229S \u2260 \u2205 then a^e = B, (6) when B = S\u207b\u00b9A: b^ce = b."
   },
   "Lecture2/02_01_Theorem": {
     "status": "scaffolding_ready",
@@ -34,13 +34,13 @@
     "status": "scaffolding_ready",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Localization at prime. Claims: (1) A_p = S⁻¹A for S = A\\p, (2) prime ideals of A_p biject with primes of A contained in p, (3) pA_p is unique maximal ideal, (4) A_p is a local ring."
+    "notes": "Localization at prime. Claims: (1) A_p = S\u207b\u00b9A for S = A\\p, (2) prime ideals of A_p biject with primes of A contained in p, (3) pA_p is unique maximal ideal, (4) A_p is a local ring."
   },
   "Lecture2/02_03_Remark": {
     "status": "scaffolding_ready",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Warning 2.3. Claims: (1) a/b ∈ A_p does not require b ∉ p (counterexample: Z, p=(3), 9/3=3/1)."
+    "notes": "Warning 2.3. Claims: (1) a/b \u2208 A_p does not require b \u2209 p (counterexample: Z, p=(3), 9/3=3/1)."
   },
   "Lecture2/02_04_Example": {
     "status": "scaffolding_ready",
@@ -58,7 +58,7 @@
     "status": "scaffolding_ready",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Section 2.3 body. Claims: (1) universal property of S⁻¹M, (2) S⁻¹M ≅ M ⊗_A S⁻¹A, (3) ι injective iff ×s injective for all s∈S, (4) for A subring of field K with M ⊆ K-vector space, M embeds in S⁻¹M."
+    "notes": "Section 2.3 body. Claims: (1) universal property of S\u207b\u00b9M, (2) S\u207b\u00b9M \u2245 M \u2297_A S\u207b\u00b9A, (3) \u03b9 injective iff \u00d7s injective for all s\u2208S, (4) for A subring of field K with M \u2286 K-vector space, M embeds in S\u207b\u00b9M."
   },
   "Lecture2/02_06_Proposition": {
     "status": "scaffolding_ready",
@@ -89,7 +89,7 @@
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "",
-    "reason": "Transitional paragraph + section heading '2.4 Dedekind domains'. Claims: (1) 'to prove an ideal I satisfies a property, enough to show for all localizations I_p and preserved under intersections' — vague heuristic, not a precise statement (no specific property named). No other claims."
+    "reason": "Transitional paragraph + section heading '2.4 Dedekind domains'. Claims: (1) 'to prove an ideal I satisfies a property, enough to show for all localizations I_p and preserved under intersections' \u2014 vague heuristic, not a precise statement (no specific property named). No other claims."
   },
   "Lecture2/02_09_Proposition": {
     "status": "scaffolding_ready",
@@ -101,7 +101,7 @@
     "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Fully covered by Mathlib IsDedekindDomain. Used #check + example pattern (recall has universe issues with polymorphic defs). Covers: definition, three component properties (noetherian, dim ≤ 1, integrally closed), instances, and iff characterization."
+    "notes": "Fully covered by Mathlib IsDedekindDomain. Used #check + example pattern (recall has universe issues with polymorphic defs). Covers: definition, three component properties (noetherian, dim \u2264 1, integrally closed), instances, and iff characterization."
   },
   "Lecture2/02_11_Corollary": {
     "status": "scaffolding_ready",
@@ -113,7 +113,7 @@
     "status": "scaffolding_ready",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Remark 2.12. Claims: (1) every PID is both UFD and Dedekind, (2) not every UFD is Dedekind (k[x,y]), (3) not every Dedekind domain is UFD (Z[√-13], 14=2·7=(1+√-13)(1-√-13)), (4) every ring that is both UFD and Dedekind is PID."
+    "notes": "Remark 2.12. Claims: (1) every PID is both UFD and Dedekind, (2) not every UFD is Dedekind (k[x,y]), (3) not every Dedekind domain is UFD (Z[\u221a-13], 14=2\u00b77=(1+\u221a-13)(1-\u221a-13)), (4) every ring that is both UFD and Dedekind is PID."
   },
   "Lecture2/02_12a_Discussion": {
     "status": "scaffolding_ready",
@@ -126,7 +126,7 @@
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "",
-    "reason": "Section heading '2.5 Fractional ideals' and context setting: 'Throughout this subsection, A is a noetherian domain and K is its fraction field.' No mathematical claims — pure scoping statement."
+    "reason": "Section heading '2.5 Fractional ideals' and context setting: 'Throughout this subsection, A is a noetherian domain and K is its fraction field.' No mathematical claims \u2014 pure scoping statement."
   },
   "Lecture2/02_13_Definition": {
     "status": "scaffolding_ready",
@@ -150,7 +150,7 @@
     "status": "scaffolding_ready",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Remark 2.15. Claims: (1) alternative def: A-submodule I of K with nonzero r∈A s.t. rI⊆A, (2) when A noetherian this coincides with f.g. definition."
+    "notes": "Remark 2.15. Claims: (1) alternative def: A-submodule I of K with nonzero r\u2208A s.t. rI\u2286A, (2) when A noetherian this coincides with f.g. definition."
   },
   "Lecture2/02_16_Corollary": {
     "status": "scaffolding_ready",
@@ -168,7 +168,7 @@
     "status": "scaffolding_ready",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Claims: (1) I+J = {i+j}, (2) IJ = A-module generated by {ij}, (3) I÷J = {x∈K : xJ⊆I} is a fractional ideal, (4) I÷J is not a quotient of A-modules, (5) for principal ideals (x)÷(y)=(x/y)."
+    "notes": "Claims: (1) I+J = {i+j}, (2) IJ = A-module generated by {ij}, (3) I\u00f7J = {x\u2208K : xJ\u2286I} is a fractional ideal, (4) I\u00f7J is not a quotient of A-modules, (5) for principal ideals (x)\u00f7(y)=(x/y)."
   },
   "Lecture2/02_18_Lemma": {
     "status": "scaffolding_ready",
@@ -195,16 +195,16 @@
     "notes": "Claims: (1) in a Dedekind domain every nonzero fractional ideal is invertible (forward ref to next lecture), (2) this is not true in general."
   },
   "Lecture2/02_21_Example": {
-    "status": "scaffolding_ready",
+    "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": ""
+    "notes": "Subring A = Z+2iZ defined with carrier {z : GaussianInt | Even z.im}. All 5 claims addressed. 3 sorries remain in proofs."
   },
   "Lecture2/02_21a_Discussion": {
     "status": "scaffolding_ready",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Section 2.6 intro. Claims: (1) I invertible iff I(A÷I)=A, (2) nonzero fractional ideals form abelian monoid, (3) invertible fractional ideals form abelian group."
+    "notes": "Section 2.6 intro. Claims: (1) I invertible iff I(A\u00f7I)=A, (2) nonzero fractional ideals form abelian monoid, (3) invertible fractional ideals form abelian group."
   },
   "Lecture2/02_22_Definition": {
     "status": "scaffolding_ready",
@@ -234,7 +234,7 @@
     "status": "scaffolding_ready",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Remark 2.25. Claims: (1) Dedekind domain is UFD iff cl(A) trivial, (2) cl(A) measures how far from UFD. Footnote: (3) Picard group ≅ ideal class group for noetherian domains."
+    "notes": "Remark 2.25. Claims: (1) Dedekind domain is UFD iff cl(A) trivial, (2) cl(A) measures how far from UFD. Footnote: (3) Picard group \u2245 ideal class group for noetherian domains."
   },
   "Backmatter/Bibliography": {
     "status": "non_formalizable",
