@@ -43,16 +43,16 @@
     "notes": "Stage 3.2 review passed. Counterexample fully proved: primeIdeal3 defined, three_mem_primeIdeal3 proved, nine_div_three_eq_three proved, warning_2_3_counterexample existential proved. Meta-remark about lowest terms in non-UFDs correctly not formalized. No sorries at all. No definition-level sorries. No gaps."
   },
   "Lecture2/02_04_Example": {
-    "status": "definition_verified",
+    "status": "proof_formalized",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed (re-reviewed). All claims mapped: (1) polyPrimeIdeal_x_sub_2 defines (x-2), (2) x_sub_2_prime + isPrime, (3) PID via inferInstance, (4) kx_loc_x_sub_2_isDVR proved, (5) kx_loc_x_sub_2_isDVR' bridges to IsDVR, (6) kx_loc_x_sub_2_maximalIdeal (sorry) — maximal ideal = image of (x-2), (7) kx_loc_x_sub_2_residueField (sorry) — residue field ≃ k, (8) kx_loc_x_sub_2_quotientMap_eq_eval (sorry) — quotient map = eval at 2. No definition-level sorries."
+    "notes": "Proved kx_loc_x_sub_2_maximalIdeal (maximal ideal = image of (x-2)), polyPrimeIdeal_x_sub_2_isMaximal, kx_loc_x_sub_2_residueField (residue field ≃ k). 2 sorries remain: kx_loc_x_sub_2_quotientMap_eq_eval (lower priority)."
   },
   "Lecture2/02_05_Example": {
-    "status": "definition_verified",
+    "status": "proof_formalized",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed (re-reviewed). All claims mapped: (1) intPrimeIdeal_p_isPrime, (2) PID via inferInstance, (3) Z_loc_p_isDVR proved, (4) padicValuation recalled, (5) Z_loc_p_residueField (sorry) — residue field ≃ 𝔽_p, (6) Z_loc_p_quotientMap_eq_mod (sorry) — quotient map = reduction mod p. No definition-level sorries."
+    "notes": "Proved intPrimeIdeal_p_isMaximal, Z_loc_p_residueField (residue field ≃ ZMod p). 1 sorry remains: Z_loc_p_quotientMap_eq_mod (lower priority)."
   },
   "Lecture2/02_05a_Discussion": {
     "status": "sorry_free",

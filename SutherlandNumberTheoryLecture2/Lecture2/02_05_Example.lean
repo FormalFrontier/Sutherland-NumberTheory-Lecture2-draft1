@@ -100,10 +100,19 @@ p-adic valuation. Recall from Lecture 1 (Definition 1.7): -/
 The residue field is ℤ_(p)/pℤ_(p) ≃ ���_p = ℤ/pℤ, and the quotient map is
 reduction modulo p. -/
 
+/-- (p) is a maximal ideal in ℤ (since ℤ is a PID and p is prime). -/
+instance intPrimeIdeal_p_isMaximal : (intPrimeIdeal_p p).IsMaximal :=
+  Ideal.IsPrime.isMaximal inferInstance (intPrimeIdeal_p_ne_bot p)
+
 /-- The residue field of ℤ_(p) is isomorphic to 𝔽_p = ℤ/pℤ. -/
 theorem Z_loc_p_residueField :
     Nonempty (IsLocalRing.ResidueField (Z_loc_p p) ≃+* ZMod p) := by
-  sorry
+  -- ResidueField(ℤ_(p)) ≃ ℤ/(p) ≃ ZMod p
+  have e1 : ℤ ⧸ intPrimeIdeal_p p ≃+* IsLocalRing.ResidueField (Z_loc_p p) :=
+    IsLocalization.AtPrime.equivQuotMaximalIdeal (intPrimeIdeal_p p) (Z_loc_p p)
+  have e2 : ℤ ⧸ Ideal.span {(p : ℤ)} ≃+* ZMod (p : ℤ).natAbs :=
+    Int.quotientSpanEquivZMod p
+  exact ⟨e1.symm.trans (e2.trans (ZMod.ringEquivCongr (Int.natAbs_natCast p)))⟩
 
 /-- The quotient map ℤ_(p) → residue field, when composed with the residue field
 isomorphism to ZMod p, gives reduction modulo p. That is, for the isomorphism
