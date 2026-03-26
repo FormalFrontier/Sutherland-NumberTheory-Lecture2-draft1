@@ -10,13 +10,13 @@
     "status": "scaffolding_ready",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Section 2.1 body. Claims: (1) universal property of localization, (2) equivalence relation construction of S⁻¹A, (3) ι(S) ⊆ (S⁻¹A)×, (4) uniqueness of factoring map, (5) for integral domains: (a,s)~(b,t) iff at-bs=0, (6) S⁻¹A embeds in Frac(A), (7) S⊆T implies S⁻¹A ⊆ T⁻¹A, (8) ι injective when A integral domain, (9) A ⊆ S⁻¹A ⊆ Frac(A). Most are in Mathlib but formalizable."
+    "notes": "Section 2.1 body. Claims: (1) universal property of localization, (2) equivalence relation construction of S\u207b\u00b9A, (3) \u03b9(S) \u2286 (S\u207b\u00b9A)\u00d7, (4) uniqueness of factoring map, (5) for integral domains: (a,s)~(b,t) iff at-bs=0, (6) S\u207b\u00b9A embeds in Frac(A), (7) S\u2286T implies S\u207b\u00b9A \u2286 T\u207b\u00b9A, (8) \u03b9 injective when A integral domain, (9) A \u2286 S\u207b\u00b9A \u2286 Frac(A). Most are in Mathlib but formalizable."
   },
   "Lecture2/02_00b_Discussion": {
     "status": "scaffolding_ready",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Section 2.2 body. Claims: (1) contraction φ⁻¹(b) is an A-ideal, (2) extension aB = (ab : a∈a, b∈B) for injective φ, (3) a ⊆ a^ec, (4) b^ce ⊆ b, (5) if a∩S ≠ ∅ then a^e = B, (6) when B = S⁻¹A: b^ce = b."
+    "notes": "Section 2.2 body. Claims: (1) contraction \u03c6\u207b\u00b9(b) is an A-ideal, (2) extension aB = (ab : a\u2208a, b\u2208B) for injective \u03c6, (3) a \u2286 a^ec, (4) b^ce \u2286 b, (5) if a\u2229S \u2260 \u2205 then a^e = B, (6) when B = S\u207b\u00b9A: b^ce = b."
   },
   "Lecture2/02_01_Theorem": {
     "status": "definition_verified",
@@ -28,7 +28,7 @@
     "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Remark 2.2 scaffolded. 4 claims: (1) generators of a generate a^e — Ideal.map_span recall, (2) every B-ideal is a^e — IsLocalization.map_comap recall, (3) noetherian preserved — IsLocalization.isNoetherianRing recall, (4) PID preserved — custom theorem with sorry."
+    "notes": "Remark 2.2 scaffolded. 4 claims: (1) generators of a generate a^e \u2014 Ideal.map_span recall, (2) every B-ideal is a^e \u2014 IsLocalization.map_comap recall, (3) noetherian preserved \u2014 IsLocalization.isNoetherianRing recall, (4) PID preserved \u2014 custom theorem with sorry."
   },
   "Lecture2/02_02a_Discussion": {
     "status": "scaffolded",
@@ -47,13 +47,13 @@
     "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All core claims mapped: (1) polyPrimeIdeal_x_sub_2 defines (x-2), (2) x_sub_2_prime + isPrime instance, (3) PID via inferInstance, (4) kx_loc_x_sub_2_isDVR proved, (5) kx_loc_x_sub_2_isDVR' bridges to book's IsDVR, (6) kx_loc_x_sub_2_residueField states residue field ≃ k (sorry). Informal characterizations (set-theoretic description, eval-at-2 map) appropriately omitted. No definition-level sorries."
+    "notes": "Stage 3.2 review passed. All core claims mapped: (1) polyPrimeIdeal_x_sub_2 defines (x-2), (2) x_sub_2_prime + isPrime instance, (3) PID via inferInstance, (4) kx_loc_x_sub_2_isDVR proved, (5) kx_loc_x_sub_2_isDVR' bridges to book's IsDVR, (6) kx_loc_x_sub_2_residueField states residue field \u2243 k (sorry). Informal characterizations (set-theoretic description, eval-at-2 map) appropriately omitted. No definition-level sorries."
   },
   "Lecture2/02_05_Example": {
     "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All core claims mapped: (1) intPrimeIdeal_p_isPrime, (2) PID via inferInstance, (3) Z_loc_p_isDVR proved, (4) padicValuation recalled, (5) Z_loc_p_residueField states residue field ≃ 𝔽_p (sorry). Quotient map = reduction mod p appropriately informal. No definition-level sorries."
+    "notes": "Stage 3.2 review passed. All core claims mapped: (1) intPrimeIdeal_p_isPrime, (2) PID via inferInstance, (3) Z_loc_p_isDVR proved, (4) padicValuation recalled, (5) Z_loc_p_residueField states residue field \u2243 \ud835\udd3d_p (sorry). Quotient map = reduction mod p appropriately informal. No definition-level sorries."
   },
   "Lecture2/02_05a_Discussion": {
     "status": "scaffolded",
@@ -85,20 +85,20 @@
     "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All claims mapped: (1) Int.eq_iInf_localization_atPrime proves ℤ = ⋂_p ℤ_(p) in ℚ via PrimeSpectrum.iInf_localization_eq_bot (fully proved), (2) Int.eq_iInf_localization_atMaximal gives maximal ideals version (fully proved). No sorries at all. No gaps."
+    "notes": "Stage 3.2 review passed. All claims mapped: (1) Int.eq_iInf_localization_atPrime proves \u2124 = \u22c2_p \u2124_(p) in \u211a via PrimeSpectrum.iInf_localization_eq_bot (fully proved), (2) Int.eq_iInf_localization_atMaximal gives maximal ideals version (fully proved). No sorries at all. No gaps."
   },
   "Lecture2/02_08a_Discussion": {
     "status": "non_formalizable",
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "",
-    "reason": "Transitional paragraph + section heading '2.4 Dedekind domains'. Claims: (1) 'to prove an ideal I satisfies a property, enough to show for all localizations I_p and preserved under intersections' — vague heuristic, not a precise statement (no specific property named). No other claims."
+    "reason": "Transitional paragraph + section heading '2.4 Dedekind domains'. Claims: (1) 'to prove an ideal I satisfies a property, enough to show for all localizations I_p and preserved under intersections' \u2014 vague heuristic, not a precise statement (no specific property named). No other claims."
   },
   "Lecture2/02_09_Proposition": {
     "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All claims mapped: (1) IsDedekindDomainDvr captures condition (i), (2) IsDedekindDomain captures condition (ii), (3) IsDedekindDomain.isDedekindDomainDvr proves (ii)→(i), (4) IsDedekindDomainDvr.isDedekindDomain proves (i)→(ii), (5) ring_dimensionLEOne for dim ≤ 1 step, (6) isIntegrallyClosed for integrally closed step, (7) five inferInstance examples demonstrate both directions and consequences. No sorries at all. No gaps."
+    "notes": "Stage 3.2 review passed. All claims mapped: (1) IsDedekindDomainDvr captures condition (i), (2) IsDedekindDomain captures condition (ii), (3) IsDedekindDomain.isDedekindDomainDvr proves (ii)\u2192(i), (4) IsDedekindDomainDvr.isDedekindDomain proves (i)\u2192(ii), (5) ring_dimensionLEOne for dim \u2264 1 step, (6) isIntegrallyClosed for integrally closed step, (7) five inferInstance examples demonstrate both directions and consequences. No sorries at all. No gaps."
   },
   "Lecture2/02_10_Definition": {
     "status": "definition_verified",
@@ -119,17 +119,17 @@
     "notes": "Stage 3.2 review passed. All 5 claims mapped: (1) PID→UFD via inferInstance, (2) PID→Dedekind via inferInstance, (3) k[x,y] UFD but not Dedekind — UFD via inferInstance + not_isDedekindDomain_polynomial_polynomial (sorry), (4) ℤ[√-13] Dedekind but not UFD — not_uniqueFactorizationMonoid_Zsqrtd_neg13 (sorry), (5) Dedekind+UFD→PID via of_isDedekindDomain_of_uniqueFactorizationMonoid + demonstration. 2 proof-level sorries for counterexamples. No definition-level sorries. No gaps."
   },
   "Lecture2/02_12a_Discussion": {
-    "status": "scaffolding_ready",
+    "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Claims: (1) if A Dedekind and L finite separable extension of Frac(A), then integral closure of A in L is Dedekind (forward reference to later proof)."
+    "notes": "Main claim: integral closure of Dedekind domain in finite separable extension is Dedekind. Fully covered by Mathlib (IsIntegralClosure.isDedekindDomain). Examples: \u2124, k[X]."
   },
   "Lecture2/02_12b_Discussion": {
     "status": "non_formalizable",
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "",
-    "reason": "Section heading '2.5 Fractional ideals' and context setting: 'Throughout this subsection, A is a noetherian domain and K is its fraction field.' No mathematical claims — pure scoping statement."
+    "reason": "Section heading '2.5 Fractional ideals' and context setting: 'Throughout this subsection, A is a noetherian domain and K is its fraction field.' No mathematical claims \u2014 pure scoping statement."
   },
   "Lecture2/02_13_Definition": {
     "status": "definition_verified",
@@ -138,10 +138,10 @@
     "notes": "Stage 3.2 review passed. All claims mapped: (1) FractionalIdeal type, (2) IsFractional predicate, (3) fg_of_isNoetherianRing bridge, (4) coeIdeal coercion from ideals, (5) coeIdeal_le_one, (6) spanSingleton_mul_spanSingleton witness for exceeding A, (7) CommSemiring and Lattice instances. No definition-level sorries. No gaps."
   },
   "Lecture2/02_13a_Discussion": {
-    "status": "scaffolding_ready",
+    "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Claims: (1) when A noetherian, ideals = f.g. A-submodules of A, (2) every ideal is a fractional ideal, (3) fractional ideals need not be contained in A."
+    "notes": "Three claims: (1) noetherian \u2192 ideals f.g., (2) every ideal is a fractional ideal, (3) fractional ideals need not be contained in A. All covered by Mathlib."
   },
   "Lecture2/02_14_Lemma": {
     "status": "definition_verified",
@@ -207,13 +207,13 @@
     "status": "scaffolding_ready",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Section 2.6 intro. Claims: (1) I invertible iff I(A÷I)=A, (2) nonzero fractional ideals form abelian monoid, (3) invertible fractional ideals form abelian group."
+    "notes": "Section 2.6 intro. Claims: (1) I invertible iff I(A\u00f7I)=A, (2) nonzero fractional ideals form abelian monoid, (3) invertible fractional ideals form abelian group."
   },
   "Lecture2/02_22_Definition": {
     "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Fully covered by Mathlib. Ideal group ℐ_A = (FractionalIdeal A⁰ K)ˣ. Covers: definition, CommGroup instance, group operations, and note that elements need not be ideals."
+    "notes": "Fully covered by Mathlib. Ideal group \u2110_A = (FractionalIdeal A\u2070 K)\u02e3. Covers: definition, CommGroup instance, group operations, and note that elements need not be ideals."
   },
   "Lecture2/02_22a_Discussion": {
     "status": "scaffolded",
@@ -225,7 +225,7 @@
     "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Fully covered by Mathlib ClassGroup. Covers: definition as ℐ_A/𝒫_A, toPrincipalIdeal map, normal subgroup, CommGroup instance, equivalence with explicit quotient, quotient map mk, and class equality criterion."
+    "notes": "Fully covered by Mathlib ClassGroup. Covers: definition as \u2110_A/\ud835\udcab_A, toPrincipalIdeal map, normal subgroup, CommGroup instance, equivalence with explicit quotient, quotient map mk, and class equality criterion."
   },
   "Lecture2/02_24_Example": {
     "status": "scaffolded",
