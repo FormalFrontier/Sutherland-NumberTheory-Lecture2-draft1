@@ -107,16 +107,16 @@
     "notes": "Stage 3.2 review passed. All claims mapped: (1) IsDedekindDomain definition, (2) IsNoetherianRing component, (3) Ring.DimensionLEOne component, (4) IsIntegrallyClosed component, (5) three inferInstance examples, (6) isDedekindRing_iff equivalence. No definition-level sorries. No gaps."
   },
   "Lecture2/02_11_Corollary": {
-    "status": "scaffolded",
+    "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Fully covered by Mathlib. IsPrincipalIdealRing.isDedekindDomain instance. Examples: ℤ and k[X] as Dedekind domains via EuclideanDomain → PID → Dedekind chain. No sorries."
+    "notes": "Stage 3.2 review passed. All 3 claims mapped: (1) PID→Dedekind via IsPrincipalIdealRing.isDedekindDomain #check + component breakdown, (2) ℤ is Dedekind via inferInstance example, (3) k[X] is Dedekind via inferInstance example. No definition-level sorries. No sorries at all. No gaps."
   },
   "Lecture2/02_12_Remark": {
-    "status": "scaffolded",
+    "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "All 4 claims covered. PID→UFD and PID→Dedekind via inferInstance; Dedekind+UFD→PID via Mathlib theorem. Counterexamples: k[x,y] not Dedekind and ℤ[√-13] not UFD stated with sorry. 2 proof-level sorries remain."
+    "notes": "Stage 3.2 review passed. All 5 claims mapped: (1) PID→UFD via inferInstance, (2) PID→Dedekind via inferInstance, (3) k[x,y] UFD but not Dedekind — UFD via inferInstance + not_isDedekindDomain_polynomial_polynomial (sorry), (4) ℤ[√-13] Dedekind but not UFD — not_uniqueFactorizationMonoid_Zsqrtd_neg13 (sorry), (5) Dedekind+UFD→PID via of_isDedekindDomain_of_uniqueFactorizationMonoid + demonstration. 2 proof-level sorries for counterexamples. No definition-level sorries. No gaps."
   },
   "Lecture2/02_12a_Discussion": {
     "status": "scaffolding_ready",
@@ -144,10 +144,10 @@
     "notes": "Claims: (1) when A noetherian, ideals = f.g. A-submodules of A, (2) every ideal is a fractional ideal, (3) fractional ideals need not be contained in A."
   },
   "Lecture2/02_14_Lemma": {
-    "status": "scaffolded",
+    "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Fully covered by Mathlib. IsFractional is the 'aI ⊆ A' predicate; fg_of_isNoetherianRing gives the backward direction. Both directions of the iff proven (no sorry). Includes den/num decomposition recalls."
+    "notes": "Stage 3.2 review passed. All 3 claims mapped: (1) biconditional via fractional_iff_fg (proved, no sorry), (2) forward direction (f.g.→IsFractional) via isFractional_span_singleton/sup/mul recalls, (3) backward direction (IsFractional→f.g.) via fg_of_isNoetherianRing + fractionalIdeal_fg. Also includes den/num decomposition. No sorries at all. No definition-level sorries. No gaps."
   },
   "Lecture2/02_15_Remark": {
     "status": "scaffolded",
