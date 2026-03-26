@@ -54,12 +54,12 @@ def Submodule.localizedAtPrime (M : Submodule A V) (𝔭 : Ideal A) [𝔭.IsPrim
   add_mem' := by
     rintro x y ⟨s, hsx⟩ ⟨t, hty⟩
     refine ⟨⟨s * t, 𝔭.primeCompl.mul_mem s.2 t.2⟩, ?_⟩
-    have hs : (s : A) • x ∈ M := hsx
-    have ht : (t : A) • y ∈ M := hty
-    have key : (↑s * ↑t : A) • (x + y) = (t : A) • ((s : A) • x) + (s : A) • ((t : A) • y) := by
-      simp [smul_add, mul_smul, smul_comm (↑s : A) (↑t : A), mul_comm (↑s : A) ↑t]
-    rw [key]
-    exact M.add_mem (M.smul_mem _ hs) (M.smul_mem _ ht)
+    have : (↑s * ↑t : A) • (x + y) = (t : A) • ((s : A) • x) + (s : A) • ((t : A) • y) := by
+      rw [mul_comm (↑s : A) ↑t, mul_smul, smul_add, smul_add]
+      congr 1
+      exact smul_comm (↑t : A) (↑s : A) y
+    rw [this]
+    exact M.add_mem (M.smul_mem _ hsx) (M.smul_mem _ hty)
   zero_mem' := ⟨⟨1, 𝔭.primeCompl.one_mem⟩, by simp [M.zero_mem]⟩
   smul_mem' := by
     intro a x ⟨⟨s, hs⟩, hsx⟩
@@ -90,15 +90,9 @@ The proof uses the "conductor" ideal 𝔞 = {a ∈ A | a·x ∈ M} for a fixed x
 /-- The conductor of x into M: the ideal {a ∈ A | a • x ∈ M}. -/
 def Submodule.conductor (M : Submodule A V) (x : V) : Ideal A where
   carrier := { a : A | a • x ∈ M }
-  add_mem' := by
-    intro a b ha hb
-    simp only [Set.mem_setOf_eq, add_smul] at *
-    exact M.add_mem ha hb
+  add_mem' ha hb := by simp only [Set.mem_setOf_eq, add_smul]; exact M.add_mem ha hb
   zero_mem' := by simp [M.zero_mem]
-  smul_mem' := by
-    intro c a ha
-    simp only [Set.mem_setOf_eq, smul_eq_mul, mul_smul] at *
-    exact M.smul_mem c ha
+  smul_mem' c _ ha := by simp only [Set.mem_setOf_eq, smul_eq_mul, mul_smul]; exact M.smul_mem c ha
 
 omit [IsDomain A] in
 /-- If x ∈ M_𝔭 then the conductor of x into M is not contained in 𝔭. -/
@@ -128,25 +122,14 @@ where 𝔭 ranges over prime ideals of A. -/
 theorem Submodule.eq_iInf_localizedAtPrime (M : Submodule A V) :
     M = ⨅ (𝔭 : Ideal A) (_ : 𝔭.IsPrime), M.localizedAtPrime 𝔭 := by
   apply le_antisymm
-  · intro x hx
-    simp only [Submodule.mem_iInf]
-    intro 𝔭 h𝔭
-    exact M.le_localizedAtPrime 𝔭 hx
+  · exact le_iInf₂ fun 𝔭 _ => M.le_localizedAtPrime 𝔭
   · intro x hx
     simp only [Submodule.mem_iInf] at hx
-    -- The conductor of x into M is not contained in any maximal ideal
-    have hcond : ∀ (𝔪 : Ideal A), 𝔪.IsMaximal → ¬(M.conductor x ≤ 𝔪) := by
-      intro 𝔪 h𝔪
-      exact M.conductor_not_le_of_mem_localizedAtPrime x 𝔪 (hx 𝔪 h𝔪.isPrime)
-    -- So conductor = ⊤ (not contained in any maximal ideal implies = ⊤)
     have htop : M.conductor x = ⊤ := by
       by_contra h
       obtain ⟨𝔪, h𝔪, hle⟩ := Ideal.exists_le_maximal _ h
-      exact hcond 𝔪 h𝔪 hle
-    -- 1 ∈ conductor means 1 • x ∈ M, i.e., x ∈ M
-    have h1 : (1 : A) • x ∈ M := by
-      have : (1 : A) ∈ M.conductor x := by rw [htop]; trivial
-      exact this
+      exact M.conductor_not_le_of_mem_localizedAtPrime x 𝔪 (hx 𝔪 h𝔪.isPrime) hle
+    have h1 : (1 : A) • x ∈ M := show (1 : A) ∈ M.conductor x by rw [htop]; trivial
     simpa using h1
 
 omit [IsDomain A] in
@@ -158,22 +141,14 @@ theorem Submodule.eq_iInf_localizedAtPrime_maximal (M : Submodule A V) :
     M = ⨅ (𝔪 : {I : Ideal A // I.IsMaximal}),
       haveI := 𝔪.2.isPrime; M.localizedAtPrime 𝔪.1 := by
   apply le_antisymm
-  · intro x hx
-    simp only [Submodule.mem_iInf]
-    intro ⟨𝔪, h𝔪⟩
-    exact M.le_localizedAtPrime 𝔪 hx
+  · exact le_iInf fun ⟨𝔪, h𝔪⟩ => M.le_localizedAtPrime 𝔪
   · intro x hx
     simp only [Submodule.mem_iInf] at hx
-    have hcond : ∀ (𝔪 : Ideal A), 𝔪.IsMaximal → ¬(M.conductor x ≤ 𝔪) := by
-      intro 𝔪 h𝔪
-      exact M.conductor_not_le_of_mem_localizedAtPrime x 𝔪 (hx ⟨𝔪, h𝔪⟩)
     have htop : M.conductor x = ⊤ := by
       by_contra h
       obtain ⟨𝔪, h𝔪, hle⟩ := Ideal.exists_le_maximal _ h
-      exact hcond 𝔪 h𝔪 hle
-    have h1 : (1 : A) • x ∈ M := by
-      have : (1 : A) ∈ M.conductor x := by rw [htop]; trivial
-      exact this
+      exact M.conductor_not_le_of_mem_localizedAtPrime x 𝔪 (hx ⟨𝔪, h𝔪⟩) hle
+    have h1 : (1 : A) • x ∈ M := show (1 : A) ∈ M.conductor x by rw [htop]; trivial
     simpa using h1
 
 omit [IsDomain A] in
