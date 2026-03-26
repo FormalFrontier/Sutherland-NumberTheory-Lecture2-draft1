@@ -225,13 +225,13 @@
     "notes": "Stage 3.2 review passed. All claims mapped: ClassGroup definition as \u2110_A/\ud835\udcab_A, toPrincipalIdeal map, PrincipalIdeals.normal, CommGroup instance, ClassGroup.equiv, ClassGroup.mk, ClassGroup.mk_eq_mk. No sorries. No definition-level sorries. No gaps."
   },
   "Lecture2/02_24_Example": {
-    "status": "sorry_free",
+    "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "Stage 3.2 review passed. All 3 claims mapped: (1) fractional ideals are (\u03c0\u207f) via IsPrincipalIdealRing.principal + eq_unit_mul_pow_irreducible + ideal_eq_span_pow_irreducible, (2) multiplicativity via spanSingleton_mul_spanSingleton, (3) trivial class group via card_classGroup_eq_one. No sorries. No definition-level sorries. No gaps."
   },
   "Lecture2/02_25_Remark": {
-    "status": "sorry_free",
+    "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "Stage 3.2 review passed. All 3 claims mapped: (1a) Dedekind+UFD\u2192PID via of_isDedekindDomain_of_uniqueFactorizationMonoid + card_classGroup_eq_one, (1b) trivial class group\u2194PID via card_classGroup_eq_one_iff + PID\u2192UFD via PrincipalIdealRing.to_uniqueFactorizationMonoid, (2) conceptual remark documented, (3) Picard \u2245 ClassGroup via ClassGroup.equivPic. No sorries. No definition-level sorries. No gaps."
