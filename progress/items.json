@@ -43,16 +43,16 @@
     "notes": "Warning 2.3. Claims: (1) a/b \u2208 A_p does not require b \u2209 p (counterexample: Z, p=(3), 9/3=3/1)."
   },
   "Lecture2/02_04_Example": {
-    "status": "scaffolded",
+    "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "k[x]_(x-2) is a DVR. Route: PID → Dedekind → DVR localization. DVR instance proven (no sorry). Residue field ≃ k sorry'd. Imports Lecture1 for IsDVR."
+    "notes": "Stage 3.2 review passed. All core claims mapped: (1) polyPrimeIdeal_x_sub_2 defines (x-2), (2) x_sub_2_prime + isPrime instance, (3) PID via inferInstance, (4) kx_loc_x_sub_2_isDVR proved, (5) kx_loc_x_sub_2_isDVR' bridges to book's IsDVR, (6) kx_loc_x_sub_2_residueField states residue field ≃ k (sorry). Informal characterizations (set-theoretic description, eval-at-2 map) appropriately omitted. No definition-level sorries."
   },
   "Lecture2/02_05_Example": {
-    "status": "scaffolded",
+    "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "ℤ_(p) is a DVR. Route: PID → Dedekind → DVR localization. DVR instance proven (no sorry). Residue field ≃ 𝔽_p sorry'd. Imports Lecture1 for IsDVR, primeIdealZ_isPrime, zLocAtP_isLocalRing, padicValuation."
+    "notes": "Stage 3.2 review passed. All core claims mapped: (1) intPrimeIdeal_p_isPrime, (2) PID via inferInstance, (3) Z_loc_p_isDVR proved, (4) padicValuation recalled, (5) Z_loc_p_residueField states residue field ≃ 𝔽_p (sorry). Quotient map = reduction mod p appropriately informal. No definition-level sorries."
   },
   "Lecture2/02_05a_Discussion": {
     "status": "scaffolding_ready",
@@ -61,10 +61,10 @@
     "notes": "Section 2.3 body. Claims: (1) universal property of S\u207b\u00b9M, (2) S\u207b\u00b9M \u2245 M \u2297_A S\u207b\u00b9A, (3) \u03b9 injective iff \u00d7s injective for all s\u2208S, (4) for A subring of field K with M \u2286 K-vector space, M embeds in S\u207b\u00b9M."
   },
   "Lecture2/02_06_Proposition": {
-    "status": "scaffolded",
+    "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Defines Submodule.localizedAtPrime (M_p in ambient V), conductor ideal, states M = \u2a05_p M_p and M = \u2a05_m M_m. Helper lemmas: le_localizedAtPrime, localizedAtPrime_anti, conductor_not_le. 4 sorries remain (all proof-level)."
+    "notes": "Stage 3.2 review passed. All 8 claims mapped: (1) localizedAtPrime definition (constructed), (2) le_localizedAtPrime proved, (3) conductor definition (constructed), (4) conductor_not_le_of_mem_localizedAtPrime (sorry), (5) localizedAtPrime_anti proved, (6) eq_iInf_localizedAtPrime (sorry), (7) eq_iInf_localizedAtPrime_maximal (sorry), (8) iInf_localizedAtPrime_maximal_eq_iInf_localizedAtPrime (sorry). No definition-level sorries."
   },
   "Lecture2/02_06a_Discussion": {
     "status": "scaffolding_ready",
