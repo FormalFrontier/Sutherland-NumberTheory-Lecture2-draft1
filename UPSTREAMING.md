@@ -8,8 +8,8 @@
 |------|-----------|------|---------|--------|
 | 02_00b_Discussion | `ideal_ext_eq_top_of_meets_submonoid` | `02_00b_Discussion.lean:61` | **Candidate** | One-liner contrapositive of `IsLocalization.map_algebraMap_ne_top_iff_disjoint`, but packages a useful API lemma. Borderline — review in Phase 2. |
 | 02_02_Remark | `isPrincipalIdealRing_localization_of_isPrincipalIdealRing` | `02_02_Remark.lean:72` | **Include** | Phase 2 confirmed: Mathlib has PID-at-prime via `IsDedekindDomain.isPrincipalIdealRing_localization_over_prime` (Dedekind detour) but **no** result for general submonoids. This 3-line elementary proof fills that gap. Ideal upstream target: `Mathlib/RingTheory/PrincipalIdealDomain.lean` or `Mathlib/RingTheory/Localization/Ideal.lean`. |
-| 02_05a_Discussion | `localizedModule_mkLinearMap_injective_iff` | `02_05a_Discussion.lean:66` | **Candidate** | Characterizes injectivity of the canonical map M → S⁻¹M as: injective iff multiplication by every s ∈ S is injective on M. Substantive 8-line proof. |
-| 02_05a_Discussion | `localizedModule_mkLinearMap_injective_of_noZeroSMulDivisors` | `02_05a_Discussion.lean:86` | **Candidate** | Corollary: canonical map is injective when M is torsion-free over a domain. Uses the iff above. |
+| 02_05a_Discussion | `localizedModule_mkLinearMap_injective_iff` | `02_05a_Discussion.lean:66` | **Reject — Mathlib covered** | `IsLocalizedModule.injective_iff_isRegular` (Basic.lean:539) is the same statement: `Injective f ↔ ∀ c : S, IsSMulRegular M c`. `IsSMulRegular M c` is definitionally `Injective (HSMul.hSMul c)`. Mathlib's version is more general (any `IsLocalizedModule` map, not just `mkLinearMap`). |
+| 02_05a_Discussion | `localizedModule_mkLinearMap_injective_of_noZeroSMulDivisors` | `02_05a_Discussion.lean:86` | **Reject — Mathlib covered** | Follows from chaining: `NoZeroSMulDivisors R M` → `Module.IsTorsionFree R M` (instance at `NoZeroSMulDivisors/Defs.lean:56`) → `IsTorsionFree.isSMulRegular` → `injective_iff_isRegular`. No new content. |
 | 02_06_Proposition | `Submodule.localizedAtPrime` | `02_06_Proposition.lean:51` | **Candidate** | Definition + three theorems (`eq_iInf_localizedAtPrime`, maximal version, bridge). Proves M = ⋂_𝔭 M_𝔭 for submodules of a K-vector space. Conductor argument, ~40 lines of substantive proof. Mathlib has the ring version (`PrimeSpectrum.iInf_localization_eq_bot`) but this submodule generalization may be absent. |
 | 02_07_Corollary | `Ideal.localizedAtPrime`, `Ideal.eq_iInf_localizedAtPrime` | `02_07_Corollary.lean:34` | **Include** | Phase 2 confirmed: Mathlib has `ideal_eq_iInf_comap_map_away` (finite generating set, localization-away version) and `PrimeSpectrum.iInf_localization_eq_bot` (ring version A = ⋂ A_𝔭), but **no** result stating I = ⋂_𝔭 I_𝔭 for arbitrary ideals at all primes/maximal ideals. The conductor-based proof is self-contained and works for arbitrary CommRing (no IsDomain needed). If 02_06 is also included, this should be refactored as a corollary; if 02_06 is excluded, the standalone proof is clean and correct. Ideal upstream target: `Mathlib/RingTheory/Localization/Ideal.lean` alongside `ideal_eq_iInf_comap_map_away`. |
 | 02_12_Remark | `not_isDedekindDomain_polynomial_polynomial` | `02_12_Remark.lean:54` | **Candidate** | Proves k[x,y] is not a Dedekind domain (dimension argument: (X) is prime but not maximal). |
@@ -63,3 +63,32 @@
 | 02_08a_Discussion | Section heading + vague heuristic |
 | 02_12b_Discussion | Section heading + scoping statement |
 | Backmatter/Bibliography | Reference list only |
+
+## Phase 2: Deep Mathlib Research
+
+### 02_05a_Discussion — Reject (Mathlib covered)
+
+**Declarations reviewed:**
+- `localizedModule_mkLinearMap_injective_iff` (line 66)
+- `localizedModule_mkLinearMap_injective_of_noZeroSMulDivisors` (line 86)
+
+**Mathlib equivalents found:**
+
+1. **`IsLocalizedModule.injective_iff_isRegular`** (`Mathlib/Algebra/Module/LocalizedModule/Basic.lean:539`):
+   ```
+   Function.Injective f ↔ ∀ c : S, IsSMulRegular M c
+   ```
+   This is the same as our `localizedModule_mkLinearMap_injective_iff`. The RHS `IsSMulRegular M c` unfolds to `Function.Injective (HSMul.hSMul c : M → M)`, which is exactly what our theorem states. Mathlib's version is strictly more general — it works for any `IsLocalizedModule S f`, not just the concrete `mkLinearMap`.
+
+2. **Corollary chain for `_of_noZeroSMulDivisors`:**
+   - `NoZeroSMulDivisors R M` → `Module.IsTorsionFree R M` (instance at `Mathlib/Algebra/NoZeroSMulDivisors/Defs.lean:56`)
+   - `Module.IsTorsionFree` provides `isSMulRegular : IsRegular r → IsSMulRegular M r` (class at `Mathlib/Algebra/Module/Torsion/Free.lean:45`)
+   - In `IsDomain A` with `s ≠ 0`, `IsRegular s` holds (by `isRegular_iff_ne_zero`)
+   - Then `injective_iff_isRegular` closes the goal
+
+3. **Supporting infrastructure:**
+   - `mem_ker_mkLinearMap_iff` (Basic.lean:1328): kernel characterization `m ∈ ker ↔ ∃ r ∈ S, r • m = 0` — also used in our proof
+   - `LocalizedModule.map_injective` (Module.lean:315): localization preserves injective maps
+   - `IsLocalizedModule.isTorsionFree` (Basic.lean:1370): when `IsDomain R` and `IsTorsionFree R M`, the localized module is torsion-free
+
+**Verdict:** Both declarations are already in Mathlib in equivalent or more general form. Our proofs are essentially re-deriving existing results. No upstreaming value. Could optionally refactor `02_05a_Discussion.lean` to use `recall` for these Mathlib results, but this is low priority.
