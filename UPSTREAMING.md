@@ -10,7 +10,7 @@
 | 02_02_Remark | `isPrincipalIdealRing_localization_of_isPrincipalIdealRing` | `02_02_Remark.lean:72` | **Include** | Phase 2 confirmed: Mathlib has PID-at-prime via `IsDedekindDomain.isPrincipalIdealRing_localization_over_prime` (Dedekind detour) but **no** result for general submonoids. This 3-line elementary proof fills that gap. Ideal upstream target: `Mathlib/RingTheory/PrincipalIdealDomain.lean` or `Mathlib/RingTheory/Localization/Ideal.lean`. |
 | 02_05a_Discussion | `localizedModule_mkLinearMap_injective_iff` | `02_05a_Discussion.lean:66` | **Reject — Mathlib covered** | `IsLocalizedModule.injective_iff_isRegular` (Basic.lean:539) is the same statement: `Injective f ↔ ∀ c : S, IsSMulRegular M c`. `IsSMulRegular M c` is definitionally `Injective (HSMul.hSMul c)`. Mathlib's version is more general (any `IsLocalizedModule` map, not just `mkLinearMap`). |
 | 02_05a_Discussion | `localizedModule_mkLinearMap_injective_of_noZeroSMulDivisors` | `02_05a_Discussion.lean:86` | **Reject — Mathlib covered** | Follows from chaining: `NoZeroSMulDivisors R M` → `Module.IsTorsionFree R M` (instance at `NoZeroSMulDivisors/Defs.lean:56`) → `IsTorsionFree.isSMulRegular` → `injective_iff_isRegular`. No new content. |
-| 02_06_Proposition | `Submodule.localizedAtPrime` | `02_06_Proposition.lean:51` | **Candidate** | Definition + three theorems (`eq_iInf_localizedAtPrime`, maximal version, bridge). Proves M = ⋂_𝔭 M_𝔭 for submodules of a K-vector space. Conductor argument, ~40 lines of substantive proof. Mathlib has the ring version (`PrimeSpectrum.iInf_localization_eq_bot`) but this submodule generalization may be absent. |
+| 02_06_Proposition | `Submodule.localizedAtPrime` | `02_06_Proposition.lean:51` | **Include** | Phase 2 confirmed: submodule generalization genuinely absent from Mathlib. See Phase 2 notes below. |
 | 02_07_Corollary | `Ideal.localizedAtPrime`, `Ideal.eq_iInf_localizedAtPrime` | `02_07_Corollary.lean:34` | **Include** | Phase 2 confirmed: Mathlib has `ideal_eq_iInf_comap_map_away` (finite generating set, localization-away version) and `PrimeSpectrum.iInf_localization_eq_bot` (ring version A = ⋂ A_𝔭), but **no** result stating I = ⋂_𝔭 I_𝔭 for arbitrary ideals at all primes/maximal ideals. The conductor-based proof is self-contained and works for arbitrary CommRing (no IsDomain needed). If 02_06 is also included, this should be refactored as a corollary; if 02_06 is excluded, the standalone proof is clean and correct. Ideal upstream target: `Mathlib/RingTheory/Localization/Ideal.lean` alongside `ideal_eq_iInf_comap_map_away`. |
 | 02_12_Remark | `not_isDedekindDomain_polynomial_polynomial` | `02_12_Remark.lean:54` | **Candidate** | Proves k[x,y] is not a Dedekind domain (dimension argument: (X) is prime but not maximal). |
 | 02_12_Remark | `not_uniqueFactorizationMonoid_Zsqrtd_neg13` | `02_12_Remark.lean:79` | **Candidate** | Proves ℤ[√-13] is not a UFD via norm argument (2 is irreducible but not prime). ~50 lines of substantive proof. |
@@ -105,3 +105,24 @@
    - `IsLocalizedModule.isTorsionFree` (Basic.lean:1370): when `IsDomain R` and `IsTorsionFree R M`, the localized module is torsion-free
 
 **Verdict:** Both declarations are already in Mathlib in equivalent or more general form. Our proofs are essentially re-deriving existing results. No upstreaming value. Could optionally refactor `02_05a_Discussion.lean` to use `recall` for these Mathlib results, but this is low priority.
+
+### 02_06_Proposition — `Submodule.localizedAtPrime`, `eq_iInf_localizedAtPrime`
+
+**Verdict: Include — genuinely absent from Mathlib**
+
+**Research findings:**
+- Mathlib has `MaximalSpectrum.iInf_localization_eq_bot` (at `Spectrum/Maximal/Localization.lean:35`) — proves R = ⋂_𝔪 R_𝔪 as subalgebras of K, for integral domains
+- Mathlib has `PrimeSpectrum.iInf_localization_eq_bot` (at `Spectrum/Maximal/Localization.lean:60`) — proves R = ⋂_𝔭 R_𝔭 as subalgebras of K
+- Mathlib has `HeightOneSpectrum.iInf_localization_eq_bot` (at `DedekindDomain/Ideal/Lemmas.lean:506`) — Dedekind domain version
+- **No submodule generalization exists anywhere in Mathlib** — searched for `Submodule.*iInf.*locali`, `Submodule.*localizedAtPrime`, `conductor.*submodule`, all negative
+
+**What our project provides:**
+1. `Submodule.localizedAtPrime` — definition of M_𝔭 = {x ∈ V | ∃ s ∉ 𝔭, s·x ∈ M} as a submodule of V
+2. `Submodule.conductor` — the conductor ideal {a ∈ A | a·x ∈ M}
+3. `Submodule.eq_iInf_localizedAtPrime` — M = ⋂_𝔭 M_𝔭 (prime version)
+4. `Submodule.eq_iInf_localizedAtPrime_maximal` — M = ⋂_𝔪 M_𝔪 (maximal version)
+5. Helper lemmas: `le_localizedAtPrime`, `localizedAtPrime_anti`, `conductor_not_le_of_mem_localizedAtPrime`
+
+**Why this is not a corollary of the ring version:** The ring version proves R = ⋂ R_𝔭 as subalgebras. The submodule version proves M = ⋂ M_𝔭 for an arbitrary A-submodule M of a K-vector space V. The proof uses the same conductor strategy but applied to the submodule setting — it's structurally parallel but not derivable from the ring result.
+
+**Upstream potential:** ~40 lines of substantive proof. Self-contained. Natural generalization of an existing Mathlib result. Would fit in `Mathlib/RingTheory/Localization/Submodule.lean` or alongside the existing `Spectrum/Maximal/Localization.lean`.

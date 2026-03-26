@@ -73,8 +73,8 @@
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "#198",
-    "notes": "Polished: simplified conductor def with inline intros; replaced verbose comment blocks with direct tactic chains; used le_iInf\u2082/le_iInf for forward directions.",
-    "upstreaming_status": "candidate"
+    "notes": "Polished: simplified conductor def with inline intros; replaced verbose comment blocks with direct tactic chains; used le_iInf₂/le_iInf for forward directions.",
+    "upstreaming_status": "include"
   },
   "Lecture2/02_06a_Discussion": {
     "status": "proof_polished",
