@@ -14,5 +14,11 @@ name = "mathlib"
 scope = "leanprover-community"
 rev = "v4.28.0"
 
+[[require]]
+name = "Sutherland-NumberTheory-Lecture1"
+scope = "FormalFrontier"
+git = "https://github.com/FormalFrontier/Sutherland-NumberTheory-Lecture1-draft2"
+rev = "33c1d4dd4669c98975902b42c8ad48f0946afb27"
+
 [[lean_lib]]
 name = "SutherlandNumberTheoryLecture2"

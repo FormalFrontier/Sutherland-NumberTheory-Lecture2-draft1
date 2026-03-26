@@ -1,7 +1,18 @@
 {"version": "1.1.0",
  "packagesDir": ".lake/packages",
  "packages":
- [{"url": "https://github.com/leanprover-community/mathlib4",
+ [{"url":
+   "https://github.com/FormalFrontier/Sutherland-NumberTheory-Lecture1-draft2",
+   "type": "git",
+   "subDir": null,
+   "scope": "FormalFrontier",
+   "rev": "33c1d4dd4669c98975902b42c8ad48f0946afb27",
+   "name": "«Sutherland-NumberTheory-Lecture1»",
+   "manifestFile": "lake-manifest.json",
+   "inputRev": "33c1d4dd4669c98975902b42c8ad48f0946afb27",
+   "inherited": false,
+   "configFile": "lakefile.toml"},
+  {"url": "https://github.com/leanprover-community/mathlib4",
    "type": "git",
    "subDir": null,
    "scope": "leanprover-community",
@@ -91,5 +102,5 @@
    "inputRev": "v4.28.0",
    "inherited": true,
    "configFile": "lakefile.toml"}],
- "name": "«Sutherland-NumberTheory-Lecture2-draft1»",
+ "name": "«Sutherland-NumberTheory-Lecture2»",
  "lakeDir": ".lake"}
