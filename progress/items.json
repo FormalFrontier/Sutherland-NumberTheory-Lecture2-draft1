@@ -92,22 +92,22 @@
     "reason": "Transitional paragraph + section heading '2.4 Dedekind domains'. Claims: (1) 'to prove an ideal I satisfies a property, enough to show for all localizations I_p and preserved under intersections' \u2014 vague heuristic, not a precise statement (no specific property named). No other claims."
   },
   "Lecture2/02_09_Proposition": {
-    "status": "sorry_free",
+    "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All claims mapped: (1) IsDedekindDomainDvr captures condition (i), (2) IsDedekindDomain captures condition (ii), (3) IsDedekindDomain.isDedekindDomainDvr proves (ii)\u2192(i), (4) IsDedekindDomainDvr.isDedekindDomain proves (i)\u2192(ii), (5) ring_dimensionLEOne for dim \u2264 1 step, (6) isIntegrallyClosed for integrally closed step, (7) five inferInstance examples demonstrate both directions and consequences. No sorries at all. No gaps."
+    "notes": "Stage 3.5: No proofs to polish \u2014 file contains only #check, recall, and inferInstance statements. Already minimal."
   },
   "Lecture2/02_10_Definition": {
-    "status": "sorry_free",
+    "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All claims mapped: (1) IsDedekindDomain definition, (2) IsNoetherianRing component, (3) Ring.DimensionLEOne component, (4) IsIntegrallyClosed component, (5) three inferInstance examples, (6) isDedekindRing_iff equivalence. No definition-level sorries. No gaps."
+    "notes": "Stage 3.5: No proofs to polish \u2014 file contains only #check, recall, and inferInstance statements. Already minimal."
   },
   "Lecture2/02_11_Corollary": {
-    "status": "sorry_free",
+    "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All 3 claims mapped: (1) PID\u2192Dedekind via IsPrincipalIdealRing.isDedekindDomain #check + component breakdown, (2) \u2124 is Dedekind via inferInstance example, (3) k[X] is Dedekind via inferInstance example. No definition-level sorries. No sorries at all. No gaps."
+    "notes": "Stage 3.5: No proofs to polish \u2014 file contains only #check, recall, and inferInstance statements. Already minimal."
   },
   "Lecture2/02_12_Remark": {
     "status": "sorry_free",
