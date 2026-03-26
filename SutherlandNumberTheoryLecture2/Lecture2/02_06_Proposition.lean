@@ -100,12 +100,15 @@ def Submodule.conductor (M : Submodule A V) (x : V) : Ideal A where
     simp only [Set.mem_setOf_eq, smul_eq_mul, mul_smul] at *
     exact M.smul_mem c ha
 
+omit [IsDomain A] in
 /-- If x ∈ M_𝔭 then the conductor of x into M is not contained in 𝔭. -/
 theorem Submodule.conductor_not_le_of_mem_localizedAtPrime
     (M : Submodule A V) (x : V) (𝔭 : Ideal A) [𝔭.IsPrime]
     (hx : x ∈ M.localizedAtPrime 𝔭) :
     ¬(M.conductor x ≤ 𝔭) := by
-  sorry
+  obtain ⟨⟨s, hs⟩, hsx⟩ := hx
+  intro hle
+  exact hs (hle hsx)
 
 /-! ## The main proposition
 
@@ -117,14 +120,33 @@ in any maximal ideal, 𝔞 = A, so 1 ∈ 𝔞 and x = 1·x ∈ M.
 For the equality of the two intersections: every maximal ideal is prime, and every
 prime is contained in some maximal ideal with M_𝔪 ⊆ M_𝔭 when 𝔭 ⊆ 𝔪. -/
 
+omit [IsDomain A] in
 /-- **Proposition 2.6** (prime ideals version). M equals the intersection of its
 localizations at all prime ideals:
   M = ⋂_𝔭 M_𝔭
 where 𝔭 ranges over prime ideals of A. -/
 theorem Submodule.eq_iInf_localizedAtPrime (M : Submodule A V) :
     M = ⨅ (𝔭 : Ideal A) (_ : 𝔭.IsPrime), M.localizedAtPrime 𝔭 := by
-  sorry
+  apply le_antisymm
+  · intro x hx
+    simp only [Submodule.mem_iInf]
+    intro 𝔭 h𝔭
+    exact M.le_localizedAtPrime 𝔭 hx
+  · intro x hx
+    simp only [Submodule.mem_iInf] at hx
+    -- x ∈ M_𝔭 for all prime 𝔭. Show conductor x = ⊤, hence 1 ∈ conductor, hence x ∈ M.
+    by_contra hxM
+    -- conductor x is a proper ideal, so it's contained in some maximal ideal 𝔪
+    have hcond_ne_top : M.conductor x ≠ ⊤ := by
+      intro h
+      apply hxM
+      have : (1 : A) ∈ M.conductor x := h ▸ Submodule.mem_top
+      simpa [Submodule.conductor] using this
+    obtain ⟨𝔪, h𝔪max, h𝔪le⟩ := Ideal.exists_le_maximal _ hcond_ne_top
+    have h𝔪prime := h𝔪max.isPrime
+    exact M.conductor_not_le_of_mem_localizedAtPrime x 𝔪 (hx 𝔪 h𝔪prime) h𝔪le
 
+omit [IsDomain A] in
 /-- **Proposition 2.6** (maximal ideals version). M equals the intersection of its
 localizations at all maximal ideals:
   M = ⋂_𝔪 M_𝔪
@@ -132,8 +154,24 @@ where 𝔪 ranges over maximal ideals of A. -/
 theorem Submodule.eq_iInf_localizedAtPrime_maximal (M : Submodule A V) :
     M = ⨅ (𝔪 : {I : Ideal A // I.IsMaximal}),
       haveI := 𝔪.2.isPrime; M.localizedAtPrime 𝔪.1 := by
-  sorry
+  apply le_antisymm
+  · intro x hx
+    simp only [Submodule.mem_iInf]
+    intro ⟨𝔪, h𝔪⟩
+    exact M.le_localizedAtPrime 𝔪 hx
+  · intro x hx
+    simp only [Submodule.mem_iInf] at hx
+    by_contra hxM
+    have hcond_ne_top : M.conductor x ≠ ⊤ := by
+      intro h
+      apply hxM
+      have : (1 : A) ∈ M.conductor x := h ▸ Submodule.mem_top
+      simpa [Submodule.conductor] using this
+    obtain ⟨𝔪, h𝔪max, h𝔪le⟩ := Ideal.exists_le_maximal _ hcond_ne_top
+    haveI := h𝔪max.isPrime
+    exact M.conductor_not_le_of_mem_localizedAtPrime x 𝔪 (hx ⟨𝔪, h𝔪max⟩) h𝔪le
 
+omit [IsDomain A] in
 /-- The intersection over maximal ideals equals the intersection over prime ideals.
 This follows from the two equalities above. -/
 theorem Submodule.iInf_localizedAtPrime_maximal_eq_iInf_localizedAtPrime
@@ -141,6 +179,6 @@ theorem Submodule.iInf_localizedAtPrime_maximal_eq_iInf_localizedAtPrime
     (⨅ (𝔪 : {I : Ideal A // I.IsMaximal}),
       haveI := 𝔪.2.isPrime; M.localizedAtPrime 𝔪.1) =
     (⨅ (𝔭 : Ideal A) (_ : 𝔭.IsPrime), M.localizedAtPrime 𝔭) := by
-  sorry
+  rw [← M.eq_iInf_localizedAtPrime_maximal, ← M.eq_iInf_localizedAtPrime]
 
 end Proposition_2_6
