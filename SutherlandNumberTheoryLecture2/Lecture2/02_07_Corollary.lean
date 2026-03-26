@@ -80,7 +80,35 @@ of its localizations at all prime ideals:
 where 𝔭 ranges over prime ideals of A. -/
 theorem Ideal.eq_iInf_localizedAtPrime (I : Ideal A) :
     I = ⨅ (𝔭 : Ideal A) (_ : 𝔭.IsPrime), I.localizedAtPrime 𝔭 := by
-  sorry
+  ext a
+  simp only [Ideal.mem_iInf]
+  constructor
+  · intro ha 𝔭 _
+    exact I.le_localizedAtPrime 𝔭 ha
+  · intro ha
+    -- The conductor J = {s ∈ A | s * a ∈ I} is not contained in any prime ideal
+    -- because for each prime 𝔭, ha gives s ∉ 𝔭 with s * a ∈ I, so s ∈ J \ 𝔭.
+    -- Hence J = A, so 1 ∈ J, meaning a ∈ I.
+    by_contra ha_notin
+    -- The conductor J = {s | s*a ∈ I}
+    let J : Ideal A := {
+      carrier := { s : A | s * a ∈ I }
+      add_mem' := fun {x y} hx hy => by
+        simp only [Set.mem_setOf_eq, add_mul] at *
+        exact I.add_mem hx hy
+      zero_mem' := by simp [I.zero_mem]
+      smul_mem' := fun c x hx => by
+        simp only [Set.mem_setOf_eq, smul_eq_mul, mul_assoc] at *
+        exact I.mul_mem_left c hx }
+    -- J ≠ ⊤ since 1 * a = a ∉ I
+    have hJ_ne_top : J ≠ ⊤ := by
+      intro h; apply ha_notin
+      have : (1 : A) ∈ J := h ▸ Submodule.mem_top
+      simpa [J] using this
+    obtain ⟨𝔪, h𝔪max, hJ𝔪⟩ := J.exists_le_maximal hJ_ne_top
+    have ha𝔪 := ha 𝔪 h𝔪max.isPrime
+    obtain ⟨⟨s, hs⟩, hsa⟩ := ha𝔪
+    exact hs (hJ𝔪 hsa)
 
 /-- **Corollary 2.7** (maximal ideals version). Every ideal I of A equals the intersection
 of its localizations at all maximal ideals:
@@ -89,13 +117,38 @@ where 𝔪 ranges over maximal ideals of A. -/
 theorem Ideal.eq_iInf_localizedAtPrime_maximal (I : Ideal A) :
     I = ⨅ (𝔪 : {J : Ideal A // J.IsMaximal}),
       haveI := 𝔪.2.isPrime; I.localizedAtPrime 𝔪.1 := by
-  sorry
+  ext a
+  simp only [Ideal.mem_iInf, Subtype.forall]
+  constructor
+  · intro ha 𝔪 h𝔪
+    haveI := h𝔪.isPrime
+    exact I.le_localizedAtPrime 𝔪 ha
+  · intro ha
+    by_contra ha_notin
+    let J : Ideal A := {
+      carrier := { s : A | s * a ∈ I }
+      add_mem' := fun {x y} hx hy => by
+        simp only [Set.mem_setOf_eq, add_mul] at *
+        exact I.add_mem hx hy
+      zero_mem' := by simp [I.zero_mem]
+      smul_mem' := fun c x hx => by
+        simp only [Set.mem_setOf_eq, smul_eq_mul, mul_assoc] at *
+        exact I.mul_mem_left c hx }
+    have hJ_ne_top : J ≠ ⊤ := by
+      intro h; apply ha_notin
+      have : (1 : A) ∈ J := h ▸ Submodule.mem_top
+      simpa [J] using this
+    obtain ⟨𝔪, h𝔪max, hJ𝔪⟩ := J.exists_le_maximal hJ_ne_top
+    haveI := h𝔪max.isPrime
+    have ha𝔪 := ha 𝔪 h𝔪max
+    obtain ⟨⟨s, hs⟩, hsa⟩ := ha𝔪
+    exact hs (hJ𝔪 hsa)
 
 /-- The intersection over maximal ideals equals the intersection over prime ideals. -/
 theorem Ideal.iInf_localizedAtPrime_maximal_eq_iInf_localizedAtPrime (I : Ideal A) :
     (⨅ (𝔪 : {J : Ideal A // J.IsMaximal}),
       haveI := 𝔪.2.isPrime; I.localizedAtPrime 𝔪.1) =
     (⨅ (𝔭 : Ideal A) (_ : 𝔭.IsPrime), I.localizedAtPrime 𝔭) := by
-  sorry
+  rw [← I.eq_iInf_localizedAtPrime_maximal, ← I.eq_iInf_localizedAtPrime]
 
 end Corollary_2_7
