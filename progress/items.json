@@ -64,7 +64,7 @@
     "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Defines Submodule.localizedAtPrime (M_p in ambient V), conductor ideal, states M = ⨅_p M_p and M = ⨅_m M_m. Helper lemmas: le_localizedAtPrime, localizedAtPrime_anti, conductor_not_le. 4 sorries remain (all proof-level)."
+    "notes": "Defines Submodule.localizedAtPrime (M_p in ambient V), conductor ideal, states M = \u2a05_p M_p and M = \u2a05_m M_m. Helper lemmas: le_localizedAtPrime, localizedAtPrime_anti, conductor_not_le. 4 sorries remain (all proof-level)."
   },
   "Lecture2/02_06a_Discussion": {
     "status": "scaffolding_ready",
@@ -73,16 +73,16 @@
     "notes": "Claims: (1) I_p = IA_p (module localization equals ideal extension)."
   },
   "Lecture2/02_07_Corollary": {
-    "status": "scaffolding_ready",
+    "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": ""
+    "notes": "Ideal localization intersection. Defines Ideal.localizedAtPrime, states prime and maximal versions with sorry proofs."
   },
   "Lecture2/02_08_Example": {
-    "status": "scaffolding_ready",
+    "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": ""
+    "notes": "Z = intersection of Z_(p) in Q. Specialization of Mathlib PrimeSpectrum/MaximalSpectrum.iInf_localization_eq_bot to Z and Q. Fully proved (no sorry)."
   },
   "Lecture2/02_08a_Discussion": {
     "status": "non_formalizable",
@@ -210,7 +210,7 @@
     "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Fully covered by Mathlib. Ideal group ℐ_A = (FractionalIdeal A⁰ K)ˣ. Covers: definition, CommGroup instance, group operations, and note that elements need not be ideals."
+    "notes": "Fully covered by Mathlib. Ideal group \u2110_A = (FractionalIdeal A\u2070 K)\u02e3. Covers: definition, CommGroup instance, group operations, and note that elements need not be ideals."
   },
   "Lecture2/02_22a_Discussion": {
     "status": "scaffolding_ready",
@@ -222,7 +222,7 @@
     "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Fully covered by Mathlib ClassGroup. Covers: definition as ℐ_A/𝒫_A, toPrincipalIdeal map, normal subgroup, CommGroup instance, equivalence with explicit quotient, quotient map mk, and class equality criterion."
+    "notes": "Fully covered by Mathlib ClassGroup. Covers: definition as \u2110_A/\ud835\udcab_A, toPrincipalIdeal map, normal subgroup, CommGroup instance, equivalence with explicit quotient, quotient map mk, and class equality criterion."
   },
   "Lecture2/02_24_Example": {
     "status": "scaffolding_ready",
