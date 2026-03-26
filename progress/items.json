@@ -25,31 +25,31 @@
     "notes": "Stage 3.2 review passed. All 4 claims mapped: (1) bijection via orderIsoOfPrime, (2) forward map via comap_map_of_isPrime_disjoint, (3) inverse map via isPrime_of_isPrime_disjoint, (4) round-trip via map_comap. No definition-level sorries. No gaps."
   },
   "Lecture2/02_02_Remark": {
-    "status": "sorry_free",
+    "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "Proved isPrincipalIdealRing_localization_of_isPrincipalIdealRing: PID preserved under localization."
   },
   "Lecture2/02_02a_Discussion": {
-    "status": "sorry_free",
+    "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "Stage 3.2 review passed. All 4 claims mapped: (1) A_\ud835\udd2d = S\u207b\u00b9A via Localization.AtPrime + IsLocalization.AtPrime, (2) prime ideal bijection via IsLocalization.orderIsoOfPrime + AtPrime.orderIsoOfPrime, (3) \ud835\udd2dA_\ud835\udd2d unique maximal via IsLocalRing.maximalIdeal + AtPrime.map_eq_maximalIdeal, (4) local ring via inferInstance example. No sorries. No definition-level sorries. No gaps."
   },
   "Lecture2/02_03_Remark": {
-    "status": "sorry_free",
+    "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "Stage 3.2 review passed. Counterexample fully proved: primeIdeal3 defined, three_mem_primeIdeal3 proved, nine_div_three_eq_three proved, warning_2_3_counterexample existential proved. Meta-remark about lowest terms in non-UFDs correctly not formalized. No sorries at all. No definition-level sorries. No gaps."
   },
   "Lecture2/02_04_Example": {
-    "status": "proof_formalized",
+    "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "Proved kx_loc_x_sub_2_maximalIdeal (maximal ideal = image of (x-2)), polyPrimeIdeal_x_sub_2_isMaximal, kx_loc_x_sub_2_residueField (residue field \u2243 k). 2 sorries remain: kx_loc_x_sub_2_quotientMap_eq_eval (lower priority)."
   },
   "Lecture2/02_05_Example": {
-    "status": "proof_formalized",
+    "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "Proved intPrimeIdeal_p_isMaximal, Z_loc_p_residueField (residue field \u2243 ZMod p). 1 sorry remains: Z_loc_p_quotientMap_eq_mod (lower priority)."
@@ -67,19 +67,19 @@
     "notes": "Polished: simplified conductor def with inline intros; replaced verbose comment blocks with direct tactic chains; used le_iInf₂/le_iInf for forward directions."
   },
   "Lecture2/02_06a_Discussion": {
-    "status": "sorry_free",
+    "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "Stage 3.2 review passed. 1 claim mapped: I_\ud835\udd2d = IA_\ud835\udd2d via Algebra.idealMap_isLocalizedModule recall + inferInstance example. No sorries. No definition-level sorries. No gaps."
   },
   "Lecture2/02_07_Corollary": {
-    "status": "sorry_free",
+    "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "All 3 proofs complete: conductor argument for prime/maximal versions, bridge by rewriting."
   },
   "Lecture2/02_08_Example": {
-    "status": "sorry_free",
+    "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "Stage 3.2 review passed. All claims mapped: (1) Int.eq_iInf_localization_atPrime proves \u2124 = \u22c2_p \u2124_(p) in \u211a via PrimeSpectrum.iInf_localization_eq_bot (fully proved), (2) Int.eq_iInf_localization_atMaximal gives maximal ideals version (fully proved). No sorries at all. No gaps."
@@ -122,7 +122,7 @@
     "notes": "Stage 3.2 review passed. All formalizable claims mapped: (1) integral closure of Dedekind domain in finite separable extension is Dedekind \u2014 IsIntegralClosure.isDedekindDomain #check, (2) \u2124 is Dedekind \u2014 inferInstance example, (3) k[X] is Dedekind \u2014 inferInstance example. Forward ref to global fields correctly omitted. No sorries. No definition-level sorries. No gaps."
   },
   "Lecture2/02_12b_Discussion": {
-    "status": "dependency_trimmed",
+    "status": "non_formalizable",
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "",
