@@ -36,17 +36,13 @@ def Ideal.localizedAtPrime (I : Ideal A) (𝔭 : Ideal A) [𝔭.IsPrime] : Ideal
   add_mem' := by
     rintro x y ⟨s, hsx⟩ ⟨t, hty⟩
     exact ⟨⟨s * t, 𝔭.primeCompl.mul_mem s.2 t.2⟩, by
-      change (↑s * ↑t) * (x + y) ∈ I
-      rw [mul_add, show (↑s * ↑t) * x = ↑t * (↑s * x) from by ring,
-          show (↑s * ↑t) * y = ↑s * (↑t * y) from by ring]
+      have : (↑s * ↑t) * (x + y) = ↑t * (↑s * x) + ↑s * (↑t * y) := by ring
+      rw [this]
       exact I.add_mem (I.mul_mem_left ↑t hsx) (I.mul_mem_left ↑s hty)⟩
-  zero_mem' := ⟨⟨1, 𝔭.primeCompl.one_mem⟩, by simp [I.zero_mem]⟩
+  zero_mem' := ⟨⟨1, 𝔭.primeCompl.one_mem⟩, by simp⟩
   smul_mem' := by
     intro c a ⟨⟨s, hs⟩, hsa⟩
-    exact ⟨⟨s, hs⟩, by
-      change (s : A) * (c * a) ∈ I
-      rw [show (s : A) * (c * a) = c * ((s : A) * a) from by ring]
-      exact I.mul_mem_left c hsa⟩
+    exact ⟨⟨s, hs⟩, by rw [smul_eq_mul, mul_left_comm]; exact I.mul_mem_left c hsa⟩
 
 omit [IsDomain A] in
 /-- I is contained in each of its localizations. -/
@@ -74,6 +70,7 @@ I = ⋂_𝔭 I_𝔭 = ⋂_𝔪 I_𝔪 as submodules of K, which translates to th
 Alternatively, the same conductor argument applies directly: for a ∈ ⋂_𝔪 I_𝔪, the
 conductor {s ∈ A | s·a ∈ I} is not contained in any maximal ideal, hence equals A. -/
 
+omit [IsDomain A] in
 /-- **Corollary 2.7** (prime ideals version). Every ideal I of A equals the intersection
 of its localizations at all prime ideals:
   I = ⋂_𝔭 I.localizedAtPrime 𝔭
@@ -110,6 +107,7 @@ theorem Ideal.eq_iInf_localizedAtPrime (I : Ideal A) :
     obtain ⟨⟨s, hs⟩, hsa⟩ := ha𝔪
     exact hs (hJ𝔪 hsa)
 
+omit [IsDomain A] in
 /-- **Corollary 2.7** (maximal ideals version). Every ideal I of A equals the intersection
 of its localizations at all maximal ideals:
   I = ⋂_𝔪 I.localizedAtPrime 𝔪
@@ -144,6 +142,7 @@ theorem Ideal.eq_iInf_localizedAtPrime_maximal (I : Ideal A) :
     obtain ⟨⟨s, hs⟩, hsa⟩ := ha𝔪
     exact hs (hJ𝔪 hsa)
 
+omit [IsDomain A] in
 /-- The intersection over maximal ideals equals the intersection over prime ideals. -/
 theorem Ideal.iInf_localizedAtPrime_maximal_eq_iInf_localizedAtPrime (I : Ideal A) :
     (⨅ (𝔪 : {J : Ideal A // J.IsMaximal}),

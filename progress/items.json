@@ -67,22 +67,22 @@
     "notes": "All 4 proof-level sorries resolved. Proposition 2.6 fully formalized: submodule equals intersection of localizations at prime (and maximal) ideals."
   },
   "Lecture2/02_06a_Discussion": {
-    "status": "sorry_free",
+    "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. 1 claim mapped: I_\ud835\udd2d = IA_\ud835\udd2d via Algebra.idealMap_isLocalizedModule recall + inferInstance example. No sorries. No definition-level sorries. No gaps."
+    "notes": "Stage 3.5 polish complete."
   },
   "Lecture2/02_07_Corollary": {
-    "status": "sorry_free",
+    "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "All 3 proofs complete: conductor argument for prime/maximal versions, bridge by rewriting."
+    "notes": "Stage 3.5 polish complete."
   },
   "Lecture2/02_08_Example": {
-    "status": "sorry_free",
+    "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All claims mapped: (1) Int.eq_iInf_localization_atPrime proves \u2124 = \u22c2_p \u2124_(p) in \u211a via PrimeSpectrum.iInf_localization_eq_bot (fully proved), (2) Int.eq_iInf_localization_atMaximal gives maximal ideals version (fully proved). No sorries at all. No gaps."
+    "notes": "Stage 3.5 polish complete."
   },
   "Lecture2/02_08a_Discussion": {
     "status": "non_formalizable",
