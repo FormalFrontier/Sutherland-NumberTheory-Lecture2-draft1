@@ -73,16 +73,16 @@
     "notes": "Claims: (1) I_p = IA_p (module localization equals ideal extension)."
   },
   "Lecture2/02_07_Corollary": {
-    "status": "scaffolded",
+    "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Ideal localization intersection. Defines Ideal.localizedAtPrime, states prime and maximal versions with sorry proofs."
+    "notes": "Stage 3.2 review passed. All claims mapped: (1) Ideal.localizedAtPrime definition fully constructed (no data-level sorry), (2) Ideal.le_localizedAtPrime proved, (3) Ideal.localizedAtPrime_anti proved, (4) eq_iInf_localizedAtPrime states prime version (sorry), (5) eq_iInf_localizedAtPrime_maximal states maximal version (sorry), (6) iInf_localizedAtPrime_maximal_eq_iInf_localizedAtPrime bridges the two (sorry). No definition-level sorries. No gaps."
   },
   "Lecture2/02_08_Example": {
-    "status": "scaffolded",
+    "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Z = intersection of Z_(p) in Q. Specialization of Mathlib PrimeSpectrum/MaximalSpectrum.iInf_localization_eq_bot to Z and Q. Fully proved (no sorry)."
+    "notes": "Stage 3.2 review passed. All claims mapped: (1) Int.eq_iInf_localization_atPrime proves ℤ = ⋂_p ℤ_(p) in ℚ via PrimeSpectrum.iInf_localization_eq_bot (fully proved), (2) Int.eq_iInf_localization_atMaximal gives maximal ideals version (fully proved). No sorries at all. No gaps."
   },
   "Lecture2/02_08a_Discussion": {
     "status": "non_formalizable",
@@ -92,10 +92,10 @@
     "reason": "Transitional paragraph + section heading '2.4 Dedekind domains'. Claims: (1) 'to prove an ideal I satisfies a property, enough to show for all localizations I_p and preserved under intersections' \u2014 vague heuristic, not a precise statement (no specific property named). No other claims."
   },
   "Lecture2/02_09_Proposition": {
-    "status": "scaffolded",
+    "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Fully covered by Mathlib. IsDedekindDomainDvr ↔ IsDedekindDomain via mutual instances. Covers: DVR characterization class, both directions of the equivalence, dimension ≤ 1 and integrally closed as consequences, key Mathlib lemmas. No sorries (all recall/example pattern)."
+    "notes": "Stage 3.2 review passed. All claims mapped: (1) IsDedekindDomainDvr captures condition (i), (2) IsDedekindDomain captures condition (ii), (3) IsDedekindDomain.isDedekindDomainDvr proves (ii)→(i), (4) IsDedekindDomainDvr.isDedekindDomain proves (i)→(ii), (5) ring_dimensionLEOne for dim ≤ 1 step, (6) isIntegrallyClosed for integrally closed step, (7) five inferInstance examples demonstrate both directions and consequences. No sorries at all. No gaps."
   },
   "Lecture2/02_10_Definition": {
     "status": "definition_verified",
