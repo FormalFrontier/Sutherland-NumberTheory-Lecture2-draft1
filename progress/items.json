@@ -221,7 +221,7 @@
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "Sorry-free. exists_noninvertible_fractionalIdeal proved using \u2124[X] as witness: (X) is prime but not maximal (\u2124[X]/(X) \u2245 \u2124 not a field), so \u00acIsDedekindDomain, then via isDedekindDomain_iff_isDedekindDomainInv extract non-invertible fractional ideal.",
-    "upstreaming_status": "candidate"
+    "upstreaming_status": "rejected"
   },
   "Lecture2/02_21_Example": {
     "status": "proof_polished",
