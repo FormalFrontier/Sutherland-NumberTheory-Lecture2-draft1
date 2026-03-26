@@ -73,6 +73,13 @@ theorem isPrincipalIdealRing_localization_of_isPrincipalIdealRing
     (R : Type*) [CommRing R] [IsDomain R] [IsPrincipalIdealRing R]
     (M : Submonoid R) (S : Type*) [CommRing S] [Algebra R S] [IsLocalization M S] :
     IsPrincipalIdealRing S := by
-  sorry
+  constructor
+  intro J
+  -- Every ideal of S⁻¹R is an extension: J = (J^c)^e
+  rw [← IsLocalization.map_comap M S J]
+  -- J^c is principal since R is a PID
+  obtain ⟨⟨a, ha⟩⟩ := IsPrincipalIdealRing.principal (J.comap (algebraMap R S))
+  rw [ha]
+  exact ⟨⟨algebraMap R S a, by simp [Ideal.map_span, Set.image_singleton]⟩⟩
 
 end Remark_2_2
