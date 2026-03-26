@@ -53,10 +53,9 @@ theorem fractionalIdeal_eq_inv_den_mul_num
       J = spanSingleton (nonZeroDivisors A) ((algebraMap A K a)⁻¹) *
           (I : FractionalIdeal (nonZeroDivisors A) K) := by
   refine ⟨J.den, J.num, ?_⟩
-  have h := den_mul_self_eq_num' (nonZeroDivisors A) K J
-  have hd : algebraMap A K J.den ≠ 0 :=
-    IsFractionRing.to_map_ne_zero_of_mem_nonZeroDivisors J.den.prop
-  rw [← h, ← mul_assoc, spanSingleton_mul_spanSingleton, inv_mul_cancel₀ hd,
+  rw [← den_mul_self_eq_num' (nonZeroDivisors A) K J, ← mul_assoc,
+    spanSingleton_mul_spanSingleton, inv_mul_cancel₀
+      (IsFractionRing.to_map_ne_zero_of_mem_nonZeroDivisors J.den.prop),
     spanSingleton_one, one_mul]
 
 end Corollary_2_16
