@@ -2,10 +2,9 @@
 
 **Last updated:** 2026-03-26
 **Textbook:** Sutherland, Number Theory Lecture 2 (Localization, Dedekind Domains, Fractional Ideals)
+**Status:** Complete — all pipeline stages finished
 
-## Current Phase: Phase 3 — Formalization
-
-### Completed Stages
+## Pipeline Completion
 
 | Stage | Status | Summary |
 |-------|--------|---------|
@@ -22,58 +21,55 @@
 | 2.4 Template Reconciliation | Complete | Templates matched to items |
 | 2.5 Formalization Plan | Complete | Planning report |
 | 2.6 Reference Attachment | Complete | 32 .refs.md files |
-| 3.1 Scaffolding (setup) | Complete | 36 Lean stubs + blob assessment |
+| 3.1 Scaffolding | Complete | 36/36 formalizable items scaffolded |
+| 3.2 Review | Complete | 36/36 items reviewed |
+| 3.3 Proof Work | Complete | All sorries resolved |
+| 3.4 Dependency Trimming | Complete | Dependencies trimmed to actual |
+| 3.5 Proof Polishing | Complete | All proofs polished to Mathlib quality |
+| 3.6 Upstreaming Analysis | Complete | Phase 1 triage + Phase 2 deep research |
 
-### In Progress
+## Final Statistics
 
-| Stage | Status | Summary |
-|-------|--------|---------|
-| 3.1 Scaffolding (items) | **58% complete** | 21/36 formalizable items scaffolded |
-| 3.2 Review | **25% complete** | 9/36 items definition_verified |
+### Items
 
-### Not Started
+| Category | Count |
+|----------|-------|
+| Total items cataloged | 40 |
+| Formalizable items | 36 |
+| Non-formalizable items | 4 |
+| Items with proof_polished status | 36 |
+| Remaining sorries | 0 |
 
-| Stage | Summary |
-|-------|---------|
-| 3.3 Proof Work | Fill in sorry'd proofs |
-| 3.4 Dependency Trimming | Trim conservative deps to actual |
-| 3.5 Final Audit | Quality check and cleanup |
+### Codebase
 
-## Item Status Summary
+| Metric | Value |
+|--------|-------|
+| Lean source files | 37 |
+| Total Lean lines | 3,051 |
+| Sorry count | 0 |
+| Commits on main | 111 |
 
-| Status | Count | Description |
-|--------|-------|-------------|
-| definition_verified | 9 | Scaffolded + reviewed, all definitions constructed |
-| scaffolded | 12 | Lean file has substantive content, awaiting review |
-| scaffolding_ready | 15 | Stub file only, needs scaffolding |
-| non_formalizable | 4 | No mathematical claims to formalize |
-| **Total** | **40** | |
+### Upstreaming Verdicts (Stage 3.6)
 
-## Quality Metrics
+| Verdict | Count | Items |
+|---------|-------|-------|
+| Include | 4 | 02_02 (PID localization), 02_06 (submodule localization), 02_07 (ideal intersection), 02_12 (counterexamples) |
+| Rejected (trivial) | 29 | recall / #check / inferInstance / one-liner proofs |
+| Rejected (insufficient interest) | 2 | 02_00b (contrapositive), 02_21 (pedagogical example) |
+| Mathlib covered | 1 | 02_05a (localized module injectivity) |
+| N/A (non-formalizable) | 4 | Introduction, section headings, bibliography |
 
-- **Lean files:** 36 formalizable items with .lean files
-- **Total Lean lines:** ~1,847
-- **Total sorries:** 18 (all proof-level; zero definition-level)
-- **Fully proved items:** 8 (02_01, 02_08, 02_09, 02_10, 02_11, 02_13, 02_14, 02_15)
+### Upstreaming Candidates — Detail
 
-## What Remains
+The 4 items recommended for Mathlib contribution:
 
-### Scaffolding (15 items)
-- 10 discussion blobs (02_00a, 02_00b, 02_02a, 02_05a, 02_06a, 02_12a, 02_13a, 02_17a, 02_20a, 02_21a, 02_22a)
-- 4 numbered items (02_18_Lemma, 02_20_Lemma, 02_24_Example, 02_25_Remark)
+1. **02_02_Remark** — `isPrincipalIdealRing_localization_of_isPrincipalIdealRing`: PID localization at general submonoids (Mathlib only has PID-at-prime via Dedekind detour)
+2. **02_06_Proposition** — `Submodule.localizedAtPrime`, `eq_iInf_localizedAtPrime`: M = ⋂ M_𝔭 for submodules (generalizes ring version already in Mathlib)
+3. **02_07_Corollary** — `Ideal.eq_iInf_localizedAtPrime`: I = ⋂ I_𝔭 for ideals at all primes/maximal ideals
+4. **02_12_Remark** — `not_isDedekindDomain_polynomial_polynomial` + `not_uniqueFactorizationMonoid_Zsqrtd_neg13`: counterexamples absent from Mathlib
 
-### Reviews (12 items)
-- All 12 scaffolded-but-not-reviewed items need Stage 3.2 review
+## Timeline
 
-### Proofs (18 sorries)
-- Residue field isomorphisms (02_04, 02_05)
-- Localization intersection proofs (02_06, 02_07)
-- Counterexamples (02_12)
-- Fractional ideal existential (02_16)
-- Z+2iZ subring properties (02_21)
-
-## Limitations
-
-- Discussion blobs (10 of 15 remaining items) are lower priority but represent real mathematical claims that should be formalized for completeness.
-- The 18 remaining sorries include some genuinely difficult results (residue field isomorphisms, counterexamples) that may require significant proof work in Stage 3.3.
-- No items have yet reached Stage 3.3 (proof work) — all proof-level sorries remain from initial scaffolding.
+- **2026-03-25**: Project initialized, Stages 1.1–2.6 completed
+- **2026-03-25 to 2026-03-26**: Stages 3.1–3.5 completed (scaffolding, review, proof work, dependency trimming, polishing)
+- **2026-03-26**: Stage 3.6 completed (upstreaming triage + deep Mathlib research for all 8 candidates)
