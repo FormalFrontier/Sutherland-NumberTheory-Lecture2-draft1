@@ -110,10 +110,10 @@
     "notes": "Stage 3.2 review passed. All 3 claims mapped: (1) PID→Dedekind via IsPrincipalIdealRing.isDedekindDomain #check + component breakdown, (2) ℤ is Dedekind via inferInstance example, (3) k[X] is Dedekind via inferInstance example. No definition-level sorries. No sorries at all. No gaps."
   },
   "Lecture2/02_12_Remark": {
-    "status": "definition_verified",
+    "status": "sorry_free",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All 5 claims mapped: (1) PID→UFD via inferInstance, (2) PID→Dedekind via inferInstance, (3) k[x,y] UFD but not Dedekind — UFD via inferInstance + not_isDedekindDomain_polynomial_polynomial (sorry), (4) ℤ[√-13] Dedekind but not UFD — not_uniqueFactorizationMonoid_Zsqrtd_neg13 (sorry), (5) Dedekind+UFD→PID via of_isDedekindDomain_of_uniqueFactorizationMonoid + demonstration. 2 proof-level sorries for counterexamples. No definition-level sorries. No gaps."
+    "notes": "All 5 claims fully proved. (1) PID→UFD via inferInstance, (2) PID→Dedekind via inferInstance, (3) k[x,y] not Dedekind — via DimensionLEOne contradiction (span{X} is nonzero prime but not maximal since quotient ≅ k[X] is not a field), (4) ℤ[√-13] not UFD — 2 is irreducible (norm argument) but not prime (2∤(1+√-13) and 2∤(1-√-13) yet 2|14), (5) Dedekind+UFD→PID via Mathlib. Zero sorries."
   },
   "Lecture2/02_12a_Discussion": {
     "status": "definition_verified",
