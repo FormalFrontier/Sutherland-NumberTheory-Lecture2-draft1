@@ -7,16 +7,16 @@
     "reason": "Motivational paragraph introducing Lecture 2 topics (localization, Dedekind domains). Claims: none. Pure narrative overview with no precise mathematical statements."
   },
   "Lecture2/02_00a_Discussion": {
-    "status": "scaffolded",
+    "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Section 2.1 body. All 9 claims covered: (1) IsLocalization.lift, (2) IsLocalization.mk' + IsLocalization.eq, (3) IsLocalization.map_units, (4) IsLocalization.lift_unique, (5) IsLocalization.mk'_eq_iff_eq, (6) IsFractionRing + FractionRing, (7) IsLocalization.of_le, (8) IsLocalization.injective, (9) IsFractionRing.injective. All recall pattern, no sorries."
+    "notes": "Stage 3.2 review passed. 9/9 claims mapped: (1) IsLocalization.lift, (2) IsLocalization.mk' + IsLocalization.eq, (3) IsLocalization.map_units, (4) IsLocalization.lift_unique, (5) IsLocalization.mk'_eq_iff_eq, (6) IsFractionRing + FractionRing, (7) IsLocalization.of_le, (8) IsLocalization.injective, (9) IsFractionRing.injective. All recall pattern, no sorries. No definition-level sorries. No gaps."
   },
   "Lecture2/02_00b_Discussion": {
-    "status": "scaffolded",
+    "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Section 2.2 body. All 6 claims covered: (1) Ideal.comap, (2) Ideal.map, (3) Ideal.le_comap_map, (4) Ideal.map_comap_le, (5) IsLocalization.map_algebraMap_ne_top_iff_disjoint + ideal_ext_eq_top_of_meets_submonoid, (6) IsLocalization.map_comap. 1 original theorem (ideal_ext_eq_top_of_meets_submonoid), rest recall pattern."
+    "notes": "Stage 3.2 review passed. 6/6 claims mapped: (1) Ideal.comap, (2) Ideal.map, (3) Ideal.le_comap_map, (4) Ideal.map_comap_le, (5) IsLocalization.map_algebraMap_ne_top_iff_disjoint + ideal_ext_eq_top_of_meets_submonoid (proved), (6) IsLocalization.map_comap. 1 original theorem, rest recall. No definition-level sorries. No gaps."
   },
   "Lecture2/02_01_Theorem": {
     "status": "definition_verified",
