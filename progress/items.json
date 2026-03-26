@@ -98,10 +98,10 @@
     "notes": ""
   },
   "Lecture2/02_10_Definition": {
-    "status": "scaffolding_ready",
+    "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": ""
+    "notes": "Fully covered by Mathlib IsDedekindDomain. Used #check + example pattern (recall has universe issues with polymorphic defs). Covers: definition, three component properties (noetherian, dim ≤ 1, integrally closed), instances, and iff characterization."
   },
   "Lecture2/02_11_Corollary": {
     "status": "scaffolding_ready",
