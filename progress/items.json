@@ -67,7 +67,7 @@
     "last_updated": "2026-03-26",
     "pr": "#198",
     "notes": "Polished: consolidated intermediate `have` steps into direct function application chains; eliminated redundant bindings.",
-    "upstreaming_status": "candidate"
+    "upstreaming_status": "mathlib_covered"
   },
   "Lecture2/02_06_Proposition": {
     "status": "proof_polished",
