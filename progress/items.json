@@ -18,7 +18,7 @@
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "Stage 3.2 review passed. 6/6 claims mapped: (1) Ideal.comap, (2) Ideal.map, (3) Ideal.le_comap_map, (4) Ideal.map_comap_le, (5) IsLocalization.map_algebraMap_ne_top_iff_disjoint + ideal_ext_eq_top_of_meets_submonoid (proved), (6) IsLocalization.map_comap. 1 original theorem, rest recall. No definition-level sorries. No gaps.",
-    "upstreaming_status": "candidate"
+    "upstreaming_status": "rejected_insufficient_interest"
   },
   "Lecture2/02_01_Theorem": {
     "status": "proof_polished",
@@ -73,8 +73,8 @@
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "#198",
-    "notes": "Polished: simplified conductor def with inline intros; replaced verbose comment blocks with direct tactic chains; used le_iInf\u2082/le_iInf for forward directions.",
-    "upstreaming_status": "candidate"
+    "notes": "Polished: simplified conductor def with inline intros; replaced verbose comment blocks with direct tactic chains; used le_iInf₂/le_iInf for forward directions.",
+    "upstreaming_status": "include"
   },
   "Lecture2/02_06a_Discussion": {
     "status": "proof_polished",
@@ -129,8 +129,8 @@
     "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "All 5 claims fully proved. (1) PID\u2192UFD via inferInstance, (2) PID\u2192Dedekind via inferInstance, (3) k[x,y] not Dedekind \u2014 via DimensionLEOne contradiction (span{X} is nonzero prime but not maximal since quotient \u2245 k[X] is not a field), (4) \u2124[\u221a-13] not UFD \u2014 2 is irreducible (norm argument) but not prime (2\u2224(1+\u221a-13) and 2\u2224(1-\u221a-13) yet 2|14), (5) Dedekind+UFD\u2192PID via Mathlib. Zero sorries.",
-    "upstreaming_status": "candidate"
+    "notes": "All 5 claims fully proved. (1) PID→UFD via inferInstance, (2) PID→Dedekind via inferInstance, (3) k[x,y] not Dedekind — via DimensionLEOne contradiction (span{X} is nonzero prime but not maximal since quotient ≅ k[X] is not a field), (4) ℤ[√-13] not UFD — 2 is irreducible (norm argument) but not prime (2∤(1+√-13) and 2∤(1-√-13) yet 2|14), (5) Dedekind+UFD→PID via Mathlib. Zero sorries.",
+    "upstreaming_status": "include"
   },
   "Lecture2/02_12a_Discussion": {
     "status": "proof_polished",
@@ -228,7 +228,7 @@
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "All 4 sorries proved. smul_mem re/im, conductor_eq_full, idealI_of_ZI_ne_bot + IsPrincipalIdealRing instance. Corrected invertibility statement from impossible integral ideal formulation to ne_bot + PID instance.",
-    "upstreaming_status": "candidate"
+    "upstreaming_status": "rejected_insufficient_interest"
   },
   "Lecture2/02_21a_Discussion": {
     "status": "proof_polished",
