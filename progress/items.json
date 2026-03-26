@@ -55,16 +55,16 @@
     "notes": "Proved intPrimeIdeal_p_isMaximal, Z_loc_p_residueField (residue field \u2243 ZMod p). 1 sorry remains: Z_loc_p_quotientMap_eq_mod (lower priority)."
   },
   "Lecture2/02_05a_Discussion": {
-    "status": "sorry_free",
+    "status": "proof_polished",
     "last_updated": "2026-03-26",
-    "pr": "",
-    "notes": "All 5 claims formalized. 2 proof-level sorries eliminated: (4) localizedModule_mkLinearMap_injective_iff proved using mem_ker_mkLinearMap_iff, (5) localizedModule_mkLinearMap_injective_of_noZeroSMulDivisors proved using NoZeroSMulDivisors. Sorry-free."
+    "pr": "#198",
+    "notes": "Polished: consolidated intermediate `have` steps into direct function application chains; eliminated redundant bindings."
   },
   "Lecture2/02_06_Proposition": {
-    "status": "sorry_free",
+    "status": "proof_polished",
     "last_updated": "2026-03-26",
-    "pr": "",
-    "notes": "All 4 proof-level sorries resolved. Proposition 2.6 fully formalized: submodule equals intersection of localizations at prime (and maximal) ideals."
+    "pr": "#198",
+    "notes": "Polished: simplified conductor def with inline intros; replaced verbose comment blocks with direct tactic chains; used le_iInf₂/le_iInf for forward directions."
   },
   "Lecture2/02_06a_Discussion": {
     "status": "sorry_free",

@@ -69,12 +69,10 @@ theorem localizedModule_mkLinearMap_injective_iff :
   rw [← LinearMap.ker_eq_bot, LinearMap.ker_eq_bot']
   constructor
   · intro h s a b hab
-    have hsub : s.1 • (a - b) = 0 := by rw [smul_sub, hab, sub_self]
-    have := h _ (LocalizedModule.mem_ker_mkLinearMap_iff.mpr ⟨s.1, s.2, hsub⟩)
-    exact sub_eq_zero.mp this
+    exact sub_eq_zero.mp <| h _ <|
+      LocalizedModule.mem_ker_mkLinearMap_iff.mpr ⟨s.1, s.2, by rw [smul_sub, hab, sub_self]⟩
   · intro h m hm
-    have hm' := LocalizedModule.mem_ker_mkLinearMap_iff.mp (LinearMap.mem_ker.mpr hm)
-    obtain ⟨r, hr, hrm⟩ := hm'
+    obtain ⟨r, hr, hrm⟩ := LocalizedModule.mem_ker_mkLinearMap_iff.mp (LinearMap.mem_ker.mpr hm)
     exact h ⟨r, hr⟩ (show r • m = r • (0 : M) by rwa [smul_zero])
 
 /-! ### Claim 5: Embedding when A is a subring of a field
