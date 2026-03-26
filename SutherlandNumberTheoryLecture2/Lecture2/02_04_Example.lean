@@ -146,8 +146,7 @@ theorem kx_loc_x_sub_2_quotientMap_eq_eval :
     rw [IsLocalRing.residue_eq_zero_iff, kx_loc_x_sub_2_maximalIdeal]
     exact Ideal.mem_map_of_mem _ hmem
   -- Expand and rearrange
-  rw [map_sub, map_sub] at hzero
-  rw [sub_eq_zero] at hzero
+  rw [map_sub, map_sub, sub_eq_zero] at hzero
   rw [hzero]
   -- Goal: residue(algebraMap(C(eval 2 f))) = algebraMap k ResidueField (eval 2 f)
   -- This follows from the scalar tower k → k[X] → loc → ResidueField
