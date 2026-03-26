@@ -1,4 +1,5 @@
 import Mathlib
+import SutherlandNumberTheoryLecture1
 
 /-!
 # Definition 2.10: Dedekind Domain
@@ -30,6 +31,9 @@ The book defines a Dedekind domain as a noetherian domain satisfying the equival
 conditions of Proposition 2.9: (i) every localization at a nonzero prime is a DVR, or
 (ii) integrally closed with dim ≤ 1. Mathlib encodes condition (ii) directly as three
 typeclasses. -/
+
+-- Cross-reference: DVR definition from Lecture 1 (Definition 1.10)
+recall IsDVR
 
 -- A Dedekind domain is noetherian: every ideal is finitely generated.
 #check @IsNoetherianRing
