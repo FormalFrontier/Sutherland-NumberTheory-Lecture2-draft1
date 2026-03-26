@@ -104,16 +104,16 @@
     "notes": "Fully covered by Mathlib IsDedekindDomain. Used #check + example pattern (recall has universe issues with polymorphic defs). Covers: definition, three component properties (noetherian, dim \u2264 1, integrally closed), instances, and iff characterization."
   },
   "Lecture2/02_11_Corollary": {
-    "status": "scaffolding_ready",
+    "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": ""
+    "notes": "Fully covered by Mathlib. IsPrincipalIdealRing.isDedekindDomain instance. Examples: ℤ and k[X] as Dedekind domains via EuclideanDomain → PID → Dedekind chain. No sorries."
   },
   "Lecture2/02_12_Remark": {
-    "status": "scaffolding_ready",
+    "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Remark 2.12. Claims: (1) every PID is both UFD and Dedekind, (2) not every UFD is Dedekind (k[x,y]), (3) not every Dedekind domain is UFD (Z[\u221a-13], 14=2\u00b77=(1+\u221a-13)(1-\u221a-13)), (4) every ring that is both UFD and Dedekind is PID."
+    "notes": "All 4 claims covered. PID→UFD and PID→Dedekind via inferInstance; Dedekind+UFD→PID via Mathlib theorem. Counterexamples: k[x,y] not Dedekind and ℤ[√-13] not UFD stated with sorry. 2 proof-level sorries remain."
   },
   "Lecture2/02_12a_Discussion": {
     "status": "scaffolding_ready",
