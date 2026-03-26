@@ -1,0 +1,213 @@
+[
+  {
+    "id": "ext_commutative_rings",
+    "description": "Commutative unital rings: definitions, ring homomorphisms, ideals, prime and maximal ideals, quotient rings, generation of ideals",
+    "items": [
+      "02_00a_Discussion", "02_00b_Discussion", "02_00_Introduction",
+      "02_01_Theorem", "02_02a_Discussion", "02_02_Remark",
+      "02_06_Proposition", "02_07_Corollary", "02_09_Proposition",
+      "02_10_Definition", "02_13_Definition", "02_17a_Discussion",
+      "02_18_Lemma", "02_19_Definition", "02_22_Definition"
+    ],
+    "category": "undergraduate_prerequisite"
+  },
+  {
+    "id": "ext_integral_domains",
+    "description": "Integral domains: definition, zero divisors, fraction fields, subrings of fields",
+    "items": [
+      "02_00a_Discussion", "02_00b_Discussion", "02_01_Theorem",
+      "02_05a_Discussion", "02_06_Proposition", "02_09_Proposition",
+      "02_10_Definition", "02_12b_Discussion", "02_13_Definition",
+      "02_14_Lemma"
+    ],
+    "category": "undergraduate_prerequisite"
+  },
+  {
+    "id": "ext_noetherian_rings",
+    "description": "Noetherian rings: definition (ACC on ideals / every ideal is finitely generated), basic properties",
+    "items": [
+      "02_02_Remark", "02_09_Proposition", "02_10_Definition",
+      "02_12b_Discussion", "02_13_Definition", "02_14_Lemma",
+      "02_18_Lemma", "02_22_Definition", "02_23_Definition"
+    ],
+    "category": "undergraduate_prerequisite"
+  },
+  {
+    "id": "ext_pid",
+    "description": "Principal ideal domains (PIDs): definition and basic properties, every PID is a UFD",
+    "items": [
+      "02_02_Remark", "02_04_Example", "02_05_Example",
+      "02_11_Corollary", "02_12_Remark"
+    ],
+    "category": "undergraduate_prerequisite"
+  },
+  {
+    "id": "ext_ufd",
+    "description": "Unique factorization domains (UFDs): definition, examples, relationship to PIDs",
+    "items": [
+      "02_03_Remark", "02_12_Remark", "02_25_Remark"
+    ],
+    "category": "undergraduate_prerequisite"
+  },
+  {
+    "id": "ext_local_rings",
+    "description": "Local rings: definition (unique maximal ideal), basic properties",
+    "items": [
+      "02_02a_Discussion", "02_08a_Discussion", "02_09_Proposition"
+    ],
+    "category": "undergraduate_prerequisite"
+  },
+  {
+    "id": "ext_krull_dimension",
+    "description": "Krull dimension of a ring: supremum of lengths of chains of prime ideals, dim A <= 1 condition",
+    "items": [
+      "02_09_Proposition", "02_10_Definition"
+    ],
+    "category": "undergraduate_prerequisite"
+  },
+  {
+    "id": "ext_integral_closure",
+    "description": "Integral elements over a ring, integral closure, integrally closed domains",
+    "items": [
+      "02_09_Proposition", "02_12a_Discussion"
+    ],
+    "category": "undergraduate_prerequisite"
+  },
+  {
+    "id": "ext_modules",
+    "description": "Modules over commutative rings: definitions, module homomorphisms, finitely generated modules, submodules",
+    "items": [
+      "02_05a_Discussion", "02_06a_Discussion", "02_06_Proposition",
+      "02_13a_Discussion", "02_13_Definition", "02_14_Lemma"
+    ],
+    "category": "undergraduate_prerequisite"
+  },
+  {
+    "id": "ext_tensor_products",
+    "description": "Tensor products of modules, base change (M tensor_A B)",
+    "items": [
+      "02_05a_Discussion", "02_06_Proposition"
+    ],
+    "category": "undergraduate_prerequisite"
+  },
+  {
+    "id": "ext_field_extensions",
+    "description": "Finite separable field extensions, algebraic extensions",
+    "items": [
+      "02_12a_Discussion"
+    ],
+    "category": "undergraduate_prerequisite"
+  },
+  {
+    "id": "ext_polynomial_rings",
+    "description": "Polynomial rings k[x], k[x,y] over fields; k(x) as fraction field of k[x]",
+    "items": [
+      "02_04_Example", "02_11_Corollary", "02_12_Remark"
+    ],
+    "category": "undergraduate_prerequisite"
+  },
+  {
+    "id": "ext_gaussian_integers",
+    "description": "Gaussian integers Z[i] and subrings thereof (Z + 2iZ)",
+    "items": [
+      "02_21_Example"
+    ],
+    "category": "undergraduate_prerequisite"
+  },
+  {
+    "id": "ext_finite_fields",
+    "description": "Finite fields F_p and F_q, reduction modulo p",
+    "items": [
+      "02_05_Example", "02_12a_Discussion"
+    ],
+    "category": "undergraduate_prerequisite"
+  },
+  {
+    "id": "ext_dvr_lecture1",
+    "description": "Discrete valuation rings (DVRs): definition, uniformizers, valuation on fraction field, residue fields. From Lecture 1.",
+    "items": [
+      "02_04_Example", "02_05_Example", "02_09_Proposition", "02_24_Example"
+    ],
+    "category": "external_result"
+  },
+  {
+    "id": "ext_theorem_1_16",
+    "description": "Theorem 1.16 (Lecture 1): An integrally closed noetherian local domain of dimension 1 is a DVR",
+    "items": [
+      "02_09_Proposition"
+    ],
+    "category": "external_result"
+  },
+  {
+    "id": "ext_number_fields_lecture1",
+    "description": "Number fields and their rings of integers, as defined in Lecture 1",
+    "items": [
+      "02_12a_Discussion"
+    ],
+    "category": "external_result"
+  },
+  {
+    "id": "ext_global_fields_lecture1",
+    "description": "Global fields (number fields and global function fields are the two types), as discussed in Lecture 1",
+    "items": [
+      "02_12a_Discussion"
+    ],
+    "category": "external_result"
+  },
+  {
+    "id": "ext_contraction_extension_props",
+    "description": "Properties of contraction and extension of ideals under localization: b^{ce} = b for B = S^{-1}A. References [1, Prop. 11.19] and [2, Prop. 3.11].",
+    "items": [
+      "02_00b_Discussion", "02_02_Remark"
+    ],
+    "category": "external_result"
+  },
+  {
+    "id": "ext_prime_ideal_correspondence_proof",
+    "description": "Proof of Theorem 2.1 (prime ideal correspondence under localization). The lecture cites [1, Cor. 11.20] and [2, Prop. 3.11.iv] rather than giving a proof.",
+    "items": [
+      "02_01_Theorem"
+    ],
+    "category": "external_result"
+  },
+  {
+    "id": "ext_localization_tensor_equivalence",
+    "description": "S^{-1}M is isomorphic to M tensor_A S^{-1}A. Reference [2, Prop. 3.5].",
+    "items": [
+      "02_05a_Discussion"
+    ],
+    "category": "external_result"
+  },
+  {
+    "id": "ext_z_sqrt_minus_13_not_ufd",
+    "description": "Z[sqrt(-13)] is not a UFD: (1+sqrt(-13))(1-sqrt(-13)) = 2 * 7 = 14 gives two distinct factorizations. Stated without proof as a well-known fact.",
+    "items": [
+      "02_12_Remark"
+    ],
+    "category": "folklore"
+  },
+  {
+    "id": "ext_k_xy_not_dedekind",
+    "description": "k[x,y] is a UFD but not a Dedekind domain (for any field k). Stated without proof.",
+    "items": [
+      "02_12_Remark"
+    ],
+    "category": "folklore"
+  },
+  {
+    "id": "ext_dvr_integrally_closed",
+    "description": "Every DVR is integrally closed. Used without proof in Proposition 2.9.",
+    "items": [
+      "02_09_Proposition"
+    ],
+    "category": "folklore"
+  },
+  {
+    "id": "ext_invertible_ideals_abelian_group",
+    "description": "Invertible fractional ideals form an abelian group under multiplication (associativity, commutativity, identity, inverses). Stated as immediate from definitions.",
+    "items": [
+      "02_21a_Discussion", "02_22_Definition"
+    ],
+    "category": "folklore"
+  }
+]
