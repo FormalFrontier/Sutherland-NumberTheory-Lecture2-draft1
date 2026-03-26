@@ -18,7 +18,7 @@
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "Stage 3.2 review passed. 6/6 claims mapped: (1) Ideal.comap, (2) Ideal.map, (3) Ideal.le_comap_map, (4) Ideal.map_comap_le, (5) IsLocalization.map_algebraMap_ne_top_iff_disjoint + ideal_ext_eq_top_of_meets_submonoid (proved), (6) IsLocalization.map_comap. 1 original theorem, rest recall. No definition-level sorries. No gaps.",
-    "upstreaming_status": "candidate"
+    "upstreaming_status": "rejected_insufficient_interest"
   },
   "Lecture2/02_01_Theorem": {
     "status": "proof_polished",

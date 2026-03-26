@@ -6,7 +6,7 @@
 
 | Item | Declaration | File | Verdict | Reason |
 |------|-----------|------|---------|--------|
-| 02_00b_Discussion | `ideal_ext_eq_top_of_meets_submonoid` | `02_00b_Discussion.lean:61` | **Candidate** | One-liner contrapositive of `IsLocalization.map_algebraMap_ne_top_iff_disjoint`, but packages a useful API lemma. Borderline — review in Phase 2. |
+| 02_00b_Discussion | `ideal_ext_eq_top_of_meets_submonoid` | `02_00b_Discussion.lean:61` | **Rejected** | Phase 2 verdict: trivial contrapositive. See Phase 2 notes below. |
 | 02_02_Remark | `isPrincipalIdealRing_localization_of_isPrincipalIdealRing` | `02_02_Remark.lean:72` | **Include** | Phase 2 confirmed: Mathlib has PID-at-prime via `IsDedekindDomain.isPrincipalIdealRing_localization_over_prime` (Dedekind detour) but **no** result for general submonoids. This 3-line elementary proof fills that gap. Ideal upstream target: `Mathlib/RingTheory/PrincipalIdealDomain.lean` or `Mathlib/RingTheory/Localization/Ideal.lean`. |
 | 02_05a_Discussion | `localizedModule_mkLinearMap_injective_iff` | `02_05a_Discussion.lean:66` | **Reject — Mathlib covered** | `IsLocalizedModule.injective_iff_isRegular` (Basic.lean:539) is the same statement: `Injective f ↔ ∀ c : S, IsSMulRegular M c`. `IsSMulRegular M c` is definitionally `Injective (HSMul.hSMul c)`. Mathlib's version is more general (any `IsLocalizedModule` map, not just `mkLinearMap`). |
 | 02_05a_Discussion | `localizedModule_mkLinearMap_injective_of_noZeroSMulDivisors` | `02_05a_Discussion.lean:86` | **Reject — Mathlib covered** | Follows from chaining: `NoZeroSMulDivisors R M` → `Module.IsTorsionFree R M` (instance at `NoZeroSMulDivisors/Defs.lean:56`) → `IsTorsionFree.isSMulRegular` → `injective_iff_isRegular`. No new content. |
@@ -65,6 +65,19 @@
 | Backmatter/Bibliography | Reference list only |
 
 ## Phase 2: Deep Mathlib Research
+
+### 02_00b_Discussion — `ideal_ext_eq_top_of_meets_submonoid`
+
+**Verdict: Rejected — insufficient interest**
+
+**Research findings:**
+- Mathlib has `IsLocalization.map_algebraMap_ne_top_iff_disjoint` at `Mathlib/RingTheory/Localization/Ideal.lean:95`
+- This is the `≠ ⊤ ↔ Disjoint` iff form
+- Our declaration is the contrapositive: `¬Disjoint → = ⊤`, proved by `of_not_not` on the `.not.mpr`
+- Only 1 usage of the existing iff in all of Mathlib (`RamificationInertia/Basic.lean:272`), which manually does `rw [← not_ne_iff, ...]`
+- The contrapositive would clean up that one usage, but doesn't justify an upstream PR on its own
+
+**Rationale:** One-liner proof, one potential use site in Mathlib. If this were part of a larger API cleanup PR for `Localization.Ideal`, it could be included as a bonus, but it's too thin to stand alone. The existing `ne_top_iff_disjoint` form is the natural one for localization theory (the positive direction "ideal stays proper iff disjoint from submonoid" is the standard statement).
 
 ### 02_05a_Discussion — Reject (Mathlib covered)
 
