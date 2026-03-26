@@ -189,19 +189,19 @@
     "notes": "Stage 3.2 review passed. All 3 claims mapped: (1) I\u00b7I\u207b\u00b9 \u2264 1 always via fractionalIdeal_mul_inv_le_one (proved), (2) invertible iff I\u00b7I\u207b\u00b9 = 1 via mul_inv_cancel_iff recall, (3) I\u207b\u00b9 = 1/I via inv_eq recall. No sorries. No definition-level sorries. No gaps."
   },
   "Lecture2/02_20a_Discussion": {
-    "status": "sorry_free",
+    "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "Sorry-free. exists_noninvertible_fractionalIdeal proved using \u2124[X] as witness: (X) is prime but not maximal (\u2124[X]/(X) \u2245 \u2124 not a field), so \u00acIsDedekindDomain, then via isDedekindDomain_iff_isDedekindDomainInv extract non-invertible fractional ideal."
   },
   "Lecture2/02_21_Example": {
-    "status": "sorry_free",
+    "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "All 4 sorries proved. smul_mem re/im, conductor_eq_full, idealI_of_ZI_ne_bot + IsPrincipalIdealRing instance. Corrected invertibility statement from impossible integral ideal formulation to ne_bot + PID instance."
   },
   "Lecture2/02_21a_Discussion": {
-    "status": "sorry_free",
+    "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "Stage 3.2 review passed. All 3 claims mapped: (1) invertible iff I(A\u00f7I)=A via mul_inv_cancel_iff recall, (2) nonzero fractional ideals form abelian monoid via CommSemiring instance, (3) invertible fractional ideals form abelian group via CommGroup units instance. No sorries. No definition-level sorries. No gaps."

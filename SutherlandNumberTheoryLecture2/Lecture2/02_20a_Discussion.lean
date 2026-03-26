@@ -57,31 +57,28 @@ theorem exists_noninvertible_fractionalIdeal :
   have hNotDedekind : ¬ IsDedekindDomain (Polynomial ℤ) := by
     intro h
     -- (X) is prime and nonzero
-    have hXprime : (Ideal.span {(Polynomial.X : Polynomial ℤ)}).IsPrime := by
-      rw [Ideal.span_singleton_prime Polynomial.X_ne_zero]
-      exact Polynomial.prime_X
-    have hXbot : Ideal.span {(Polynomial.X : Polynomial ℤ)} ≠ ⊥ := by
-      rw [Ne, Ideal.span_singleton_eq_bot]
-      exact Polynomial.X_ne_zero
+    have hXprime : (Ideal.span {(Polynomial.X : Polynomial ℤ)}).IsPrime :=
+      (Ideal.span_singleton_prime Polynomial.X_ne_zero).mpr Polynomial.prime_X
+    have hXbot : Ideal.span {(Polynomial.X : Polynomial ℤ)} ≠ ⊥ :=
+      Ideal.span_singleton_eq_bot.not.mpr Polynomial.X_ne_zero
     -- DimensionLEOne says (X) is maximal
     have hXmax : (Ideal.span {(Polynomial.X : Polynomial ℤ)}).IsMaximal :=
       hXprime.isMaximal hXbot
     -- But Polynomial ℤ/(X) ≅ ℤ, and ℤ is not a field
     rw [Ideal.Quotient.maximal_ideal_iff_isField_quotient] at hXmax
-    have : Ideal.span {Polynomial.X - Polynomial.C (0 : ℤ)} =
-           Ideal.span {(Polynomial.X : Polynomial ℤ)} := by simp
-    rw [← this] at hXmax
+    have : Ideal.span {(Polynomial.X : Polynomial ℤ)} =
+           Ideal.span {Polynomial.X - Polynomial.C (0 : ℤ)} := by simp
     exact Int.not_isField
-      ((Polynomial.quotientSpanXSubCAlgEquiv (R := ℤ) 0).symm.toMulEquiv.isField hXmax)
+      ((Polynomial.quotientSpanXSubCAlgEquiv (R := ℤ) 0).symm.toMulEquiv.isField
+        (this ▸ hXmax))
   -- From ¬ IsDedekindDomain, get ¬ IsDedekindDomainInv via the iff
   have hNotInv : ¬ IsDedekindDomainInv (Polynomial ℤ) :=
     mt isDedekindDomain_iff_isDedekindDomainInv.mpr hNotDedekind
   -- Extract the non-invertible fractional ideal
-  unfold IsDedekindDomainInv at hNotInv
-  push_neg at hNotInv
+  simp only [IsDedekindDomainInv, not_forall, exists_prop] at hNotInv
   obtain ⟨I, hI_ne, hI_not_inv⟩ := hNotInv
-  exact ⟨I, hI_ne, fun h =>
-    hI_not_inv ((FractionalIdeal.mul_inv_cancel_iff_isUnit
+  exact ⟨I, hI_ne, fun h => hI_not_inv
+    ((FractionalIdeal.mul_inv_cancel_iff_isUnit
       (K := FractionRing (Polynomial ℤ))).mpr h)⟩
 
 end Discussion_02_20a
