@@ -234,7 +234,7 @@
     "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All 3 claims mapped: (1a) Dedekind+UFD→PID via of_isDedekindDomain_of_uniqueFactorizationMonoid + card_classGroup_eq_one, (1b) PID→UFD via PrincipalIdealRing.to_uniqueFactorizationMonoid, (2) conceptual remark documented, (3) Picard ≅ ClassGroup via ClassGroup.equivPic. No sorries. No definition-level sorries. No gaps."
+    "notes": "Stage 3.2 review passed. All 3 claims mapped: (1a) Dedekind+UFD→PID via of_isDedekindDomain_of_uniqueFactorizationMonoid + card_classGroup_eq_one, (1b) trivial class group↔PID via card_classGroup_eq_one_iff + PID→UFD via PrincipalIdealRing.to_uniqueFactorizationMonoid, (2) conceptual remark documented, (3) Picard ≅ ClassGroup via ClassGroup.equivPic. No sorries. No definition-level sorries. No gaps."
   },
   "Backmatter/Bibliography": {
     "status": "non_formalizable",
