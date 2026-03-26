@@ -92,10 +92,10 @@
     "reason": "Transitional paragraph + section heading '2.4 Dedekind domains'. Claims: (1) 'to prove an ideal I satisfies a property, enough to show for all localizations I_p and preserved under intersections' \u2014 vague heuristic, not a precise statement (no specific property named). No other claims."
   },
   "Lecture2/02_09_Proposition": {
-    "status": "scaffolding_ready",
+    "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": ""
+    "notes": "Fully covered by Mathlib. IsDedekindDomainDvr ↔ IsDedekindDomain via mutual instances. Covers: DVR characterization class, both directions of the equivalence, dimension ≤ 1 and integrally closed as consequences, key Mathlib lemmas. No sorries (all recall/example pattern)."
   },
   "Lecture2/02_10_Definition": {
     "status": "scaffolded",
