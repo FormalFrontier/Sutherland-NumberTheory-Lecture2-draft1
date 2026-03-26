@@ -28,13 +28,13 @@
     "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All 4 claims mapped: (1) generators of 𝔞 generate 𝔞ᵉ via Ideal.map_span, (2) every B-ideal is 𝔞ᵉ via IsLocalization.map_comap, (3) noetherian preserved via IsLocalization.isNoetherianRing + example, (4) PID preserved via custom theorem (1 proof-level sorry) + Mathlib PID→Dedekind→localization PID path. No definition-level sorries. No gaps."
+    "notes": "Stage 3.2 review passed. All 4 claims mapped: (1) generators of \ud835\udd1e generate \ud835\udd1e\u1d49 via Ideal.map_span, (2) every B-ideal is \ud835\udd1e\u1d49 via IsLocalization.map_comap, (3) noetherian preserved via IsLocalization.isNoetherianRing + example, (4) PID preserved via custom theorem (1 proof-level sorry) + Mathlib PID\u2192Dedekind\u2192localization PID path. No definition-level sorries. No gaps."
   },
   "Lecture2/02_02a_Discussion": {
     "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All 4 claims mapped: (1) A_𝔭 = S⁻¹A via Localization.AtPrime + IsLocalization.AtPrime, (2) prime ideal bijection via IsLocalization.orderIsoOfPrime + AtPrime.orderIsoOfPrime, (3) 𝔭A_𝔭 unique maximal via IsLocalRing.maximalIdeal + AtPrime.map_eq_maximalIdeal, (4) local ring via inferInstance example. No sorries. No definition-level sorries. No gaps."
+    "notes": "Stage 3.2 review passed. All 4 claims mapped: (1) A_\ud835\udd2d = S\u207b\u00b9A via Localization.AtPrime + IsLocalization.AtPrime, (2) prime ideal bijection via IsLocalization.orderIsoOfPrime + AtPrime.orderIsoOfPrime, (3) \ud835\udd2dA_\ud835\udd2d unique maximal via IsLocalRing.maximalIdeal + AtPrime.map_eq_maximalIdeal, (4) local ring via inferInstance example. No sorries. No definition-level sorries. No gaps."
   },
   "Lecture2/02_03_Remark": {
     "status": "definition_verified",
@@ -46,31 +46,31 @@
     "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed (re-reviewed). All claims mapped: (1) polyPrimeIdeal_x_sub_2 defines (x-2), (2) x_sub_2_prime + isPrime, (3) PID via inferInstance, (4) kx_loc_x_sub_2_isDVR proved, (5) kx_loc_x_sub_2_isDVR' bridges to IsDVR, (6) kx_loc_x_sub_2_maximalIdeal (sorry) — maximal ideal = image of (x-2), (7) kx_loc_x_sub_2_residueField (sorry) — residue field ≃ k, (8) kx_loc_x_sub_2_quotientMap_eq_eval (sorry) — quotient map = eval at 2. No definition-level sorries."
+    "notes": "Stage 3.2 review passed (re-reviewed). All claims mapped: (1) polyPrimeIdeal_x_sub_2 defines (x-2), (2) x_sub_2_prime + isPrime, (3) PID via inferInstance, (4) kx_loc_x_sub_2_isDVR proved, (5) kx_loc_x_sub_2_isDVR' bridges to IsDVR, (6) kx_loc_x_sub_2_maximalIdeal (sorry) \u2014 maximal ideal = image of (x-2), (7) kx_loc_x_sub_2_residueField (sorry) \u2014 residue field \u2243 k, (8) kx_loc_x_sub_2_quotientMap_eq_eval (sorry) \u2014 quotient map = eval at 2. No definition-level sorries."
   },
   "Lecture2/02_05_Example": {
     "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed (re-reviewed). All claims mapped: (1) intPrimeIdeal_p_isPrime, (2) PID via inferInstance, (3) Z_loc_p_isDVR proved, (4) padicValuation recalled, (5) Z_loc_p_residueField (sorry) — residue field ≃ 𝔽_p, (6) Z_loc_p_quotientMap_eq_mod (sorry) — quotient map = reduction mod p. No definition-level sorries."
+    "notes": "Stage 3.2 review passed (re-reviewed). All claims mapped: (1) intPrimeIdeal_p_isPrime, (2) PID via inferInstance, (3) Z_loc_p_isDVR proved, (4) padicValuation recalled, (5) Z_loc_p_residueField (sorry) \u2014 residue field \u2243 \ud835\udd3d_p, (6) Z_loc_p_quotientMap_eq_mod (sorry) \u2014 quotient map = reduction mod p. No definition-level sorries."
   },
   "Lecture2/02_05a_Discussion": {
     "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All 5 claims mapped: (1) S⁻¹M type via LocalizedModule + mk + mkLinearMap, (2) universal property via IsLocalizedModule, (3) tensor product equiv via LocalizedModule.equivTensorProduct, (4) injectivity iff via custom theorem (sorry), (5) embedding for torsion-free via custom theorem (sorry). Notation M_𝔭 documented. 2 proof-level sorries. No definition-level sorries. No gaps."
+    "notes": "Stage 3.2 review passed. All 5 claims mapped: (1) S\u207b\u00b9M type via LocalizedModule + mk + mkLinearMap, (2) universal property via IsLocalizedModule, (3) tensor product equiv via LocalizedModule.equivTensorProduct, (4) injectivity iff via custom theorem (sorry), (5) embedding for torsion-free via custom theorem (sorry). Notation M_\ud835\udd2d documented. 2 proof-level sorries. No definition-level sorries. No gaps."
   },
   "Lecture2/02_06_Proposition": {
-    "status": "definition_verified",
+    "status": "sorry_free",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All 8 claims mapped: (1) localizedAtPrime definition (constructed), (2) le_localizedAtPrime proved, (3) conductor definition (constructed), (4) conductor_not_le_of_mem_localizedAtPrime (sorry), (5) localizedAtPrime_anti proved, (6) eq_iInf_localizedAtPrime (sorry), (7) eq_iInf_localizedAtPrime_maximal (sorry), (8) iInf_localizedAtPrime_maximal_eq_iInf_localizedAtPrime (sorry). No definition-level sorries."
+    "notes": "All 4 proof-level sorries resolved. Proposition 2.6 fully formalized: submodule equals intersection of localizations at prime (and maximal) ideals."
   },
   "Lecture2/02_06a_Discussion": {
     "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. 1 claim mapped: I_𝔭 = IA_𝔭 via Algebra.idealMap_isLocalizedModule recall + inferInstance example. No sorries. No definition-level sorries. No gaps."
+    "notes": "Stage 3.2 review passed. 1 claim mapped: I_\ud835\udd2d = IA_\ud835\udd2d via Algebra.idealMap_isLocalizedModule recall + inferInstance example. No sorries. No definition-level sorries. No gaps."
   },
   "Lecture2/02_07_Corollary": {
     "status": "definition_verified",
@@ -82,20 +82,20 @@
     "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All claims mapped: (1) Int.eq_iInf_localization_atPrime proves ℤ = ⋂_p ℤ_(p) in ℚ via PrimeSpectrum.iInf_localization_eq_bot (fully proved), (2) Int.eq_iInf_localization_atMaximal gives maximal ideals version (fully proved). No sorries at all. No gaps."
+    "notes": "Stage 3.2 review passed. All claims mapped: (1) Int.eq_iInf_localization_atPrime proves \u2124 = \u22c2_p \u2124_(p) in \u211a via PrimeSpectrum.iInf_localization_eq_bot (fully proved), (2) Int.eq_iInf_localization_atMaximal gives maximal ideals version (fully proved). No sorries at all. No gaps."
   },
   "Lecture2/02_08a_Discussion": {
     "status": "non_formalizable",
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "",
-    "reason": "Transitional paragraph + section heading '2.4 Dedekind domains'. Claims: (1) 'to prove an ideal I satisfies a property, enough to show for all localizations I_p and preserved under intersections' — vague heuristic, not a precise statement (no specific property named). No other claims."
+    "reason": "Transitional paragraph + section heading '2.4 Dedekind domains'. Claims: (1) 'to prove an ideal I satisfies a property, enough to show for all localizations I_p and preserved under intersections' \u2014 vague heuristic, not a precise statement (no specific property named). No other claims."
   },
   "Lecture2/02_09_Proposition": {
     "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All claims mapped: (1) IsDedekindDomainDvr captures condition (i), (2) IsDedekindDomain captures condition (ii), (3) IsDedekindDomain.isDedekindDomainDvr proves (ii)→(i), (4) IsDedekindDomainDvr.isDedekindDomain proves (i)→(ii), (5) ring_dimensionLEOne for dim ≤ 1 step, (6) isIntegrallyClosed for integrally closed step, (7) five inferInstance examples demonstrate both directions and consequences. No sorries at all. No gaps."
+    "notes": "Stage 3.2 review passed. All claims mapped: (1) IsDedekindDomainDvr captures condition (i), (2) IsDedekindDomain captures condition (ii), (3) IsDedekindDomain.isDedekindDomainDvr proves (ii)\u2192(i), (4) IsDedekindDomainDvr.isDedekindDomain proves (i)\u2192(ii), (5) ring_dimensionLEOne for dim \u2264 1 step, (6) isIntegrallyClosed for integrally closed step, (7) five inferInstance examples demonstrate both directions and consequences. No sorries at all. No gaps."
   },
   "Lecture2/02_10_Definition": {
     "status": "definition_verified",
@@ -107,26 +107,26 @@
     "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All 3 claims mapped: (1) PID→Dedekind via IsPrincipalIdealRing.isDedekindDomain #check + component breakdown, (2) ℤ is Dedekind via inferInstance example, (3) k[X] is Dedekind via inferInstance example. No definition-level sorries. No sorries at all. No gaps."
+    "notes": "Stage 3.2 review passed. All 3 claims mapped: (1) PID\u2192Dedekind via IsPrincipalIdealRing.isDedekindDomain #check + component breakdown, (2) \u2124 is Dedekind via inferInstance example, (3) k[X] is Dedekind via inferInstance example. No definition-level sorries. No sorries at all. No gaps."
   },
   "Lecture2/02_12_Remark": {
     "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All 5 claims mapped: (1) PID→UFD via inferInstance, (2) PID→Dedekind via inferInstance, (3) k[x,y] UFD but not Dedekind — UFD via inferInstance + not_isDedekindDomain_polynomial_polynomial (sorry), (4) ℤ[√-13] Dedekind but not UFD — not_uniqueFactorizationMonoid_Zsqrtd_neg13 (sorry), (5) Dedekind+UFD→PID via of_isDedekindDomain_of_uniqueFactorizationMonoid + demonstration. 2 proof-level sorries for counterexamples. No definition-level sorries. No gaps."
+    "notes": "Stage 3.2 review passed. All 5 claims mapped: (1) PID\u2192UFD via inferInstance, (2) PID\u2192Dedekind via inferInstance, (3) k[x,y] UFD but not Dedekind \u2014 UFD via inferInstance + not_isDedekindDomain_polynomial_polynomial (sorry), (4) \u2124[\u221a-13] Dedekind but not UFD \u2014 not_uniqueFactorizationMonoid_Zsqrtd_neg13 (sorry), (5) Dedekind+UFD\u2192PID via of_isDedekindDomain_of_uniqueFactorizationMonoid + demonstration. 2 proof-level sorries for counterexamples. No definition-level sorries. No gaps."
   },
   "Lecture2/02_12a_Discussion": {
     "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All formalizable claims mapped: (1) integral closure of Dedekind domain in finite separable extension is Dedekind — IsIntegralClosure.isDedekindDomain #check, (2) ℤ is Dedekind — inferInstance example, (3) k[X] is Dedekind — inferInstance example. Forward ref to global fields correctly omitted. No sorries. No definition-level sorries. No gaps."
+    "notes": "Stage 3.2 review passed. All formalizable claims mapped: (1) integral closure of Dedekind domain in finite separable extension is Dedekind \u2014 IsIntegralClosure.isDedekindDomain #check, (2) \u2124 is Dedekind \u2014 inferInstance example, (3) k[X] is Dedekind \u2014 inferInstance example. Forward ref to global fields correctly omitted. No sorries. No definition-level sorries. No gaps."
   },
   "Lecture2/02_12b_Discussion": {
     "status": "non_formalizable",
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "",
-    "reason": "Section heading '2.5 Fractional ideals' and context setting: 'Throughout this subsection, A is a noetherian domain and K is its fraction field.' No mathematical claims — pure scoping statement."
+    "reason": "Section heading '2.5 Fractional ideals' and context setting: 'Throughout this subsection, A is a noetherian domain and K is its fraction field.' No mathematical claims \u2014 pure scoping statement."
   },
   "Lecture2/02_13_Definition": {
     "status": "definition_verified",
@@ -138,37 +138,37 @@
     "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All 3 formalizable claims mapped: (1) noetherian → ideals f.g. — IsNoetherian.noetherian example, (2) every ideal is a fractional ideal — coercion example + coeIdeal_injective, (3) fractional ideals need not be contained in A — FractionalIdeal and IsFractional type signatures show Submodule A K. Editorial remark about 'integral ideal' correctly omitted. No sorries. No definition-level sorries. No gaps."
+    "notes": "Stage 3.2 review passed. All 3 formalizable claims mapped: (1) noetherian \u2192 ideals f.g. \u2014 IsNoetherian.noetherian example, (2) every ideal is a fractional ideal \u2014 coercion example + coeIdeal_injective, (3) fractional ideals need not be contained in A \u2014 FractionalIdeal and IsFractional type signatures show Submodule A K. Editorial remark about 'integral ideal' correctly omitted. No sorries. No definition-level sorries. No gaps."
   },
   "Lecture2/02_14_Lemma": {
     "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All 3 claims mapped: (1) biconditional via fractional_iff_fg (proved, no sorry), (2) forward direction (f.g.→IsFractional) via isFractional_span_singleton/sup/mul recalls, (3) backward direction (IsFractional→f.g.) via fg_of_isNoetherianRing + fractionalIdeal_fg. Also includes den/num decomposition. No sorries at all. No definition-level sorries. No gaps."
+    "notes": "Stage 3.2 review passed. All 3 claims mapped: (1) biconditional via fractional_iff_fg (proved, no sorry), (2) forward direction (f.g.\u2192IsFractional) via isFractional_span_singleton/sup/mul recalls, (3) backward direction (IsFractional\u2192f.g.) via fg_of_isNoetherianRing + fractionalIdeal_fg. Also includes den/num decomposition. No sorries at all. No definition-level sorries. No gaps."
   },
   "Lecture2/02_15_Remark": {
     "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All 4 claims mapped: (1) alternative definition reference — IsFractional #check, (2) A-submodules with ∃r,rI⊆A — FractionalIdeal uses IsFractional predicate, (3) extends to non-noetherian — Mathlib's primary def works for all domains (doc comment), (4) coincides when noetherian — fractionalIdeal_fg_of_noetherian proved via fg_of_isNoetherianRing. No sorries at all. No definition-level sorries. No gaps."
+    "notes": "Stage 3.2 review passed. All 4 claims mapped: (1) alternative definition reference \u2014 IsFractional #check, (2) A-submodules with \u2203r,rI\u2286A \u2014 FractionalIdeal uses IsFractional predicate, (3) extends to non-noetherian \u2014 Mathlib's primary def works for all domains (doc comment), (4) coincides when noetherian \u2014 fractionalIdeal_fg_of_noetherian proved via fg_of_isNoetherianRing. No sorries at all. No definition-level sorries. No gaps."
   },
   "Lecture2/02_16_Corollary": {
     "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. Blob claim: every fractional ideal = (1/a)I. Mapped to: (1) FractionalIdeal.den — denominator, (2) FractionalIdeal.num — numerator ideal, (3) den_mul_self_eq_num — key relation, (4) fractionalIdeal_eq_inv_den_mul_num — existential statement (1 proof-level sorry). No definition-level sorries. No gaps."
+    "notes": "Stage 3.2 review passed. Blob claim: every fractional ideal = (1/a)I. Mapped to: (1) FractionalIdeal.den \u2014 denominator, (2) FractionalIdeal.num \u2014 numerator ideal, (3) den_mul_self_eq_num \u2014 key relation, (4) fractionalIdeal_eq_inv_den_mul_num \u2014 existential statement (1 proof-level sorry). No definition-level sorries. No gaps."
   },
   "Lecture2/02_17_Definition": {
     "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All 3 claims mapped: (1) principal = generated by one element — spanSingleton definition, (2) form xA — spanSingleton A⁰ x, (3) notation (x) := xA — spanSingleton used throughout. Key properties: spanSingleton_one, spanSingleton_zero, spanSingleton_mul_spanSingleton, mem_spanSingleton, spanSingleton_mul_inv, spanSingleton_inv. No sorries. No gaps."
+    "notes": "Stage 3.2 review passed. All 3 claims mapped: (1) principal = generated by one element \u2014 spanSingleton definition, (2) form xA \u2014 spanSingleton A\u2070 x, (3) notation (x) := xA \u2014 spanSingleton used throughout. Key properties: spanSingleton_one, spanSingleton_zero, spanSingleton_mul_spanSingleton, mem_spanSingleton, spanSingleton_mul_inv, spanSingleton_inv. No sorries. No gaps."
   },
   "Lecture2/02_17a_Discussion": {
     "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All 5 claims mapped: (1) I+J via sup_eq_add + mem_add, (2) IJ via mul_mem_mul + mul_le, (3) I÷J via mem_div_iff_of_ne_zero + isFractional_div_of_ne_zero + le_div_iff_mul_le, (4) not a module quotient — documented, (5) (x)÷(y)=(x/y) via spanSingleton_div_spanSingleton + spanSingleton_div_self. No sorries. No definition-level sorries. No gaps."
+    "notes": "Stage 3.2 review passed. All 5 claims mapped: (1) I+J via sup_eq_add + mem_add, (2) IJ via mul_mem_mul + mul_le, (3) I\u00f7J via mem_div_iff_of_ne_zero + isFractional_div_of_ne_zero + le_div_iff_mul_le, (4) not a module quotient \u2014 documented, (5) (x)\u00f7(y)=(x/y) via spanSingleton_div_spanSingleton + spanSingleton_div_self. No sorries. No definition-level sorries. No gaps."
   },
   "Lecture2/02_18_Lemma": {
     "status": "definition_verified",
@@ -180,61 +180,61 @@
     "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All 3 claims mapped: (1) invertible = IJ=A for some J via mul_inv_cancel_iff, (2) uniqueness of inverses via right_inverse_eq, (3) I⁻¹ notation via inv_eq. Extra: mul_inv_cancel_iff_isUnit, mem_inv_iff, inv_anti_mono, Dedekind domain example. No sorries at all. No definition-level sorries. No gaps."
+    "notes": "Stage 3.2 review passed. All 3 claims mapped: (1) invertible = IJ=A for some J via mul_inv_cancel_iff, (2) uniqueness of inverses via right_inverse_eq, (3) I\u207b\u00b9 notation via inv_eq. Extra: mul_inv_cancel_iff_isUnit, mem_inv_iff, inv_anti_mono, Dedekind domain example. No sorries at all. No definition-level sorries. No gaps."
   },
   "Lecture2/02_20_Lemma": {
     "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All 3 claims mapped: (1) I·I⁻¹ ≤ 1 always via fractionalIdeal_mul_inv_le_one (proved), (2) invertible iff I·I⁻¹ = 1 via mul_inv_cancel_iff recall, (3) I⁻¹ = 1/I via inv_eq recall. No sorries. No definition-level sorries. No gaps."
+    "notes": "Stage 3.2 review passed. All 3 claims mapped: (1) I\u00b7I\u207b\u00b9 \u2264 1 always via fractionalIdeal_mul_inv_le_one (proved), (2) invertible iff I\u00b7I\u207b\u00b9 = 1 via mul_inv_cancel_iff recall, (3) I\u207b\u00b9 = 1/I via inv_eq recall. No sorries. No definition-level sorries. No gaps."
   },
   "Lecture2/02_20a_Discussion": {
     "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All 2 claims mapped: (1) Dedekind domains have all nonzero fractional ideals invertible via mul_inv_cancel₀ example, (2) not true in general via exists_noninvertible_fractionalIdeal (sorry). 1 proof-level sorry. No definition-level sorries. No gaps."
+    "notes": "Stage 3.2 review passed. All 2 claims mapped: (1) Dedekind domains have all nonzero fractional ideals invertible via mul_inv_cancel\u2080 example, (2) not true in general via exists_noninvertible_fractionalIdeal (sorry). 1 proof-level sorry. No definition-level sorries. No gaps."
   },
   "Lecture2/02_21_Example": {
     "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All 6 claims mapped: (1) SubringA defines A=ℤ+2iℤ (constructed), (2) idealI defines I=2ℤ[i], (3) idealI_of_A defines I as A-ideal (constructed), (4) idealI_of_ZI_invertible states ℤ[i]-invertibility (sorry), (5) conductor_eq_full states A÷I=ℤ[i] (sorry), (6) idealI_ssubset_SubringA + idealI_not_invertible_over_A prove non-invertibility. 3 proof-level sorries. No definition-level sorries. No gaps."
+    "notes": "Stage 3.2 review passed. All 6 claims mapped: (1) SubringA defines A=\u2124+2i\u2124 (constructed), (2) idealI defines I=2\u2124[i], (3) idealI_of_A defines I as A-ideal (constructed), (4) idealI_of_ZI_invertible states \u2124[i]-invertibility (sorry), (5) conductor_eq_full states A\u00f7I=\u2124[i] (sorry), (6) idealI_ssubset_SubringA + idealI_not_invertible_over_A prove non-invertibility. 3 proof-level sorries. No definition-level sorries. No gaps."
   },
   "Lecture2/02_21a_Discussion": {
     "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All 3 claims mapped: (1) invertible iff I(A÷I)=A via mul_inv_cancel_iff recall, (2) nonzero fractional ideals form abelian monoid via CommSemiring instance, (3) invertible fractional ideals form abelian group via CommGroup units instance. No sorries. No definition-level sorries. No gaps."
+    "notes": "Stage 3.2 review passed. All 3 claims mapped: (1) invertible iff I(A\u00f7I)=A via mul_inv_cancel_iff recall, (2) nonzero fractional ideals form abelian monoid via CommSemiring instance, (3) invertible fractional ideals form abelian group via CommGroup units instance. No sorries. No definition-level sorries. No gaps."
   },
   "Lecture2/02_22_Definition": {
     "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All 2 claims mapped: (1) ideal group 𝒥_A = group of invertible fractional ideals via (FractionalIdeal A⁰ K)ˣ + CommGroup instance + group operations (#checks), (2) elements need not be ideals via coeToSubmodule #check. No sorries at all. No definition-level sorries. No gaps."
+    "notes": "Stage 3.2 review passed. All 2 claims mapped: (1) ideal group \ud835\udca5_A = group of invertible fractional ideals via (FractionalIdeal A\u2070 K)\u02e3 + CommGroup instance + group operations (#checks), (2) elements need not be ideals via coeToSubmodule #check. No sorries at all. No definition-level sorries. No gaps."
   },
   "Lecture2/02_22a_Discussion": {
     "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All 3 claims mapped: (1) (x)⁻¹ = (x⁻¹) via toPrincipalIdeal + map_inv, (2) (x)(y) = (xy) via map_mul, (3) 𝒫_A subgroup via .range + PrincipalIdeals.normal + map_one. No sorries. No definition-level sorries. No gaps."
+    "notes": "Stage 3.2 review passed. All 3 claims mapped: (1) (x)\u207b\u00b9 = (x\u207b\u00b9) via toPrincipalIdeal + map_inv, (2) (x)(y) = (xy) via map_mul, (3) \ud835\udcab_A subgroup via .range + PrincipalIdeals.normal + map_one. No sorries. No definition-level sorries. No gaps."
   },
   "Lecture2/02_23_Definition": {
     "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All claims mapped: ClassGroup definition as ℐ_A/𝒫_A, toPrincipalIdeal map, PrincipalIdeals.normal, CommGroup instance, ClassGroup.equiv, ClassGroup.mk, ClassGroup.mk_eq_mk. No sorries. No definition-level sorries. No gaps."
+    "notes": "Stage 3.2 review passed. All claims mapped: ClassGroup definition as \u2110_A/\ud835\udcab_A, toPrincipalIdeal map, PrincipalIdeals.normal, CommGroup instance, ClassGroup.equiv, ClassGroup.mk, ClassGroup.mk_eq_mk. No sorries. No definition-level sorries. No gaps."
   },
   "Lecture2/02_24_Example": {
     "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All 3 claims mapped: (1) fractional ideals are (πⁿ) via IsPrincipalIdealRing.principal + eq_unit_mul_pow_irreducible + ideal_eq_span_pow_irreducible, (2) multiplicativity via spanSingleton_mul_spanSingleton, (3) trivial class group via card_classGroup_eq_one. No sorries. No definition-level sorries. No gaps."
+    "notes": "Stage 3.2 review passed. All 3 claims mapped: (1) fractional ideals are (\u03c0\u207f) via IsPrincipalIdealRing.principal + eq_unit_mul_pow_irreducible + ideal_eq_span_pow_irreducible, (2) multiplicativity via spanSingleton_mul_spanSingleton, (3) trivial class group via card_classGroup_eq_one. No sorries. No definition-level sorries. No gaps."
   },
   "Lecture2/02_25_Remark": {
     "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All 3 claims mapped: (1a) Dedekind+UFD→PID via of_isDedekindDomain_of_uniqueFactorizationMonoid + card_classGroup_eq_one, (1b) trivial class group↔PID via card_classGroup_eq_one_iff + PID→UFD via PrincipalIdealRing.to_uniqueFactorizationMonoid, (2) conceptual remark documented, (3) Picard ≅ ClassGroup via ClassGroup.equivPic. No sorries. No definition-level sorries. No gaps."
+    "notes": "Stage 3.2 review passed. All 3 claims mapped: (1a) Dedekind+UFD\u2192PID via of_isDedekindDomain_of_uniqueFactorizationMonoid + card_classGroup_eq_one, (1b) trivial class group\u2194PID via card_classGroup_eq_one_iff + PID\u2192UFD via PrincipalIdealRing.to_uniqueFactorizationMonoid, (2) conceptual remark documented, (3) Picard \u2245 ClassGroup via ClassGroup.equivPic. No sorries. No definition-level sorries. No gaps."
   },
   "Backmatter/Bibliography": {
     "status": "non_formalizable",
