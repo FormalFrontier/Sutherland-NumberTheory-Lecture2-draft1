@@ -10,13 +10,13 @@
     "status": "scaffolding_ready",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Section 2.1 body. Claims: (1) universal property of localization, (2) equivalence relation construction of S\u207b\u00b9A, (3) \u03b9(S) \u2286 (S\u207b\u00b9A)\u00d7, (4) uniqueness of factoring map, (5) for integral domains: (a,s)~(b,t) iff at-bs=0, (6) S\u207b\u00b9A embeds in Frac(A), (7) S\u2286T implies S\u207b\u00b9A \u2286 T\u207b\u00b9A, (8) \u03b9 injective when A integral domain, (9) A \u2286 S\u207b\u00b9A \u2286 Frac(A). Most are in Mathlib but formalizable."
+    "notes": "Section 2.1 body. Claims: (1) universal property of localization, (2) equivalence relation construction of S⁻¹A, (3) ι(S) ⊆ (S⁻¹A)×, (4) uniqueness of factoring map, (5) for integral domains: (a,s)~(b,t) iff at-bs=0, (6) S⁻¹A embeds in Frac(A), (7) S⊆T implies S⁻¹A ⊆ T⁻¹A, (8) ι injective when A integral domain, (9) A ⊆ S⁻¹A ⊆ Frac(A). Most are in Mathlib but formalizable."
   },
   "Lecture2/02_00b_Discussion": {
     "status": "scaffolding_ready",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Section 2.2 body. Claims: (1) contraction \u03c6\u207b\u00b9(b) is an A-ideal, (2) extension aB = (ab : a\u2208a, b\u2208B) for injective \u03c6, (3) a \u2286 a^ec, (4) b^ce \u2286 b, (5) if a\u2229S \u2260 \u2205 then a^e = B, (6) when B = S\u207b\u00b9A: b^ce = b."
+    "notes": "Section 2.2 body. Claims: (1) contraction φ⁻¹(b) is an A-ideal, (2) extension aB = (ab : a∈a, b∈B) for injective φ, (3) a ⊆ a^ec, (4) b^ce ⊆ b, (5) if a∩S ≠ ∅ then a^e = B, (6) when B = S⁻¹A: b^ce = b."
   },
   "Lecture2/02_01_Theorem": {
     "status": "definition_verified",
@@ -25,22 +25,22 @@
     "notes": "Stage 3.2 review passed. All 4 claims mapped: (1) bijection via orderIsoOfPrime, (2) forward map via comap_map_of_isPrime_disjoint, (3) inverse map via isPrime_of_isPrime_disjoint, (4) round-trip via map_comap. No definition-level sorries. No gaps."
   },
   "Lecture2/02_02_Remark": {
-    "status": "scaffolding_ready",
+    "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Remark 2.2. Claims: (1) generators of a as A-ideal also generate a^e as B-ideal, (2) every B-ideal is of form a^e, (3) A noetherian implies all localizations noetherian, (4) A PID implies all localizations PID."
+    "notes": "Remark 2.2 scaffolded. 4 claims: (1) generators of a generate a^e — Ideal.map_span recall, (2) every B-ideal is a^e — IsLocalization.map_comap recall, (3) noetherian preserved — IsLocalization.isNoetherianRing recall, (4) PID preserved — custom theorem with sorry."
   },
   "Lecture2/02_02a_Discussion": {
     "status": "scaffolding_ready",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Localization at prime. Claims: (1) A_p = S\u207b\u00b9A for S = A\\p, (2) prime ideals of A_p biject with primes of A contained in p, (3) pA_p is unique maximal ideal, (4) A_p is a local ring."
+    "notes": "Localization at prime. Claims: (1) A_p = S⁻¹A for S = A\\p, (2) prime ideals of A_p biject with primes of A contained in p, (3) pA_p is unique maximal ideal, (4) A_p is a local ring."
   },
   "Lecture2/02_03_Remark": {
-    "status": "scaffolding_ready",
+    "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Warning 2.3. Claims: (1) a/b \u2208 A_p does not require b \u2209 p (counterexample: Z, p=(3), 9/3=3/1)."
+    "notes": "Warning 2.3 scaffolded. Counterexample: 9/3 = 3/1 in Z_(3) even though 3 in (3). All proofs completed (no sorry)."
   },
   "Lecture2/02_04_Example": {
     "status": "definition_verified",
@@ -58,7 +58,7 @@
     "status": "scaffolding_ready",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Section 2.3 body. Claims: (1) universal property of S\u207b\u00b9M, (2) S\u207b\u00b9M \u2245 M \u2297_A S\u207b\u00b9A, (3) \u03b9 injective iff \u00d7s injective for all s\u2208S, (4) for A subring of field K with M \u2286 K-vector space, M embeds in S\u207b\u00b9M."
+    "notes": "Section 2.3 body. Claims: (1) universal property of S⁻¹M, (2) S⁻¹M ≅ M ⊗_A S⁻¹A, (3) ι injective iff ×s injective for all s∈S, (4) for A subring of field K with M ⊆ K-vector space, M embeds in S⁻¹M."
   },
   "Lecture2/02_06_Proposition": {
     "status": "definition_verified",
@@ -89,7 +89,7 @@
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "",
-    "reason": "Transitional paragraph + section heading '2.4 Dedekind domains'. Claims: (1) 'to prove an ideal I satisfies a property, enough to show for all localizations I_p and preserved under intersections' \u2014 vague heuristic, not a precise statement (no specific property named). No other claims."
+    "reason": "Transitional paragraph + section heading '2.4 Dedekind domains'. Claims: (1) 'to prove an ideal I satisfies a property, enough to show for all localizations I_p and preserved under intersections' — vague heuristic, not a precise statement (no specific property named). No other claims."
   },
   "Lecture2/02_09_Proposition": {
     "status": "definition_verified",
@@ -126,7 +126,7 @@
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "",
-    "reason": "Section heading '2.5 Fractional ideals' and context setting: 'Throughout this subsection, A is a noetherian domain and K is its fraction field.' No mathematical claims \u2014 pure scoping statement."
+    "reason": "Section heading '2.5 Fractional ideals' and context setting: 'Throughout this subsection, A is a noetherian domain and K is its fraction field.' No mathematical claims — pure scoping statement."
   },
   "Lecture2/02_13_Definition": {
     "status": "definition_verified",
@@ -168,7 +168,7 @@
     "status": "scaffolding_ready",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Claims: (1) I+J = {i+j}, (2) IJ = A-module generated by {ij}, (3) I\u00f7J = {x\u2208K : xJ\u2286I} is a fractional ideal, (4) I\u00f7J is not a quotient of A-modules, (5) for principal ideals (x)\u00f7(y)=(x/y)."
+    "notes": "Claims: (1) I+J = {i+j}, (2) IJ = A-module generated by {ij}, (3) I÷J = {x∈K : xJ⊆I} is a fractional ideal, (4) I÷J is not a quotient of A-modules, (5) for principal ideals (x)÷(y)=(x/y)."
   },
   "Lecture2/02_18_Lemma": {
     "status": "scaffolding_ready",
@@ -204,13 +204,13 @@
     "status": "scaffolding_ready",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Section 2.6 intro. Claims: (1) I invertible iff I(A\u00f7I)=A, (2) nonzero fractional ideals form abelian monoid, (3) invertible fractional ideals form abelian group."
+    "notes": "Section 2.6 intro. Claims: (1) I invertible iff I(A÷I)=A, (2) nonzero fractional ideals form abelian monoid, (3) invertible fractional ideals form abelian group."
   },
   "Lecture2/02_22_Definition": {
     "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Fully covered by Mathlib. Ideal group \u2110_A = (FractionalIdeal A\u2070 K)\u02e3. Covers: definition, CommGroup instance, group operations, and note that elements need not be ideals."
+    "notes": "Fully covered by Mathlib. Ideal group ℐ_A = (FractionalIdeal A⁰ K)ˣ. Covers: definition, CommGroup instance, group operations, and note that elements need not be ideals."
   },
   "Lecture2/02_22a_Discussion": {
     "status": "scaffolding_ready",
@@ -222,7 +222,7 @@
     "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Fully covered by Mathlib ClassGroup. Covers: definition as \u2110_A/\ud835\udcab_A, toPrincipalIdeal map, normal subgroup, CommGroup instance, equivalence with explicit quotient, quotient map mk, and class equality criterion."
+    "notes": "Fully covered by Mathlib ClassGroup. Covers: definition as ℐ_A/𝒫_A, toPrincipalIdeal map, normal subgroup, CommGroup instance, equivalence with explicit quotient, quotient map mk, and class equality criterion."
   },
   "Lecture2/02_24_Example": {
     "status": "scaffolding_ready",
@@ -234,7 +234,7 @@
     "status": "scaffolding_ready",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Remark 2.25. Claims: (1) Dedekind domain is UFD iff cl(A) trivial, (2) cl(A) measures how far from UFD. Footnote: (3) Picard group \u2245 ideal class group for noetherian domains."
+    "notes": "Remark 2.25. Claims: (1) Dedekind domain is UFD iff cl(A) trivial, (2) cl(A) measures how far from UFD. Footnote: (3) Picard group ≅ ideal class group for noetherian domains."
   },
   "Backmatter/Bibliography": {
     "status": "non_formalizable",
