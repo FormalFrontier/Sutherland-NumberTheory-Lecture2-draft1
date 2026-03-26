@@ -129,10 +129,10 @@
     "reason": "Section heading '2.5 Fractional ideals' and context setting: 'Throughout this subsection, A is a noetherian domain and K is its fraction field.' No mathematical claims — pure scoping statement."
   },
   "Lecture2/02_13_Definition": {
-    "status": "scaffolding_ready",
+    "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": ""
+    "notes": "Fully covered by Mathlib FractionalIdeal. Used #check + example pattern. Covers: definition, IsFractional predicate, bridge to f.g. characterization (fg_of_isNoetherianRing), coeIdeal coercion from ideals, algebraic structure (CommSemiring, Lattice)."
   },
   "Lecture2/02_13a_Discussion": {
     "status": "scaffolding_ready",
