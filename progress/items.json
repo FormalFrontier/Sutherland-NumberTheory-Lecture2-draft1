@@ -153,10 +153,10 @@
     "notes": "Stage 3.2 review passed. All 4 claims mapped: (1) alternative definition reference — IsFractional #check, (2) A-submodules with ∃r,rI⊆A — FractionalIdeal uses IsFractional predicate, (3) extends to non-noetherian — Mathlib's primary def works for all domains (doc comment), (4) coincides when noetherian — fractionalIdeal_fg_of_noetherian proved via fg_of_isNoetherianRing. No sorries at all. No definition-level sorries. No gaps."
   },
   "Lecture2/02_16_Corollary": {
-    "status": "definition_verified",
+    "status": "sorry_free",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. Blob claim: every fractional ideal = (1/a)I. Mapped to: (1) FractionalIdeal.den — denominator, (2) FractionalIdeal.num — numerator ideal, (3) den_mul_self_eq_num — key relation, (4) fractionalIdeal_eq_inv_den_mul_num — existential statement (1 proof-level sorry). No definition-level sorries. No gaps."
+    "notes": "Sorry-free. fractionalIdeal_eq_inv_den_mul_num proved by rearranging den_mul_self_eq_num' via spanSingleton_mul_spanSingleton and inv_mul_cancel₀."
   },
   "Lecture2/02_17_Definition": {
     "status": "sorry_free",
@@ -189,10 +189,10 @@
     "notes": "Stage 3.2 review passed. All 3 claims mapped: (1) I·I⁻¹ ≤ 1 always via fractionalIdeal_mul_inv_le_one (proved), (2) invertible iff I·I⁻¹ = 1 via mul_inv_cancel_iff recall, (3) I⁻¹ = 1/I via inv_eq recall. No sorries. No definition-level sorries. No gaps."
   },
   "Lecture2/02_20a_Discussion": {
-    "status": "definition_verified",
+    "status": "sorry_free",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All 2 claims mapped: (1) Dedekind domains have all nonzero fractional ideals invertible via mul_inv_cancel₀ example, (2) not true in general via exists_noninvertible_fractionalIdeal (sorry). 1 proof-level sorry. No definition-level sorries. No gaps."
+    "notes": "Sorry-free. exists_noninvertible_fractionalIdeal proved using ℤ[X] as witness: (X) is prime but not maximal (ℤ[X]/(X) ≅ ℤ not a field), so ¬IsDedekindDomain, then via isDedekindDomain_iff_isDedekindDomainInv extract non-invertible fractional ideal."
   },
   "Lecture2/02_21_Example": {
     "status": "sorry_free",
