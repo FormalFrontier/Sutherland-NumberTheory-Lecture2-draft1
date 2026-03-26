@@ -1,5 +1,8 @@
 import Mathlib
 
+-- `show` used functionally to unfold subtype coercions
+set_option linter.style.show false
+
 /-!
 # Example 2.21
 
@@ -22,26 +25,12 @@ imaginary part. -/
 def SubringA : Subring ℤ[i] where
   carrier := {z : ℤ[i] | Even z.im}
   mul_mem' := by
-    intro a b ha hb
-    simp only [Set.mem_setOf_eq] at *
-    obtain ⟨m, hm⟩ := ha
-    obtain ⟨n, hn⟩ := hb
-    -- (a * b).im = a.re * b.im + a.im * b.re
-    refine ⟨a.re * n + m * b.re, ?_⟩
-    -- (a * b).im = a.re * b.im + a.im * b.re = a.re * 2n + 2m * b.re
-    change (a * b).im = _ + _
-    rw [Zsqrtd.im_mul, hm, hn]
-    ring
+    intro a b ⟨m, hm⟩ ⟨n, hn⟩
+    exact ⟨a.re * n + m * b.re, by rw [Zsqrtd.im_mul, hm, hn]; ring⟩
   one_mem' := ⟨0, by simp⟩
-  add_mem' := by
-    intro a b ha hb
-    simp only [Set.mem_setOf_eq] at *
-    exact ha.add hb
+  add_mem' := fun ha hb => ha.add hb
   zero_mem' := ⟨0, by simp⟩
-  neg_mem' := by
-    intro a ha
-    simp only [Set.mem_setOf_eq] at *
-    exact ha.neg
+  neg_mem' := fun ha => ha.neg
 
 /-! ## The set I = 2ℤ[i]
 
@@ -74,16 +63,13 @@ def idealI_of_A : Ideal SubringA where
     exact ⟨har.add hbr, hai.add hbi⟩
   zero_mem' := ⟨⟨0, by simp⟩, ⟨0, by simp⟩⟩
   smul_mem' := by
-    intro ⟨c, hc_mem⟩ ⟨x, hx_mem⟩ ⟨hxr, hxi⟩
-    simp only [Set.mem_setOf_eq] at *
+    intro ⟨c, hc_mem⟩ ⟨x, _⟩ ⟨hxr, hxi⟩
     obtain ⟨m, hm⟩ := hxr
     obtain ⟨n, hn⟩ := hxi
     obtain ⟨p, hp⟩ := hc_mem
-    -- smul on SubringA is just multiplication of underlying ℤ[i] elements
     show Even (c * x).re ∧ Even (c * x).im
-    rw [Zsqrtd.re_mul, Zsqrtd.im_mul]
-    exact ⟨⟨c.re * m - p * x.im, by rw [hm, hp]; ring⟩,
-           ⟨c.re * n + p * x.re, by rw [hn, hp]; ring⟩⟩
+    exact ⟨⟨c.re * m - p * x.im, by rw [Zsqrtd.re_mul, hm, hp]; ring⟩,
+           ⟨c.re * n + p * x.re, by rw [Zsqrtd.im_mul, hn, hp]; ring⟩⟩
 
 /-! ## Claim (c): I is invertible as a ℤ[i]-ideal
 
@@ -112,8 +98,6 @@ z · I ⊆ A. This is because if w ∈ I = 2ℤ[i] then z * w = 2(z * w') ∈ 2�
 theorem conductor_eq_full :
     ∀ (z : ℤ[i]) (w : ℤ[i]), w ∈ idealI → (z * w) ∈ (SubringA : Set ℤ[i]) := by
   intro z w ⟨⟨m, hm⟩, ⟨n, hn⟩⟩
-  -- w ∈ I means w.re = 2m, w.im = 2n
-  -- (z * w).im = z.re * w.im + z.im * w.re = z.re * 2n + z.im * 2m, which is even
   show Even (z * w).im
   exact ⟨z.re * n + z.im * m, by rw [Zsqrtd.im_mul, hm, hn]; ring⟩
 
@@ -131,9 +115,7 @@ theorem idealI_ssubset_SubringA : idealI ⊂ (SubringA : Set ℤ[i]) := by
   simp only [idealI, Set.mem_setOf_eq] at h2
   obtain ⟨⟨r, hr⟩, _⟩ := h2
   -- hr : (1 : ℤ[i]).re = r + r, i.e. 1 = 2r, impossible in ℤ
-  change (1 : Zsqrtd (-1)).re = r + r at hr
-  simp at hr
-  omega
+  simp at hr; omega
 
 /-- I is not invertible as an A-ideal: the product I · (A ÷ I) = I ≠ A. -/
 theorem idealI_not_invertible_over_A : idealI ≠ (SubringA : Set ℤ[i]) :=
