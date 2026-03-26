@@ -4,28 +4,28 @@
     "notes": "Lecture introduction; no dependencies"
   },
   "Lecture2/02_00a_Discussion": {
-    "depends_on": ["Lecture2/02_00_Introduction"],
-    "notes": "§2.1 opens with localization of rings; follows introduction"
+    "depends_on": [],
+    "notes": "Lean file only imports Mathlib; all claims are recall statements for Mathlib's IsLocalization API"
   },
   "Lecture2/02_00b_Discussion": {
-    "depends_on": ["Lecture2/02_00a_Discussion"],
-    "notes": "§2.2 on ideals in localizations; builds on §2.1 localization setup"
+    "depends_on": [],
+    "notes": "Lean file only imports Mathlib; recall statements for Ideal.comap/map + one custom theorem using only Mathlib"
   },
   "Lecture2/02_01_Theorem": {
-    "depends_on": ["Lecture2/02_00b_Discussion"],
-    "notes": "Theorem 2.1 (prime ideal correspondence) stated in context of §2.2"
+    "depends_on": [],
+    "notes": "Lean file only imports Mathlib; recall statements for IsLocalization.orderIsoOfPrime and related"
   },
   "Lecture2/02_02_Remark": {
-    "depends_on": ["Lecture2/02_00b_Discussion"],
-    "notes": "Explicitly references 'an immediate consequence of (2)', where equation (2) is in 02_00b_Discussion"
+    "depends_on": [],
+    "notes": "Lean file only imports Mathlib; custom theorem isPrincipalIdealRing_localization uses only Mathlib APIs"
   },
   "Lecture2/02_02a_Discussion": {
-    "depends_on": ["Lecture2/02_01_Theorem"],
-    "notes": "Uses Theorem 2.1: 'prime ideals of A_p are in bijection with prime ideals of A contained in p'"
+    "depends_on": [],
+    "notes": "Lean file only imports Mathlib; recall statements for Localization.AtPrime and related"
   },
   "Lecture2/02_03_Remark": {
-    "depends_on": ["Lecture2/02_02a_Discussion"],
-    "notes": "References 'the notation in (3)', where equation (3) is in 02_02a_Discussion"
+    "depends_on": [],
+    "notes": "Lean file only imports Mathlib; standalone counterexample about ℤ_(3) using only Mathlib"
   },
   "Lecture2/02_04_Example": {
     "depends_on": ["Lecture2/02_02a_Discussion", "Lecture2/02_02_Remark"],
@@ -36,12 +36,12 @@
     "notes": "'As in the previous example' — explicitly references Example 2.4"
   },
   "Lecture2/02_05a_Discussion": {
-    "depends_on": ["Lecture2/02_05_Example"],
-    "notes": "§2.3 on module localization; follows §2.1-2.2 examples"
+    "depends_on": [],
+    "notes": "Lean file only imports Mathlib; custom theorems about LocalizedModule injectivity using only Mathlib"
   },
   "Lecture2/02_06_Proposition": {
-    "depends_on": ["Lecture2/02_05a_Discussion"],
-    "notes": "Proposition 2.6 uses module localization framework from §2.3"
+    "depends_on": [],
+    "notes": "Lean file only imports Mathlib; custom defs (localizedAtPrime, conductor) and proofs using only Mathlib"
   },
   "Lecture2/02_06a_Discussion": {
     "depends_on": ["Lecture2/02_06_Proposition"],
