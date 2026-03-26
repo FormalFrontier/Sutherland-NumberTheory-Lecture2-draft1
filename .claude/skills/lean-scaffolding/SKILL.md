@@ -99,8 +99,45 @@ When reviewing another agent's scaffolding:
 3. **Flag gaps**: Any unmapped claim = review failure
 4. **Check equivalences**: Book wording ≠ Mathlib wording → need bridging theorem
 5. **Check definitions**: No data is sorry'd, only proof obligations
+6. **Build verification**: Run `lake build` on the file to confirm it compiles
 
 Include the coverage audit as a checklist in the review PR body.
+
+### Review Output Format
+
+When updating `progress/items.json` after a review, write the `notes` field
+with the full claim-by-claim audit. This format has proven effective across
+20+ reviews:
+
+```
+"Stage 3.2 review passed. All N/N claims mapped: (1) <claim> — <Lean decl>,
+(2) <claim> — <Lean decl>, ... No definition-level sorries. No gaps."
+```
+
+Set status to `definition_verified` when all claims are mapped and no
+definition-level sorries exist. Proof-level sorries are expected and acceptable
+at this stage.
+
+### Correctly Omitted Content
+
+Some blob content should NOT be formalized. Document these explicitly:
+- Forward references to later lectures → "correctly omitted"
+- Editorial remarks about terminology → "correctly omitted"
+- Informal heuristics without precise statements → "correctly omitted"
+- Set-theoretic descriptions already captured by type signatures → "appropriately omitted"
+
+This prevents future reviewers from flagging intentional omissions as gaps.
+
+## Handling items.json Merge Conflicts
+
+When multiple agents work in parallel, `progress/items.json` is the most
+common source of merge conflicts. During rebase:
+
+1. Accept both sides — each agent's item updates are independent
+2. Verify the merged JSON is valid: `python3 -c "import json; json.load(open('progress/items.json'))"`
+3. Ensure no item's status was accidentally downgraded (e.g., `definition_verified` → `scaffolded`)
+
+This is expected in parallel workflows and is not a sign of problems.
 
 ## Common Mistakes
 
