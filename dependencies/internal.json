@@ -84,40 +84,36 @@
     "notes": "§2.5 introduction on fractional ideals; sets up standing assumptions"
   },
   "Lecture2/02_13_Definition": {
-    "depends_on": ["Lecture2/02_12b_Discussion"],
-    "notes": "Fractional ideal definition; uses §2.5 setup (noetherian domain, fraction field)"
+    "depends_on": [],
+    "notes": "Lean file only imports Mathlib; FractionalIdeal and IsFractional are Mathlib types"
   },
   "Lecture2/02_13a_Discussion": {
-    "depends_on": ["Lecture2/02_13_Definition"],
-    "notes": "Elaborates on Definition 2.13; explains how fractional ideals generalize ideals"
+    "depends_on": [],
+    "notes": "Lean file only imports Mathlib; recall statements for FractionalIdeal coercion and IsFractional"
   },
   "Lecture2/02_14_Lemma": {
-    "depends_on": ["Lecture2/02_13a_Discussion"],
-    "notes": "Characterizes finitely generated A-submodules of K; uses fractional ideal setup"
+    "depends_on": [],
+    "notes": "Lean file only imports Mathlib; fractional_iff_fg and fractionalIdeal_fg use only Mathlib APIs (IsFractional, fg_of_isNoetherianRing)"
   },
   "Lecture2/02_15_Remark": {
-    "depends_on": ["Lecture2/02_14_Lemma"],
-    "notes": "'Lemma 2.14 gives an alternative definition' — explicitly references Lemma 2.14"
-  },
-  "Lecture2/02_16_Corollary": {
-    "depends_on": ["Lecture2/02_14_Lemma"],
-    "notes": "Direct consequence of Lemma 2.14; every fractional ideal has form (1/a)I"
+    "depends_on": [],
+    "notes": "Lean file only imports Mathlib; fractionalIdeal_fg_of_noetherian uses FractionalIdeal.fg_of_isNoetherianRing"
   },
   "Lecture2/02_17_Definition": {
-    "depends_on": ["Lecture2/02_16_Corollary"],
-    "notes": "Principal fractional ideal; extends fractional ideal concept"
+    "depends_on": [],
+    "notes": "Lean file only imports Mathlib; recall statements for FractionalIdeal.spanSingleton and properties"
   },
   "Lecture2/02_17a_Discussion": {
-    "depends_on": ["Lecture2/02_17_Definition"],
-    "notes": "Operations on fractional ideals: sum, product, quotient; uses Definition 2.17"
+    "depends_on": [],
+    "notes": "Lean file only imports Mathlib; recall statements for FractionalIdeal add/mul/div operations"
   },
   "Lecture2/02_18_Lemma": {
-    "depends_on": ["Lecture2/02_17a_Discussion", "Lecture2/02_14_Lemma"],
-    "notes": "Proof explicitly uses 'by Lemma 2.14' twice; also uses ideal quotient from 02_17a"
+    "depends_on": [],
+    "notes": "Lean file only imports Mathlib; quotient_fractionalIdeal_fg uses FractionalIdeal.fg_of_isNoetherianRing and Div instance"
   },
   "Lecture2/02_19_Definition": {
-    "depends_on": ["Lecture2/02_18_Lemma"],
-    "notes": "Invertible fractional ideal; follows from quotient being a fractional ideal"
+    "depends_on": [],
+    "notes": "Lean file only imports Mathlib; recall statements for FractionalIdeal inv/mul_inv_cancel and IsUnit"
   },
   "Lecture2/02_20_Lemma": {
     "depends_on": [],
