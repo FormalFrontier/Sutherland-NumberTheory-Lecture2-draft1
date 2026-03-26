@@ -159,10 +159,10 @@
     "notes": ""
   },
   "Lecture2/02_17_Definition": {
-    "status": "scaffolding_ready",
+    "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": ""
+    "notes": "Fully covered by Mathlib via FractionalIdeal.spanSingleton"
   },
   "Lecture2/02_17a_Discussion": {
     "status": "scaffolding_ready",
@@ -177,10 +177,10 @@
     "notes": ""
   },
   "Lecture2/02_19_Definition": {
-    "status": "scaffolding_ready",
+    "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": ""
+    "notes": "Fully covered by Mathlib via FractionalIdeal.mul_inv_cancel_iff and inv machinery"
   },
   "Lecture2/02_20_Lemma": {
     "status": "scaffolding_ready",
