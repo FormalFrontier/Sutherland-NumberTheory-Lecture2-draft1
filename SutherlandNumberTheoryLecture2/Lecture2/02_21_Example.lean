@@ -76,16 +76,14 @@ def idealI_of_A : Ideal SubringA where
   smul_mem' := by
     intro ⟨c, hc_mem⟩ ⟨x, hx_mem⟩ ⟨hxr, hxi⟩
     simp only [Set.mem_setOf_eq] at *
-    -- c ∈ A means c.im is even, x ∈ I means x.re and x.im are even
-    -- (c * x).re = c.re * x.re + (-1) * c.im * x.im; both products even
-    -- (c * x).im = c.re * x.im + c.im * x.re; both products even
     obtain ⟨m, hm⟩ := hxr
     obtain ⟨n, hn⟩ := hxi
-    constructor
-    · -- re part: c.re * x.re + (-1) * c.im * x.im
-      sorry
-    · -- im part: c.re * x.im + c.im * x.re
-      sorry
+    obtain ⟨p, hp⟩ := hc_mem
+    -- smul on SubringA is just multiplication of underlying ℤ[i] elements
+    show Even (c * x).re ∧ Even (c * x).im
+    rw [Zsqrtd.re_mul, Zsqrtd.im_mul]
+    exact ⟨⟨c.re * m - p * x.im, by rw [hm, hp]; ring⟩,
+           ⟨c.re * n + p * x.re, by rw [hn, hp]; ring⟩⟩
 
 /-! ## Claim (c): I is invertible as a ℤ[i]-ideal
 
@@ -95,9 +93,14 @@ As a ℤ[i]-ideal, I = (2) is principal, hence invertible.
 /-- I = 2ℤ[i] as an ideal of ℤ[i], i.e., the principal ideal (2). -/
 def idealI_of_ZI : Ideal ℤ[i] := Ideal.span {(⟨2, 0⟩ : ℤ[i])}
 
-/-- I = (2) is invertible as a ℤ[i]-ideal (it is principal in a PID). -/
-theorem idealI_of_ZI_invertible : idealI_of_ZI ≠ ⊥ ∧ ∃ J : Ideal ℤ[i], idealI_of_ZI * J = ⊤ := by
-  sorry
+/-- I = (2) is a nonzero ideal of ℤ[i]. Combined with the fact that ℤ[i] is a PID
+(and hence a Dedekind domain), this implies I is invertible as a fractional ideal. -/
+theorem idealI_of_ZI_ne_bot : idealI_of_ZI ≠ ⊥ := by
+  rw [idealI_of_ZI, Ne, Ideal.span_singleton_eq_bot]
+  simp [Zsqrtd.ext_iff]
+
+/-- ℤ[i] is a principal ideal ring (hence every nonzero ideal is invertible). -/
+instance : IsPrincipalIdealRing ℤ[i] := EuclideanDomain.to_principal_ideal_domain
 
 /-! ## Claim (d): A ÷ I = ℤ[i]
 
@@ -108,7 +111,11 @@ z · I ⊆ A. This is because if w ∈ I = 2ℤ[i] then z * w = 2(z * w') ∈ 2�
 /-- For all z ∈ ℤ[i] and w ∈ I, we have z * w ∈ A. This shows A ÷ I = ℤ[i]. -/
 theorem conductor_eq_full :
     ∀ (z : ℤ[i]) (w : ℤ[i]), w ∈ idealI → (z * w) ∈ (SubringA : Set ℤ[i]) := by
-  sorry
+  intro z w ⟨⟨m, hm⟩, ⟨n, hn⟩⟩
+  -- w ∈ I means w.re = 2m, w.im = 2n
+  -- (z * w).im = z.re * w.im + z.im * w.re = z.re * 2n + z.im * 2m, which is even
+  show Even (z * w).im
+  exact ⟨z.re * n + z.im * m, by rw [Zsqrtd.im_mul, hm, hn]; ring⟩
 
 /-! ## Claim (e): I is NOT invertible as an A-ideal
 
