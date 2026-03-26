@@ -207,10 +207,10 @@
     "notes": "Section 2.6 intro. Claims: (1) I invertible iff I(A\u00f7I)=A, (2) nonzero fractional ideals form abelian monoid, (3) invertible fractional ideals form abelian group."
   },
   "Lecture2/02_22_Definition": {
-    "status": "scaffolding_ready",
+    "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": ""
+    "notes": "Fully covered by Mathlib. Ideal group ℐ_A = (FractionalIdeal A⁰ K)ˣ. Covers: definition, CommGroup instance, group operations, and note that elements need not be ideals."
   },
   "Lecture2/02_22a_Discussion": {
     "status": "scaffolding_ready",
@@ -219,10 +219,10 @@
     "notes": "Claims: (1) every nonzero principal fractional ideal is invertible, (2) product of principal fractional ideals is principal, (3) P_A is subgroup of I_A."
   },
   "Lecture2/02_23_Definition": {
-    "status": "scaffolding_ready",
+    "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": ""
+    "notes": "Fully covered by Mathlib ClassGroup. Covers: definition as ℐ_A/𝒫_A, toPrincipalIdeal map, normal subgroup, CommGroup instance, equivalence with explicit quotient, quotient map mk, and class equality criterion."
   },
   "Lecture2/02_24_Example": {
     "status": "scaffolding_ready",
