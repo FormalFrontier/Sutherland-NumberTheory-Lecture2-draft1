@@ -88,7 +88,7 @@
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "All 3 proofs complete: conductor argument for prime/maximal versions, bridge by rewriting.",
-    "upstreaming_status": "candidate"
+    "upstreaming_status": "include"
   },
   "Lecture2/02_08_Example": {
     "status": "proof_polished",
