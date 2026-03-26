@@ -60,9 +60,8 @@ variable {M : Submonoid R} [IsLocalization M S]
 
 theorem ideal_ext_eq_top_of_meets_submonoid
     (I : Ideal R) (h : ¬Disjoint (M : Set R) (I : Set R)) :
-    Ideal.map (algebraMap R S) I = ⊤ := by
-  by_contra h_ne
-  exact h ((IsLocalization.map_algebraMap_ne_top_iff_disjoint M S I).mp h_ne)
+    Ideal.map (algebraMap R S) I = ⊤ :=
+  of_not_not ((IsLocalization.map_algebraMap_ne_top_iff_disjoint M S I).not.mpr h)
 
 /-! ## Claim 6: 𝔟ᶜᵉ = 𝔟 when B = S⁻¹A
 

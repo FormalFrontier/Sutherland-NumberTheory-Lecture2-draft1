@@ -7,52 +7,52 @@
     "reason": "Motivational paragraph introducing Lecture 2 topics (localization, Dedekind domains). Claims: none. Pure narrative overview with no precise mathematical statements."
   },
   "Lecture2/02_00a_Discussion": {
-    "status": "sorry_free",
+    "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "Stage 3.2 review passed. 9/9 claims mapped: (1) IsLocalization.lift, (2) IsLocalization.mk' + IsLocalization.eq, (3) IsLocalization.map_units, (4) IsLocalization.lift_unique, (5) IsLocalization.mk'_eq_iff_eq, (6) IsFractionRing + FractionRing, (7) IsLocalization.of_le, (8) IsLocalization.injective, (9) IsFractionRing.injective. All recall pattern, no sorries. No definition-level sorries. No gaps."
   },
   "Lecture2/02_00b_Discussion": {
-    "status": "sorry_free",
+    "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "Stage 3.2 review passed. 6/6 claims mapped: (1) Ideal.comap, (2) Ideal.map, (3) Ideal.le_comap_map, (4) Ideal.map_comap_le, (5) IsLocalization.map_algebraMap_ne_top_iff_disjoint + ideal_ext_eq_top_of_meets_submonoid (proved), (6) IsLocalization.map_comap. 1 original theorem, rest recall. No definition-level sorries. No gaps."
   },
   "Lecture2/02_01_Theorem": {
-    "status": "sorry_free",
+    "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "Stage 3.2 review passed. All 4 claims mapped: (1) bijection via orderIsoOfPrime, (2) forward map via comap_map_of_isPrime_disjoint, (3) inverse map via isPrime_of_isPrime_disjoint, (4) round-trip via map_comap. No definition-level sorries. No gaps."
   },
   "Lecture2/02_02_Remark": {
-    "status": "proof_polished",
+    "status": "sorry_free",
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "Proved isPrincipalIdealRing_localization_of_isPrincipalIdealRing: PID preserved under localization."
   },
   "Lecture2/02_02a_Discussion": {
-    "status": "proof_polished",
+    "status": "sorry_free",
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "Stage 3.2 review passed. All 4 claims mapped: (1) A_\ud835\udd2d = S\u207b\u00b9A via Localization.AtPrime + IsLocalization.AtPrime, (2) prime ideal bijection via IsLocalization.orderIsoOfPrime + AtPrime.orderIsoOfPrime, (3) \ud835\udd2dA_\ud835\udd2d unique maximal via IsLocalRing.maximalIdeal + AtPrime.map_eq_maximalIdeal, (4) local ring via inferInstance example. No sorries. No definition-level sorries. No gaps."
   },
   "Lecture2/02_03_Remark": {
-    "status": "proof_polished",
+    "status": "sorry_free",
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "Stage 3.2 review passed. Counterexample fully proved: primeIdeal3 defined, three_mem_primeIdeal3 proved, nine_div_three_eq_three proved, warning_2_3_counterexample existential proved. Meta-remark about lowest terms in non-UFDs correctly not formalized. No sorries at all. No definition-level sorries. No gaps."
   },
   "Lecture2/02_04_Example": {
-    "status": "proof_polished",
+    "status": "proof_formalized",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Sorry-free. Polished: combined redundant rw steps in quotient map proof."
+    "notes": "Proved kx_loc_x_sub_2_maximalIdeal (maximal ideal = image of (x-2)), polyPrimeIdeal_x_sub_2_isMaximal, kx_loc_x_sub_2_residueField (residue field \u2243 k). 2 sorries remain: kx_loc_x_sub_2_quotientMap_eq_eval (lower priority)."
   },
   "Lecture2/02_05_Example": {
-    "status": "proof_polished",
+    "status": "proof_formalized",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Sorry-free. Polished: converted quotient map proof to term-mode."
+    "notes": "Proved intPrimeIdeal_p_isMaximal, Z_loc_p_residueField (residue field \u2243 ZMod p). 1 sorry remains: Z_loc_p_quotientMap_eq_mod (lower priority)."
   },
   "Lecture2/02_05a_Discussion": {
     "status": "sorry_free",
@@ -67,22 +67,22 @@
     "notes": "All 4 proof-level sorries resolved. Proposition 2.6 fully formalized: submodule equals intersection of localizations at prime (and maximal) ideals."
   },
   "Lecture2/02_06a_Discussion": {
-    "status": "proof_polished",
+    "status": "sorry_free",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.5 polish complete."
+    "notes": "Stage 3.2 review passed. 1 claim mapped: I_\ud835\udd2d = IA_\ud835\udd2d via Algebra.idealMap_isLocalizedModule recall + inferInstance example. No sorries. No definition-level sorries. No gaps."
   },
   "Lecture2/02_07_Corollary": {
-    "status": "proof_polished",
+    "status": "sorry_free",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.5 polish complete."
+    "notes": "All 3 proofs complete: conductor argument for prime/maximal versions, bridge by rewriting."
   },
   "Lecture2/02_08_Example": {
-    "status": "proof_polished",
+    "status": "sorry_free",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.5 polish complete."
+    "notes": "Stage 3.2 review passed. All claims mapped: (1) Int.eq_iInf_localization_atPrime proves \u2124 = \u22c2_p \u2124_(p) in \u211a via PrimeSpectrum.iInf_localization_eq_bot (fully proved), (2) Int.eq_iInf_localization_atMaximal gives maximal ideals version (fully proved). No sorries at all. No gaps."
   },
   "Lecture2/02_08a_Discussion": {
     "status": "non_formalizable",
