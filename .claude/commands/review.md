@@ -26,13 +26,25 @@ Rotate through these areas across sessions:
 - Dead code, duplicated logic, verbose comments, unused imports
 - Other signs of AI-generated bloat
 
-**Lean formalization quality** (Phase 3):
+**Lean formalization quality** (Stage 3.1–3.3):
 - Definition integrity: no sorry'd `def` bodies (only proof obligations may use sorry)
 - Coverage completeness: every mathematical claim in the blob has a Lean declaration
 - `recall` vs `def` correctness: items in Mathlib use `recall`/`example`, not wrapper defs
 - Bridging theorems: book definitions that differ from Mathlib have explicit equivalence proofs
 - Consistent representations across related items
 - Read the `lean-scaffolding` skill for detailed criteria
+
+**Dependency accuracy** (Stage 3.4):
+- `dependencies/internal.json` entries match actual Lean imports and proof references
+- No spurious dependencies from the conservative linear chain remain
+- Read the `dependency-trimming` skill for methodology
+
+**Proof polish quality** (Stage 3.5):
+- No obviously redundant tactic steps (e.g., separate `rw` calls that could be combined)
+- `simp only` preferred over bare `simp` for non-terminal goals
+- No unnecessary intermediate `have` bindings used only once
+- Proofs that mirror book reasoning preserve their pedagogical structure
+- Read the `proof-polishing` skill for detailed criteria
 
 **Idioms and best practices**:
 - Are newer APIs or language features being used where appropriate?
