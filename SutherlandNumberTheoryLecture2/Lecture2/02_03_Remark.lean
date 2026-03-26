@@ -27,7 +27,7 @@ noncomputable abbrev primeIdeal3 : Ideal ℤ := Ideal.span {3}
 
 instance primeIdeal3_isPrime : primeIdeal3.IsPrime := by
   rw [Ideal.span_singleton_prime (by norm_num : (3 : ℤ) ≠ 0)]
-  exact Int.prime_iff_natAbs_prime.mpr (by norm_num)
+  exact Int.prime_iff_natAbs_prime.mpr (by decide)
 
 /-! ### The counterexample: 9/3 = 3/1 in ℚ
 
@@ -50,8 +50,7 @@ theorem warning_2_3_nine_eq_three_times_three :
     algebraMap ℤ (Localization.AtPrime primeIdeal3) 9 =
       algebraMap ℤ (Localization.AtPrime primeIdeal3) 3 *
         algebraMap ℤ (Localization.AtPrime primeIdeal3) 3 := by
-  have : (9 : ℤ) = 3 * 3 := by norm_num
-  rw [this, map_mul]
+  rw [show (9 : ℤ) = 3 * 3 from by norm_num, map_mul]
 
 /-- Warning 2.3 punchline: there exist a, b ∈ ℤ with b ∈ (3) and a/b = 3 in ℚ,
     yet a/b ∈ ℤ_(3) (because a/b = 3/1 and 1 ∉ (3)).
@@ -62,9 +61,7 @@ theorem warning_2_3_counterexample :
     ∃ (a b : ℤ), b ∈ primeIdeal3 ∧ (a : ℚ) / b = 3 ∧
       (algebraMap ℤ (Localization.AtPrime primeIdeal3) a =
         algebraMap ℤ (Localization.AtPrime primeIdeal3) b *
-          algebraMap ℤ (Localization.AtPrime primeIdeal3) 3) := by
-  refine ⟨9, 3, three_mem_primeIdeal3, by norm_num, ?_⟩
-  have : (9 : ℤ) = 3 * 3 := by norm_num
-  rw [this, map_mul]
+          algebraMap ℤ (Localization.AtPrime primeIdeal3) 3) :=
+  ⟨9, 3, three_mem_primeIdeal3, by norm_num, warning_2_3_nine_eq_three_times_three⟩
 
 end Warning_2_3
