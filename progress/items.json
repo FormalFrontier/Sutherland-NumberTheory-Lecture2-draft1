@@ -185,13 +185,13 @@
     "notes": "Fully covered by Mathlib via FractionalIdeal.mul_inv_cancel_iff and inv machinery"
   },
   "Lecture2/02_20_Lemma": {
-    "status": "scaffolding_ready",
+    "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_20a_Discussion": {
-    "status": "scaffolding_ready",
+    "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "Claims: (1) in a Dedekind domain every nonzero fractional ideal is invertible (forward ref to next lecture), (2) this is not true in general."
@@ -203,7 +203,7 @@
     "notes": "Subring A = Z+2iZ defined with carrier {z : GaussianInt | Even z.im}. All 5 claims addressed. 3 sorries remain in proofs."
   },
   "Lecture2/02_21a_Discussion": {
-    "status": "scaffolding_ready",
+    "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "Section 2.6 intro. Claims: (1) I invertible iff I(A÷I)=A, (2) nonzero fractional ideals form abelian monoid, (3) invertible fractional ideals form abelian group."
