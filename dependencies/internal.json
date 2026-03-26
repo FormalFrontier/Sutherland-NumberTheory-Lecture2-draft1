@@ -154,5 +154,9 @@
   "Lecture2/02_25_Remark": {
     "depends_on": ["Lecture2/02_23_Definition"],
     "notes": "Dedekind domain is UFD iff cl(A) trivial; uses ideal class group definition"
+  },
+  "Backmatter/Bibliography": {
+    "depends_on": [],
+    "notes": "Bibliography; no mathematical dependencies"
   }
 }
