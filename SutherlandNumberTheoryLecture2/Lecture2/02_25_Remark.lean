@@ -39,6 +39,9 @@ class group. -/
 The converse direction: if cl(A) = 1 then every ideal is principal
 (PID), and a PID is a UFD. -/
 
+-- For Dedekind domains: |cl(A)| = 1 ↔ A is a PID
+#check @card_classGroup_eq_one_iff
+
 -- PID → UFD
 #check @PrincipalIdealRing.to_uniqueFactorizationMonoid
 
