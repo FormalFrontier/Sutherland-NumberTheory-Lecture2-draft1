@@ -138,19 +138,19 @@
     "status": "dependency_trimmed",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All 3 formalizable claims mapped: (1) noetherian \u2192 ideals f.g. \u2014 IsNoetherian.noetherian example, (2) every ideal is a fractional ideal \u2014 coercion example + coeIdeal_injective, (3) fractional ideals need not be contained in A \u2014 FractionalIdeal and IsFractional type signatures show Submodule A K. Editorial remark about 'integral ideal' correctly omitted. No sorries. No definition-level sorries. No gaps."
+    "notes": "Already minimal \u2014 proof terms and #check statements only, no tactic sequences to simplify."
   },
   "Lecture2/02_14_Lemma": {
-    "status": "sorry_free",
+    "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All 3 claims mapped: (1) biconditional via fractional_iff_fg (proved, no sorry), (2) forward direction (f.g.\u2192IsFractional) via isFractional_span_singleton/sup/mul recalls, (3) backward direction (IsFractional\u2192f.g.) via fg_of_isNoetherianRing + fractionalIdeal_fg. Also includes den/num decomposition. No sorries at all. No definition-level sorries. No gaps."
+    "notes": "Already minimal \u2014 proof terms and #check statements only, no tactic sequences to simplify."
   },
   "Lecture2/02_15_Remark": {
-    "status": "sorry_free",
+    "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Stage 3.2 review passed. All 4 claims mapped: (1) alternative definition reference \u2014 IsFractional #check, (2) A-submodules with \u2203r,rI\u2286A \u2014 FractionalIdeal uses IsFractional predicate, (3) extends to non-noetherian \u2014 Mathlib's primary def works for all domains (doc comment), (4) coincides when noetherian \u2014 fractionalIdeal_fg_of_noetherian proved via fg_of_isNoetherianRing. No sorries at all. No definition-level sorries. No gaps."
+    "notes": "Already minimal \u2014 proof terms and #check statements only, no tactic sequences to simplify."
   },
   "Lecture2/02_16_Corollary": {
     "status": "proof_polished",
