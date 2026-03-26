@@ -119,10 +119,10 @@
     "notes": "Stage 3.2 review passed. All 5 claims mapped: (1) PID→UFD via inferInstance, (2) PID→Dedekind via inferInstance, (3) k[x,y] UFD but not Dedekind — UFD via inferInstance + not_isDedekindDomain_polynomial_polynomial (sorry), (4) ℤ[√-13] Dedekind but not UFD — not_uniqueFactorizationMonoid_Zsqrtd_neg13 (sorry), (5) Dedekind+UFD→PID via of_isDedekindDomain_of_uniqueFactorizationMonoid + demonstration. 2 proof-level sorries for counterexamples. No definition-level sorries. No gaps."
   },
   "Lecture2/02_12a_Discussion": {
-    "status": "scaffolding_ready",
+    "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Claims: (1) if A Dedekind and L finite separable extension of Frac(A), then integral closure of A in L is Dedekind (forward reference to later proof)."
+    "notes": "Main claim: integral closure of Dedekind domain in finite separable extension is Dedekind. Fully covered by Mathlib (IsIntegralClosure.isDedekindDomain). Examples: \u2124, k[X]."
   },
   "Lecture2/02_12b_Discussion": {
     "status": "non_formalizable",
@@ -138,10 +138,10 @@
     "notes": "Stage 3.2 review passed. All claims mapped: (1) FractionalIdeal type, (2) IsFractional predicate, (3) fg_of_isNoetherianRing bridge, (4) coeIdeal coercion from ideals, (5) coeIdeal_le_one, (6) spanSingleton_mul_spanSingleton witness for exceeding A, (7) CommSemiring and Lattice instances. No definition-level sorries. No gaps."
   },
   "Lecture2/02_13a_Discussion": {
-    "status": "scaffolding_ready",
+    "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Claims: (1) when A noetherian, ideals = f.g. A-submodules of A, (2) every ideal is a fractional ideal, (3) fractional ideals need not be contained in A."
+    "notes": "Three claims: (1) noetherian \u2192 ideals f.g., (2) every ideal is a fractional ideal, (3) fractional ideals need not be contained in A. All covered by Mathlib."
   },
   "Lecture2/02_14_Lemma": {
     "status": "definition_verified",
