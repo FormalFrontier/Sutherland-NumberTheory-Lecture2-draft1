@@ -105,4 +105,14 @@ theorem Z_loc_p_residueField :
     Nonempty (IsLocalRing.ResidueField (Z_loc_p p) ≃+* ZMod p) := by
   sorry
 
+/-- The quotient map ℤ_(p) → residue field, when composed with the residue field
+isomorphism to ZMod p, gives reduction modulo p. That is, for the isomorphism
+φ : ResidueField(ℤ_(p)) ≃+* ZMod p from `Z_loc_p_residueField`, we have
+φ(residue(algebraMap n)) = (n : ZMod p) for all n : ℤ. -/
+theorem Z_loc_p_quotientMap_eq_mod
+    (φ : IsLocalRing.ResidueField (Z_loc_p p) ≃+* ZMod p) :
+    ∀ n : ℤ,
+      φ (IsLocalRing.residue (Z_loc_p p) (algebraMap ℤ (Z_loc_p p) n)) = (n : ZMod p) := by
+  sorry
+
 end Example_2_5
