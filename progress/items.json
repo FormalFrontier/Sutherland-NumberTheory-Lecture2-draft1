@@ -177,10 +177,10 @@
     "notes": "Stage 3.2 review passed. All claims mapped: (1) IsFractional for I/J via IsFractional.div_of_nonzero + isFractional_div_of_ne_zero, (2) Div instance via inferInstance, (3) f.g. via quotient_fractionalIdeal_fg (proved, no sorry), (4) coe_div for submodule coercion. No sorries. No definition-level sorries. No gaps."
   },
   "Lecture2/02_19_Definition": {
-    "status": "scaffolded",
+    "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Fully covered by Mathlib via FractionalIdeal.mul_inv_cancel_iff and inv machinery"
+    "notes": "Stage 3.2 review passed. All 3 claims mapped: (1) invertible = IJ=A for some J via mul_inv_cancel_iff, (2) uniqueness of inverses via right_inverse_eq, (3) I⁻¹ notation via inv_eq. Extra: mul_inv_cancel_iff_isUnit, mem_inv_iff, inv_anti_mono, Dedekind domain example. No sorries at all. No definition-level sorries. No gaps."
   },
   "Lecture2/02_20_Lemma": {
     "status": "definition_verified",
@@ -195,10 +195,10 @@
     "notes": "Stage 3.2 review passed. All 2 claims mapped: (1) Dedekind domains have all nonzero fractional ideals invertible via mul_inv_cancel₀ example, (2) not true in general via exists_noninvertible_fractionalIdeal (sorry). 1 proof-level sorry. No definition-level sorries. No gaps."
   },
   "Lecture2/02_21_Example": {
-    "status": "scaffolded",
+    "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Subring A = Z+2iZ defined with carrier {z : GaussianInt | Even z.im}. All 5 claims addressed. 3 sorries remain in proofs."
+    "notes": "Stage 3.2 review passed. All 6 claims mapped: (1) SubringA defines A=ℤ+2iℤ (constructed), (2) idealI defines I=2ℤ[i], (3) idealI_of_A defines I as A-ideal (constructed), (4) idealI_of_ZI_invertible states ℤ[i]-invertibility (sorry), (5) conductor_eq_full states A÷I=ℤ[i] (sorry), (6) idealI_ssubset_SubringA + idealI_not_invertible_over_A prove non-invertibility. 3 proof-level sorries. No definition-level sorries. No gaps."
   },
   "Lecture2/02_21a_Discussion": {
     "status": "definition_verified",
@@ -207,10 +207,10 @@
     "notes": "Stage 3.2 review passed. All 3 claims mapped: (1) invertible iff I(A÷I)=A via mul_inv_cancel_iff recall, (2) nonzero fractional ideals form abelian monoid via CommSemiring instance, (3) invertible fractional ideals form abelian group via CommGroup units instance. No sorries. No definition-level sorries. No gaps."
   },
   "Lecture2/02_22_Definition": {
-    "status": "scaffolded",
+    "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Fully covered by Mathlib. Ideal group ℐ_A = (FractionalIdeal A⁰ K)ˣ. Covers: definition, CommGroup instance, group operations, and note that elements need not be ideals."
+    "notes": "Stage 3.2 review passed. All 2 claims mapped: (1) ideal group 𝒥_A = group of invertible fractional ideals via (FractionalIdeal A⁰ K)ˣ + CommGroup instance + group operations (#checks), (2) elements need not be ideals via coeToSubmodule #check. No sorries at all. No definition-level sorries. No gaps."
   },
   "Lecture2/02_22a_Discussion": {
     "status": "definition_verified",
