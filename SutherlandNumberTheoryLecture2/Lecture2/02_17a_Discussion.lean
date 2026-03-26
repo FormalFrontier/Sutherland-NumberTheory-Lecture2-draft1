@@ -30,10 +30,10 @@ in the submodule lattice. The membership characterization is:
 x ∈ I + J ↔ ∃ i ∈ I, ∃ j ∈ J, i + j = x -/
 
 -- Addition is the lattice join
-#check @FractionalIdeal.sup_eq_add
+recall FractionalIdeal.sup_eq_add
 
 -- Membership characterization: x ∈ I + J ↔ ∃ i ∈ I, ∃ j ∈ J, i + j = x
-#check @FractionalIdeal.mem_add
+recall FractionalIdeal.mem_add
 
 /-! ### Claim 2: Multiplication of fractional ideals
 
@@ -43,10 +43,10 @@ In Mathlib, multiplication is defined via the underlying submodule multiplicatio
 which is the span of pairwise products. -/
 
 -- i ∈ I, j ∈ J implies i * j ∈ I * J
-#check @FractionalIdeal.mul_mem_mul
+recall FractionalIdeal.mul_mem_mul
 
 -- I * J ≤ K ↔ ∀ i ∈ I, ∀ j ∈ J, i * j ∈ K
-#check @FractionalIdeal.mul_le
+recall FractionalIdeal.mul_le
 
 /-! ### Claim 3: Quotient (colon) ideal
 
@@ -56,13 +56,13 @@ In Mathlib, this is `FractionalIdeal / J` using the submodule division.
 The membership characterization is: x ∈ I / J ↔ ∀ y ∈ J, x * y ∈ I. -/
 
 -- The membership characterization of I / J
-#check @FractionalIdeal.mem_div_iff_of_ne_zero
+recall FractionalIdeal.mem_div_iff_of_ne_zero
 
 -- I ÷ J is a fractional ideal (when J ≠ 0)
-#check @FractionalIdeal.isFractional_div_of_ne_zero
+recall FractionalIdeal.isFractional_div_of_ne_zero
 
 -- The lattice characterization: I ≤ J / J' ↔ I * J' ≤ J
-#check @FractionalIdeal.le_div_iff_mul_le
+recall FractionalIdeal.le_div_iff_mul_le
 
 /-! ### Claim 4: I ÷ J is NOT a module quotient
 
@@ -78,9 +78,9 @@ documentation. -/
 This generalizes division in K×. -/
 
 -- (x) / (y) = (x / y) for elements of the fraction field
-#check @FractionalIdeal.spanSingleton_div_spanSingleton
+recall FractionalIdeal.spanSingleton_div_spanSingleton
 
 -- Self-division: (x) / (x) = 1 for x ≠ 0
-#check @FractionalIdeal.spanSingleton_div_self
+recall FractionalIdeal.spanSingleton_div_self
 
 end FractionalIdealOps
