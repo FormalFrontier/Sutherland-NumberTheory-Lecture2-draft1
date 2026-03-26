@@ -33,7 +33,7 @@ conditions of Proposition 2.9: (i) every localization at a nonzero prime is a DV
 typeclasses. -/
 
 -- Cross-reference: DVR definition from Lecture 1 (Definition 1.10)
-recall IsDVR
+recall IsDiscreteValuationRing
 
 -- A Dedekind domain is noetherian: every ideal is finitely generated.
 #check @IsNoetherianRing
