@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "generated": "2026-03-26",
+    "description": "External sources research for Sutherland Number Theory Lecture 2 formalization",
+    "notes": "Identifies sources beyond Mathlib for items not fully covered by Mathlib (Stage 2.3)"
+  },
+  "sources": [
+    {
+      "id": "lecture1",
+      "name": "Sutherland Number Theory Lecture 1 (FormalFrontier)",
+      "type": "lean4_library",
+      "url": "https://github.com/FormalFrontier/Sutherland-NumberTheory-Lecture1-draft2",
+      "rev": "33c1d4dd4669c98975902b42c8ad48f0946afb27",
+      "lake_require": {
+        "name": "Sutherland-NumberTheory-Lecture1",
+        "scope": "FormalFrontier"
+      },
+      "description": "Formalization of Lecture 1 of Sutherland's 18.785 Number Theory I. Contains DVR definitions (Def 1.10), valuation rings (Def 1.11), local rings (Def 1.12), residue fields (Def 1.13), Theorem 1.16 (7-way equivalence for DVRs including integrally closed noetherian local domain of dim 1), integral elements/closure (Defs 1.17, 1.19), and number fields/rings of integers (Def 1.26).",
+      "available_declarations": [
+        "sutherland_theorem1_16 : TFAE (7-way DVR equivalence)",
+        "IsDiscreteValuationRing A : local PID, not a field",
+        "NumberField K : finite extension of Q",
+        "NumberField.RingOfIntegers K (= integralClosure Z K)"
+      ],
+      "covers_items": [
+        "02_04_Example",
+        "02_05_Example",
+        "02_09_Proposition",
+        "02_12a_Discussion",
+        "02_24_Example"
+      ],
+      "covers_external_deps": [
+        "ext_dvr_lecture1",
+        "ext_theorem_1_16",
+        "ext_number_fields_lecture1",
+        "ext_global_fields_lecture1"
+      ],
+      "notes": "Pinned to commit 33c1d4d (last commit on lean4 v4.28.0 / mathlib v4.28.0, matching this project's toolchain). Later commits upgraded to v4.29.0-rc8 and are incompatible."
+    },
+    {
+      "id": "mathlib4",
+      "name": "Mathlib4",
+      "type": "lean4_library",
+      "url": "https://github.com/leanprover-community/mathlib4",
+      "description": "Already a dependency (v4.28.0). Contains the bulk of the formalization infrastructure: localization, Dedekind domains, fractional ideals, class groups. The lean-forward/class-number project has been merged into mathlib. Covers most items fully; see mathlib-coverage.json for details.",
+      "covers_items": "See research/mathlib-coverage.json for per-item coverage",
+      "notes": "Primary source for all undergraduate prerequisites (ext_commutative_rings, ext_integral_domains, ext_noetherian_rings, etc.)"
+    },
+    {
+      "id": "atiyah_macdonald",
+      "name": "Atiyah & MacDonald, Introduction to Commutative Algebra",
+      "type": "textbook",
+      "reference": "[1] in the lecture notes",
+      "description": "Standard reference for commutative algebra. The lecture cites [1, Prop. 11.19] for contraction/extension properties and [1, Cor. 11.20] for the prime ideal correspondence (Theorem 2.1). These results are already in Mathlib, but the textbook provides detailed proof strategies if custom proofs are needed.",
+      "covers_external_deps": [
+        "ext_contraction_extension_props",
+        "ext_prime_ideal_correspondence_proof"
+      ],
+      "covers_items": [
+        "02_00b_Discussion",
+        "02_01_Theorem",
+        "02_02_Remark"
+      ]
+    },
+    {
+      "id": "artin_algebra",
+      "name": "Artin, Algebra (2nd ed.)",
+      "type": "textbook",
+      "reference": "[2] in the lecture notes",
+      "description": "The lecture cites [2, Prop. 3.5] for the tensor-localization equivalence S⁻¹M ≅ M ⊗_A S⁻¹A, and [2, Prop. 3.11] for contraction/extension and prime ideal correspondence. These are in Mathlib but the textbook is useful for proof strategy.",
+      "covers_external_deps": [
+        "ext_localization_tensor_equivalence",
+        "ext_contraction_extension_props",
+        "ext_prime_ideal_correspondence_proof"
+      ],
+      "covers_items": [
+        "02_00b_Discussion",
+        "02_01_Theorem",
+        "02_05a_Discussion"
+      ]
+    },
+    {
+      "id": "lean_forward_class_number",
+      "name": "lean-forward/class-number (ITP 2021)",
+      "type": "historical_reference",
+      "url": "https://github.com/lean-forward/class-number",
+      "description": "Original Lean 3 formalization of Dedekind domains and class groups of global fields, by Baanen, Dahmen, Narayanan, Nuccio. This work has been merged into mathlib (now mathlib4). Not a direct dependency, but documents proof strategies for Dedekind domain properties, fractional ideal operations, and class number finiteness that informed the mathlib API.",
+      "notes": "Lean 3 only. All relevant results now in mathlib4. Useful as documentation of proof strategies, not as a code dependency."
+    },
+    {
+      "id": "gaussian_integers_mathlib",
+      "name": "Mathlib GaussianInt module",
+      "type": "mathlib_submodule",
+      "import": "Mathlib.NumberTheory.Zsqrtd.GaussianInt",
+      "description": "Mathlib defines GaussianInt (Z[i]) and its ring structure. Example 2.21 needs the subring A = Z + 2iZ ⊂ Z[i], which is NOT in Mathlib and must be constructed from scratch.",
+      "covers_items": [
+        "02_21_Example"
+      ],
+      "notes": "Z[i] is available; the subring Z + 2iZ and the proof that I = 2Z[i] is not invertible as an A-ideal must be built custom. This is the only 'not_covered' item."
+    }
+  ],
+  "gap_analysis": {
+    "description": "Items with partial or no Mathlib coverage and how external sources help",
+    "items": {
+      "02_04_Example": {
+        "mathlib_coverage": "partially_covered",
+        "gap": "Specific example: k[x] localized at (x-2) is a DVR. Needs assembly from Mathlib polynomial ring + localization + DVR infrastructure.",
+        "external_help": "Lecture 1 provides DVR definition and Theorem 1.16 characterization. Proof strategy from the blob file."
+      },
+      "02_05_Example": {
+        "mathlib_coverage": "partially_covered",
+        "gap": "Specific example: Z_(p) is a DVR with p-adic valuation. Mathlib has padic infrastructure but assembly needed.",
+        "external_help": "Lecture 1 DVR definitions. Mathlib padic valuation."
+      },
+      "02_06_Proposition": {
+        "mathlib_coverage": "partially_covered",
+        "gap": "General submodule intersection: M = ∩_p M_p. Mathlib has Dedekind domain version but not general integral domain version.",
+        "external_help": "Must be proved from scratch following the book's proof. No external Lean source found."
+      },
+      "02_07_Corollary": {
+        "mathlib_coverage": "partially_covered",
+        "gap": "I = ∩_p I_p for ideals in integral domain. General version may need proof.",
+        "external_help": "Follows from 02_06_Proposition. Book proof strategy."
+      },
+      "02_08_Example": {
+        "mathlib_coverage": "partially_covered",
+        "gap": "Z = ∩ Z_(p) in Q. Concrete instance of Corollary 2.7.",
+        "external_help": "Assembly from Mathlib localization infrastructure."
+      },
+      "02_12_Remark": {
+        "mathlib_coverage": "partially_covered",
+        "gap": "Counterexamples: k[x,y] not Dedekind, Z[√(-13)] not UFD.",
+        "external_help": "Folklore results. Must be constructed. Z[√(-13)] available via Mathlib Zsqrtd."
+      },
+      "02_21_Example": {
+        "mathlib_coverage": "not_covered",
+        "gap": "A = Z + 2iZ, I = 2Z[i] not invertible. Subring Z + 2iZ not in Mathlib.",
+        "external_help": "GaussianInt from Mathlib provides Z[i]. The subring and non-invertibility proof must be built from scratch."
+      },
+      "02_24_Example": {
+        "mathlib_coverage": "partially_covered",
+        "gap": "DVR has trivial class group. Framework exists, specific result needs assembly.",
+        "external_help": "Lecture 1 DVR characterization. Mathlib class group machinery."
+      },
+      "02_25_Remark": {
+        "mathlib_coverage": "partially_covered",
+        "gap": "Dedekind domain is UFD iff cl(A) trivial. Biconditional may need assembly.",
+        "external_help": "Mathlib has both directions separately. Assembly needed."
+      }
+    }
+  },
+  "conclusion": "The primary external dependency is Lecture 1 (FormalFrontier), which provides DVR definitions, Theorem 1.16, and number field infrastructure used by 5 items. All undergraduate prerequisite material (commutative algebra, modules, etc.) is fully covered by Mathlib. The textbook references [1] (Atiyah-MacDonald) and [2] (Artin) provide proof strategies but their results are in Mathlib. The hardest gap is Example 2.21 (Z + 2iZ subring), which requires custom construction. Most partially-covered items need assembly of existing Mathlib components rather than fundamentally new mathematics."
+}
