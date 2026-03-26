@@ -120,3 +120,16 @@ After polishing each file:
 
 After polishing: update `progress/items.json` status from `dependency_trimmed`
 to `proof_polished`.
+
+## Stage 3.5 Retrospective (completed 2026-03-26)
+
+All 36 items polished with zero failures. Key observations for future projects:
+
+- **Most items needed no changes** — `recall`, `#check`, and `inferInstance`
+  files are already minimal by construction. Budget polishing time only for
+  items with substantive proofs (3+ tactic lines).
+- **Term-mode conversion sometimes fails** — instance resolution issues can
+  prevent converting tactic proofs to term mode. Don't force it; a clean
+  2-line tactic proof is fine.
+- **Batch polishing is efficient** — grouping 3-5 items per issue works well
+  for parallelization without excessive overhead per issue.
