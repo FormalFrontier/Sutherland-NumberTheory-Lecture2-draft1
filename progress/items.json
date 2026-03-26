@@ -228,7 +228,7 @@
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "All 4 sorries proved. smul_mem re/im, conductor_eq_full, idealI_of_ZI_ne_bot + IsPrincipalIdealRing instance. Corrected invertibility statement from impossible integral ideal formulation to ne_bot + PID instance.",
-    "upstreaming_status": "candidate"
+    "upstreaming_status": "rejected_insufficient_interest"
   },
   "Lecture2/02_21a_Discussion": {
     "status": "proof_polished",

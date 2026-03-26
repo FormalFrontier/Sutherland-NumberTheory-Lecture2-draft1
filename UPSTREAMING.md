@@ -15,7 +15,7 @@
 | 02_12_Remark | `not_isDedekindDomain_polynomial_polynomial` | `02_12_Remark.lean:54` | **Include** | Phase 2 confirmed: no equivalent in Mathlib. See Phase 2 notes below. |
 | 02_12_Remark | `not_uniqueFactorizationMonoid_Zsqrtd_neg13` | `02_12_Remark.lean:79` | **Include** | Phase 2 confirmed: no equivalent in Mathlib. See Phase 2 notes below. |
 | 02_20a_Discussion | `exists_noninvertible_fractionalIdeal` | `02_20a_Discussion.lean:49` | **Candidate** | Exhibits a domain (ℤ[X]) with a non-invertible nonzero fractional ideal, using the ¬IsDedekindDomain → ¬IsDedekindDomainInv characterization. |
-| 02_21_Example | `SubringA`, `idealI_of_A`, various | `02_21_Example.lean` | **Candidate** | Full worked example: ℤ + 2iℤ ⊂ ℤ[i], I = 2ℤ[i] is non-invertible over A. ~120 lines of substantive constructions and proofs. Specific to the textbook, but the constructions are original. |
+| 02_21_Example | `SubringA`, `idealI_of_A`, various | `02_21_Example.lean` | **Rejected** | Phase 2 verdict: textbook-specific pedagogical example. See Phase 2 notes below. |
 
 ### Rejected — Trivial (recall / #check / inferInstance only)
 
@@ -145,3 +145,15 @@
 - ~50 lines. Proof: 2 is irreducible in ℤ[√-13] (norm argument: no elements of norm 2 or 3) but not prime (2 | (1+√-13)(1-√-13) but 2 ∤ either factor).
 
 **Upstream potential:** Both would fit in `Counterexamples/` or `Mathlib/RingTheory/DedekindDomain/`. The ℤ[√-13] result is the more substantial contribution (~50 lines of original norm-based proof). The k[x,y] result is shorter but equally absent. Together they complete the standard textbook picture: PID ⊊ UFD, PID ⊊ Dedekind, UFD ∩ Dedekind = PID.
+
+### 02_21_Example — `SubringA`, `idealI_of_A`, various
+
+**Verdict: Rejected — insufficient interest (textbook-specific pedagogical example)**
+
+**Research findings:**
+- Searched Mathlib for `GaussianInt.*Subring`, `non.*invertible.*ideal` — no equivalent constructions
+- The constructions are original (~120 lines) but entirely specific to the textbook example ℤ + 2iℤ ⊂ ℤ[i]
+- No reusable API or general-purpose lemmas emerge from this example
+- The non-invertibility argument is ad-hoc: I · (A ÷ I) = I ⊊ A by checking 1 ∉ I
+
+**Rationale:** This is a worked example illustrating that non-Dedekind subrings of number fields can have non-invertible ideals. While the formalization is correct and substantive, the specific subring ℤ + 2iℤ and its ideal 2ℤ[i] are too narrow for Mathlib. The value is pedagogical (demonstrating the concept), not API (providing reusable infrastructure). Mathlib's `Counterexamples/` directory focuses on broader counterexamples, not specific number-ring calculations.
