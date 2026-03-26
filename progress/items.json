@@ -110,32 +110,32 @@
     "notes": "Stage 3.2 review passed. All 3 claims mapped: (1) PID\u2192Dedekind via IsPrincipalIdealRing.isDedekindDomain #check + component breakdown, (2) \u2124 is Dedekind via inferInstance example, (3) k[X] is Dedekind via inferInstance example. No definition-level sorries. No sorries at all. No gaps."
   },
   "Lecture2/02_12_Remark": {
-    "status": "sorry_free",
+    "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "All 5 claims fully proved. (1) PID\u2192UFD via inferInstance, (2) PID\u2192Dedekind via inferInstance, (3) k[x,y] not Dedekind \u2014 via DimensionLEOne contradiction (span{X} is nonzero prime but not maximal since quotient \u2245 k[X] is not a field), (4) \u2124[\u221a-13] not UFD \u2014 2 is irreducible (norm argument) but not prime (2\u2224(1+\u221a-13) and 2\u2224(1-\u221a-13) yet 2|14), (5) Dedekind+UFD\u2192PID via Mathlib. Zero sorries."
   },
   "Lecture2/02_12a_Discussion": {
-    "status": "sorry_free",
+    "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "Stage 3.2 review passed. All formalizable claims mapped: (1) integral closure of Dedekind domain in finite separable extension is Dedekind \u2014 IsIntegralClosure.isDedekindDomain #check, (2) \u2124 is Dedekind \u2014 inferInstance example, (3) k[X] is Dedekind \u2014 inferInstance example. Forward ref to global fields correctly omitted. No sorries. No definition-level sorries. No gaps."
   },
   "Lecture2/02_12b_Discussion": {
-    "status": "non_formalizable",
+    "status": "dependency_trimmed",
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "",
     "reason": "Section heading '2.5 Fractional ideals' and context setting: 'Throughout this subsection, A is a noetherian domain and K is its fraction field.' No mathematical claims \u2014 pure scoping statement."
   },
   "Lecture2/02_13_Definition": {
-    "status": "sorry_free",
+    "status": "proof_polished",
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "Stage 3.2 review passed. All claims mapped: (1) FractionalIdeal type, (2) IsFractional predicate, (3) fg_of_isNoetherianRing bridge, (4) coeIdeal coercion from ideals, (5) coeIdeal_le_one, (6) spanSingleton_mul_spanSingleton witness for exceeding A, (7) CommSemiring and Lattice instances. No definition-level sorries. No gaps."
   },
   "Lecture2/02_13a_Discussion": {
-    "status": "sorry_free",
+    "status": "dependency_trimmed",
     "last_updated": "2026-03-26",
     "pr": "",
     "notes": "Stage 3.2 review passed. All 3 formalizable claims mapped: (1) noetherian \u2192 ideals f.g. \u2014 IsNoetherian.noetherian example, (2) every ideal is a fractional ideal \u2014 coercion example + coeIdeal_injective, (3) fractional ideals need not be contained in A \u2014 FractionalIdeal and IsFractional type signatures show Submodule A K. Editorial remark about 'integral ideal' correctly omitted. No sorries. No definition-level sorries. No gaps."
