@@ -1,0 +1,768 @@
+{
+  "metadata": {
+    "mathlib_version": "v4.28.0",
+    "generated": "2026-03-26",
+    "description": "Mathlib coverage analysis for Sutherland Number Theory Lecture 2"
+  },
+  "items": {
+    "Lecture2/02_00_Introduction": {
+      "coverage": "discussion_only",
+      "notes": "Lecture introduction. No formalizable content.",
+      "mathlib_declarations": []
+    },
+    "Lecture2/02_00a_Discussion": {
+      "coverage": "fully_covered",
+      "notes": "Localization S⁻¹A: definition, universal property, construction all in Mathlib.",
+      "mathlib_declarations": [
+        {
+          "name": "Localization",
+          "description": "S⁻¹A as a type",
+          "import": "Mathlib.RingTheory.Localization.Basic"
+        },
+        {
+          "name": "IsLocalization",
+          "description": "Typeclass for localization",
+          "import": "Mathlib.RingTheory.Localization.Basic"
+        },
+        {
+          "name": "Localization.mk",
+          "description": "Constructor a/s for localization elements",
+          "import": "Mathlib.RingTheory.Localization.Basic"
+        },
+        {
+          "name": "IsLocalization.lift",
+          "description": "Universal property of localization",
+          "import": "Mathlib.RingTheory.Localization.Basic"
+        },
+        {
+          "name": "IsFractionRing",
+          "description": "Fraction field as localization at nonZeroDivisors",
+          "import": "Mathlib.RingTheory.Localization.FractionRing"
+        },
+        {
+          "name": "FractionRing",
+          "description": "Concrete fraction field construction",
+          "import": "Mathlib.RingTheory.Localization.FractionRing"
+        }
+      ]
+    },
+    "Lecture2/02_00b_Discussion": {
+      "coverage": "fully_covered",
+      "notes": "Ideal extension/contraction under localization; b = b^{ce} for localizations.",
+      "mathlib_declarations": [
+        {
+          "name": "Ideal.map",
+          "description": "Extension of an ideal under a ring homomorphism",
+          "import": "Mathlib.RingTheory.Ideal.Operations"
+        },
+        {
+          "name": "Ideal.comap",
+          "description": "Contraction of an ideal under a ring homomorphism",
+          "import": "Mathlib.Order.GaloisConnection"
+        },
+        {
+          "name": "IsLocalization.map_comap",
+          "description": "b^{ce} = b for localizations (extension-contraction identity)",
+          "import": "Mathlib.RingTheory.Localization.Ideal"
+        }
+      ]
+    },
+    "Lecture2/02_01_Theorem": {
+      "coverage": "fully_covered",
+      "notes": "Theorem 2.1 (prime ideal correspondence under localization) is fully in Mathlib as an order isomorphism.",
+      "mathlib_declarations": [
+        {
+          "name": "IsLocalization.orderIsoOfPrime",
+          "description": "Order isomorphism between primes of S⁻¹A and primes of A disjoint from S",
+          "import": "Mathlib.RingTheory.Localization.AtPrime"
+        }
+      ]
+    },
+    "Lecture2/02_02_Remark": {
+      "coverage": "fully_covered",
+      "notes": "Noetherian and PID preserved under localization, ideal generation in localizations.",
+      "mathlib_declarations": [
+        {
+          "name": "IsLocalization.isNoetherianRing",
+          "description": "Localization of noetherian ring is noetherian",
+          "import": "Mathlib.RingTheory.Localization.Module"
+        },
+        {
+          "name": "Localization.AtPrime.isPrincipalIdealRing",
+          "description": "Localization of PID at prime is PID",
+          "import": "Mathlib.RingTheory.Localization.AtPrime"
+        }
+      ]
+    },
+    "Lecture2/02_02a_Discussion": {
+      "coverage": "fully_covered",
+      "notes": "Localization at prime A_p, local ring structure, unique maximal ideal.",
+      "mathlib_declarations": [
+        {
+          "name": "Localization.AtPrime",
+          "description": "Localization at a prime ideal A_p",
+          "import": "Mathlib.RingTheory.Localization.AtPrime"
+        },
+        {
+          "name": "IsLocalization.AtPrime",
+          "description": "Typeclass for localization at a prime",
+          "import": "Mathlib.RingTheory.Localization.AtPrime"
+        },
+        {
+          "name": "Localization.AtPrime.instIsLocalRing",
+          "description": "A_p is a local ring",
+          "import": "Mathlib.RingTheory.Localization.AtPrime"
+        },
+        {
+          "name": "IsLocalRing",
+          "description": "Local ring typeclass (unique maximal ideal)",
+          "import": "Mathlib.RingTheory.LocalRing.Basic"
+        },
+        {
+          "name": "IsLocalRing.maximalIdeal",
+          "description": "The unique maximal ideal of a local ring",
+          "import": "Mathlib.RingTheory.LocalRing.Basic"
+        }
+      ]
+    },
+    "Lecture2/02_03_Remark": {
+      "coverage": "discussion_only",
+      "notes": "Warning about ambiguity of a/b notation in localizations. Pedagogical remark, not formalizable as a standalone result.",
+      "mathlib_declarations": []
+    },
+    "Lecture2/02_04_Example": {
+      "coverage": "partially_covered",
+      "notes": "k[x] localized at (x-2) is a DVR. Mathlib has DVR definition and polynomial rings. The specific example would need to be constructed.",
+      "mathlib_declarations": [
+        {
+          "name": "IsDiscreteValuationRing",
+          "description": "DVR typeclass",
+          "import": "Mathlib.RingTheory.DiscreteValuationRing.Basic"
+        },
+        {
+          "name": "Polynomial",
+          "description": "Polynomial ring k[x]",
+          "import": "Mathlib.Algebra.Polynomial.Basic"
+        },
+        {
+          "name": "Localization.AtPrime",
+          "description": "Localization at prime for building k[x]_(x-2)",
+          "import": "Mathlib.RingTheory.Localization.AtPrime"
+        }
+      ]
+    },
+    "Lecture2/02_05_Example": {
+      "coverage": "partially_covered",
+      "notes": "Z_(p) is a DVR with p-adic valuation. Mathlib has padic valuation infrastructure but the specific localization-DVR example needs assembly.",
+      "mathlib_declarations": [
+        {
+          "name": "IsDiscreteValuationRing",
+          "description": "DVR typeclass",
+          "import": "Mathlib.RingTheory.DiscreteValuationRing.Basic"
+        },
+        {
+          "name": "padicValNat",
+          "description": "p-adic valuation on natural numbers",
+          "import": "Mathlib.NumberTheory.Padics.PadicVal"
+        },
+        {
+          "name": "ZMod",
+          "description": "Z/pZ (finite fields F_p)",
+          "import": "Mathlib.Data.ZMod.Basic"
+        }
+      ]
+    },
+    "Lecture2/02_05a_Discussion": {
+      "coverage": "fully_covered",
+      "notes": "Module localization S⁻¹M, tensor product equivalence S⁻¹M ≅ M ⊗_A S⁻¹A.",
+      "mathlib_declarations": [
+        {
+          "name": "LocalizedModule",
+          "description": "S⁻¹M as a type",
+          "import": "Mathlib.RingTheory.Localization.Module"
+        },
+        {
+          "name": "IsLocalizedModule",
+          "description": "Typeclass for module localization",
+          "import": "Mathlib.RingTheory.Localization.Module"
+        },
+        {
+          "name": "LocalizedModule.mk",
+          "description": "Constructor m/s for localized module elements",
+          "import": "Mathlib.RingTheory.Localization.Module"
+        },
+        {
+          "name": "LocalizedModule.equivTensorProduct",
+          "description": "S⁻¹M ≃ₗ M ⊗_A S⁻¹A",
+          "import": "Mathlib.RingTheory.Localization.Module"
+        }
+      ]
+    },
+    "Lecture2/02_06_Proposition": {
+      "coverage": "partially_covered",
+      "notes": "Proposition 2.6 (M = ∩ M_p over all primes). Mathlib has related results for ideals in Dedekind domains but the general submodule-of-vector-space version may need custom proof.",
+      "mathlib_declarations": [
+        {
+          "name": "Submodule.iInf_localization_eq_bot (Maximal)",
+          "description": "Related intersection-of-localizations results for Dedekind domains",
+          "import": "Mathlib.RingTheory.Spectrum.Maximal.Localization"
+        }
+      ]
+    },
+    "Lecture2/02_06a_Discussion": {
+      "coverage": "partially_covered",
+      "notes": "Localization of an ideal as module = extension of ideal. Mathlib has both concepts but the explicit identification I_p = IA_p may need assembly.",
+      "mathlib_declarations": [
+        {
+          "name": "Ideal.map",
+          "description": "Ideal extension IA_p",
+          "import": "Mathlib.RingTheory.Ideal.Operations"
+        },
+        {
+          "name": "LocalizedModule",
+          "description": "Module localization I_p",
+          "import": "Mathlib.RingTheory.Localization.Module"
+        }
+      ]
+    },
+    "Lecture2/02_07_Corollary": {
+      "coverage": "partially_covered",
+      "notes": "Corollary 2.7: I = ∩ I_p for ideals in an integral domain. Mathlib has the ideal version for Dedekind domains (iInf_localization_eq_bot). The general integral domain version may need proof.",
+      "mathlib_declarations": [
+        {
+          "name": "IsDedekindDomain.HeightOneSpectrum.iInf_localization_eq_bot",
+          "description": "Intersection of localizations of ideals in Dedekind domains",
+          "import": "Mathlib.RingTheory.DedekindDomain.Ideal.Lemmas"
+        }
+      ]
+    },
+    "Lecture2/02_08_Example": {
+      "coverage": "partially_covered",
+      "notes": "Z = ∩ Z_(p) in Q. This is a concrete instance of Corollary 2.7. Needs assembly from localization infrastructure.",
+      "mathlib_declarations": [
+        {
+          "name": "Localization.AtPrime",
+          "description": "Z_(p) construction",
+          "import": "Mathlib.RingTheory.Localization.AtPrime"
+        }
+      ]
+    },
+    "Lecture2/02_08a_Discussion": {
+      "coverage": "discussion_only",
+      "notes": "Motivational discussion connecting localization principle to Dedekind domains. No formalizable content beyond what's in adjacent items.",
+      "mathlib_declarations": []
+    },
+    "Lecture2/02_09_Proposition": {
+      "coverage": "fully_covered",
+      "notes": "Proposition 2.9: Noetherian + integrally closed + dim ≤ 1 ↔ all localizations at nonzero primes are DVRs. This is exactly the Dedekind domain characterization in Mathlib.",
+      "mathlib_declarations": [
+        {
+          "name": "IsDedekindDomain",
+          "description": "Dedekind domain: noetherian, dim ≤ 1, integrally closed",
+          "import": "Mathlib.RingTheory.DedekindDomain.Basic"
+        },
+        {
+          "name": "IsDedekindDomainDvr",
+          "description": "DVR characterization of Dedekind domains",
+          "import": "Mathlib.RingTheory.DedekindDomain.Dvr"
+        },
+        {
+          "name": "IsDedekindDomain.isDedekindDomainDvr",
+          "description": "IsDedekindDomain → IsDedekindDomainDvr",
+          "import": "Mathlib.RingTheory.DedekindDomain.Dvr"
+        },
+        {
+          "name": "IsDedekindDomainDvr.ring_dimensionLEOne",
+          "description": "DVR localizations → dimension ≤ 1",
+          "import": "Mathlib.RingTheory.DedekindDomain.Dvr"
+        },
+        {
+          "name": "IsIntegrallyClosed",
+          "description": "Integrally closed typeclass",
+          "import": "Mathlib.RingTheory.IntegralClosure.IsIntegralClosure.Basic"
+        },
+        {
+          "name": "Ring.DimensionLEOne",
+          "description": "Krull dimension ≤ 1 typeclass",
+          "import": "Mathlib.RingTheory.Ideal.Height"
+        }
+      ]
+    },
+    "Lecture2/02_10_Definition": {
+      "coverage": "fully_covered",
+      "notes": "Definition 2.10: Dedekind domain. Directly corresponds to Mathlib's IsDedekindDomain.",
+      "mathlib_declarations": [
+        {
+          "name": "IsDedekindDomain",
+          "description": "A Dedekind domain is a noetherian, integrally closed domain of dimension ≤ 1",
+          "import": "Mathlib.RingTheory.DedekindDomain.Basic"
+        }
+      ]
+    },
+    "Lecture2/02_11_Corollary": {
+      "coverage": "fully_covered",
+      "notes": "Corollary 2.11: Every PID is a Dedekind domain. Directly in Mathlib.",
+      "mathlib_declarations": [
+        {
+          "name": "IsPrincipalIdealRing.isDedekindDomain",
+          "description": "Every PID is a Dedekind domain",
+          "import": "Mathlib.RingTheory.DedekindDomain.Basic"
+        }
+      ]
+    },
+    "Lecture2/02_12_Remark": {
+      "coverage": "partially_covered",
+      "notes": "Remark 2.12 discusses PID/UFD/Dedekind relationships. The key result (Dedekind + UFD → PID) is in Mathlib. The counterexamples (k[x,y] not Dedekind, Z[√(-13)] not UFD) would need construction.",
+      "mathlib_declarations": [
+        {
+          "name": "IsPrincipalIdealRing.of_isDedekindDomain_of_uniqueFactorizationMonoid",
+          "description": "Dedekind domain + UFD → PID",
+          "import": "Mathlib.RingTheory.DedekindDomain.PID"
+        },
+        {
+          "name": "Zsqrtd",
+          "description": "Z[√d] for d : ℤ (for Z[√(-13)] example)",
+          "import": "Mathlib.NumberTheory.Zsqrtd.Basic"
+        }
+      ]
+    },
+    "Lecture2/02_12a_Discussion": {
+      "coverage": "fully_covered",
+      "notes": "Integral closure of Dedekind domain in finite separable extension is Dedekind. Directly in Mathlib.",
+      "mathlib_declarations": [
+        {
+          "name": "IsIntegralClosure.isDedekindDomain",
+          "description": "Integral closure of Dedekind domain in finite separable extension is Dedekind",
+          "import": "Mathlib.RingTheory.DedekindDomain.IntegralClosure"
+        },
+        {
+          "name": "integralClosure",
+          "description": "Integral closure of R in A",
+          "import": "Mathlib.RingTheory.IntegralClosure.Algebra.Basic"
+        }
+      ]
+    },
+    "Lecture2/02_12b_Discussion": {
+      "coverage": "discussion_only",
+      "notes": "Section 2.5 setup: standing assumptions (A noetherian domain, K = Frac A). No formalizable content.",
+      "mathlib_declarations": []
+    },
+    "Lecture2/02_13_Definition": {
+      "coverage": "fully_covered",
+      "notes": "Definition 2.13: Fractional ideal = finitely generated A-submodule of K. Mathlib's FractionalIdeal uses the aI ⊆ A characterization.",
+      "mathlib_declarations": [
+        {
+          "name": "FractionalIdeal",
+          "description": "Type of fractional ideals (A-submodules I of K with aI ⊆ A for some nonzero a)",
+          "import": "Mathlib.RingTheory.FractionalIdeal.Basic"
+        }
+      ]
+    },
+    "Lecture2/02_13a_Discussion": {
+      "coverage": "discussion_only",
+      "notes": "Discussion of fractional vs integral ideals. Terminological, no standalone formalizable content.",
+      "mathlib_declarations": []
+    },
+    "Lecture2/02_14_Lemma": {
+      "coverage": "fully_covered",
+      "notes": "Lemma 2.14: I is f.g. A-submodule of K iff aI ⊆ A for some nonzero a. This is built into Mathlib's FractionalIdeal definition.",
+      "mathlib_declarations": [
+        {
+          "name": "FractionalIdeal",
+          "description": "Uses the aI ⊆ A characterization as its definition",
+          "import": "Mathlib.RingTheory.FractionalIdeal.Basic"
+        },
+        {
+          "name": "FractionalIdeal.isFractional",
+          "description": "Every fractional ideal satisfies the aI ⊆ A property",
+          "import": "Mathlib.RingTheory.FractionalIdeal.Basic"
+        }
+      ]
+    },
+    "Lecture2/02_15_Remark": {
+      "coverage": "discussion_only",
+      "notes": "Remark on alternative definition of fractional ideals for non-noetherian domains. Discussion only.",
+      "mathlib_declarations": []
+    },
+    "Lecture2/02_16_Corollary": {
+      "coverage": "fully_covered",
+      "notes": "Corollary 2.16: Every fractional ideal = (1/a)I. Follows from Mathlib's FractionalIdeal.isFractional.",
+      "mathlib_declarations": [
+        {
+          "name": "FractionalIdeal.isFractional",
+          "description": "Existence of a with aI ⊆ A, equivalent to I = (1/a)(aI)",
+          "import": "Mathlib.RingTheory.FractionalIdeal.Basic"
+        },
+        {
+          "name": "FractionalIdeal.coeIdeal",
+          "description": "Embedding of ideals into fractional ideals",
+          "import": "Mathlib.RingTheory.FractionalIdeal.Basic"
+        }
+      ]
+    },
+    "Lecture2/02_17_Definition": {
+      "coverage": "fully_covered",
+      "notes": "Definition 2.17: Principal fractional ideal (x) = xA. Directly in Mathlib.",
+      "mathlib_declarations": [
+        {
+          "name": "FractionalIdeal.spanSingleton",
+          "description": "Principal fractional ideal (x) = span {x}",
+          "import": "Mathlib.RingTheory.FractionalIdeal.Basic"
+        }
+      ]
+    },
+    "Lecture2/02_17a_Discussion": {
+      "coverage": "fully_covered",
+      "notes": "Operations on fractional ideals: sum, product, quotient (colon ideal). All in Mathlib.",
+      "mathlib_declarations": [
+        {
+          "name": "FractionalIdeal.instAdd",
+          "description": "Sum of fractional ideals I + J",
+          "import": "Mathlib.RingTheory.FractionalIdeal.Basic"
+        },
+        {
+          "name": "FractionalIdeal.instMul",
+          "description": "Product of fractional ideals IJ",
+          "import": "Mathlib.RingTheory.FractionalIdeal.Basic"
+        },
+        {
+          "name": "FractionalIdeal.instDiv",
+          "description": "Division/quotient I / J (colon ideal)",
+          "import": "Mathlib.RingTheory.FractionalIdeal.Basic"
+        }
+      ]
+    },
+    "Lecture2/02_18_Lemma": {
+      "coverage": "fully_covered",
+      "notes": "Lemma 2.18: I ÷ J is a fractional ideal. Built into the return type of FractionalIdeal division in Mathlib.",
+      "mathlib_declarations": [
+        {
+          "name": "FractionalIdeal.div_of_ne_zero",
+          "description": "Division of fractional ideals returns a fractional ideal",
+          "import": "Mathlib.RingTheory.FractionalIdeal.Basic"
+        }
+      ]
+    },
+    "Lecture2/02_19_Definition": {
+      "coverage": "fully_covered",
+      "notes": "Definition 2.19: Invertible fractional ideal (IJ = A). Mathlib has Inv instance and mul_inv_cancel for Dedekind domains.",
+      "mathlib_declarations": [
+        {
+          "name": "FractionalIdeal.mul_inv_cancel",
+          "description": "I * I⁻¹ = 1 for nonzero fractional ideals in Dedekind domains",
+          "import": "Mathlib.RingTheory.DedekindDomain.Ideal.Basic"
+        }
+      ]
+    },
+    "Lecture2/02_20_Lemma": {
+      "coverage": "fully_covered",
+      "notes": "Lemma 2.20: I invertible iff I(A ÷ I) = A, with I⁻¹ = A ÷ I. In Mathlib as inv_eq.",
+      "mathlib_declarations": [
+        {
+          "name": "FractionalIdeal.inv_eq",
+          "description": "I⁻¹ = 1 / I (i.e., A ÷ I)",
+          "import": "Mathlib.RingTheory.FractionalIdeal.Basic"
+        }
+      ]
+    },
+    "Lecture2/02_20a_Discussion": {
+      "coverage": "discussion_only",
+      "notes": "Preview that all nonzero fractional ideals of Dedekind domains are invertible. Discussion only.",
+      "mathlib_declarations": []
+    },
+    "Lecture2/02_21_Example": {
+      "coverage": "not_covered",
+      "notes": "Example 2.21: A = Z + 2iZ, I = 2Z[i] is not invertible as A-ideal. This specific example needs custom construction. Mathlib has GaussianInt (Z[i]) but not the subring Z + 2iZ.",
+      "mathlib_declarations": [
+        {
+          "name": "GaussianInt",
+          "description": "Z[i] (Gaussian integers)",
+          "import": "Mathlib.NumberTheory.Zsqrtd.GaussianInt"
+        }
+      ]
+    },
+    "Lecture2/02_21a_Discussion": {
+      "coverage": "partially_covered",
+      "notes": "Fractional ideals form abelian monoid; invertible ones form abelian group. The group structure is in Mathlib.",
+      "mathlib_declarations": [
+        {
+          "name": "FractionalIdeal.instCommMonoid",
+          "description": "Commutative monoid structure on fractional ideals",
+          "import": "Mathlib.RingTheory.FractionalIdeal.Basic"
+        }
+      ]
+    },
+    "Lecture2/02_22_Definition": {
+      "coverage": "fully_covered",
+      "notes": "Definition 2.22: Ideal group I_A = group of invertible fractional ideals. In Mathlib as the units of FractionalIdeal.",
+      "mathlib_declarations": [
+        {
+          "name": "(FractionalIdeal (nonZeroDivisors A) K)ˣ",
+          "description": "Units of fractional ideals = group of invertible fractional ideals",
+          "import": "Mathlib.RingTheory.FractionalIdeal.Basic"
+        }
+      ]
+    },
+    "Lecture2/02_22a_Discussion": {
+      "coverage": "fully_covered",
+      "notes": "Principal fractional ideals P_A form subgroup. In Mathlib as toPrincipalIdeal.",
+      "mathlib_declarations": [
+        {
+          "name": "toPrincipalIdeal",
+          "description": "Homomorphism from K× to fractional ideal group (principal ideals)",
+          "import": "Mathlib.RingTheory.ClassGroup"
+        }
+      ]
+    },
+    "Lecture2/02_23_Definition": {
+      "coverage": "fully_covered",
+      "notes": "Definition 2.23: Ideal class group cl(A) = I_A / P_A. Directly in Mathlib as ClassGroup.",
+      "mathlib_declarations": [
+        {
+          "name": "ClassGroup",
+          "description": "The ideal class group (quotient of invertible fractional ideals by principal ones)",
+          "import": "Mathlib.RingTheory.ClassGroup"
+        },
+        {
+          "name": "ClassGroup.equiv",
+          "description": "ClassGroup R ≃* (FractionalIdeal)ˣ ⧸ (toPrincipalIdeal R K).range",
+          "import": "Mathlib.RingTheory.ClassGroup"
+        }
+      ]
+    },
+    "Lecture2/02_24_Example": {
+      "coverage": "partially_covered",
+      "notes": "Example 2.24: DVR has trivial class group. The general framework exists; the specific DVR class group triviality result needs assembly.",
+      "mathlib_declarations": [
+        {
+          "name": "IsDiscreteValuationRing",
+          "description": "DVR typeclass",
+          "import": "Mathlib.RingTheory.DiscreteValuationRing.Basic"
+        },
+        {
+          "name": "ClassGroup",
+          "description": "Class group for the triviality statement",
+          "import": "Mathlib.RingTheory.ClassGroup"
+        },
+        {
+          "name": "ClassGroup.mk0_eq_one_iff",
+          "description": "ClassGroup.mk0 I = 1 ↔ I is principal (for Dedekind domains)",
+          "import": "Mathlib.RingTheory.ClassGroup"
+        }
+      ]
+    },
+    "Lecture2/02_25_Remark": {
+      "coverage": "partially_covered",
+      "notes": "Remark 2.25: Dedekind domain is UFD iff cl(A) trivial. Mathlib has Dedekind + UFD → PID and the class group machinery, but the exact biconditional may need assembly.",
+      "mathlib_declarations": [
+        {
+          "name": "IsPrincipalIdealRing.of_isDedekindDomain_of_uniqueFactorizationMonoid",
+          "description": "Dedekind + UFD → PID",
+          "import": "Mathlib.RingTheory.DedekindDomain.PID"
+        },
+        {
+          "name": "ClassGroup.mk0_eq_one_iff",
+          "description": "Relates class group triviality to principalness of ideals",
+          "import": "Mathlib.RingTheory.ClassGroup"
+        }
+      ]
+    },
+    "Backmatter/Bibliography": {
+      "coverage": "not_applicable",
+      "notes": "Bibliography listing references. No formalizable content.",
+      "mathlib_declarations": []
+    }
+  },
+  "external_dependencies": {
+    "ext_commutative_rings": {
+      "coverage": "fully_covered",
+      "notes": "CommRing, RingHom, Ideal, IsPrime, IsMaximal, quotient rings all in Mathlib.",
+      "mathlib_declarations": [
+        "CommRing", "RingHom", "Ideal", "Ideal.IsPrime", "Ideal.IsMaximal",
+        "Ideal.Quotient.commRing"
+      ]
+    },
+    "ext_integral_domains": {
+      "coverage": "fully_covered",
+      "notes": "IsDomain, FractionRing, fraction field construction all in Mathlib.",
+      "mathlib_declarations": [
+        "IsDomain", "FractionRing", "IsFractionRing"
+      ]
+    },
+    "ext_noetherian_rings": {
+      "coverage": "fully_covered",
+      "notes": "IsNoetherianRing and basic properties fully covered.",
+      "mathlib_declarations": [
+        "IsNoetherianRing", "isNoetherian_of_isNoetherianRing"
+      ]
+    },
+    "ext_pid": {
+      "coverage": "fully_covered",
+      "notes": "IsPrincipalIdealRing, PID → UFD, PID → Dedekind all in Mathlib.",
+      "mathlib_declarations": [
+        "IsPrincipalIdealRing", "IsPrincipalIdealRing.isDedekindDomain",
+        "PrincipalIdealRing.isUniqueFactorizationMonoid"
+      ]
+    },
+    "ext_ufd": {
+      "coverage": "fully_covered",
+      "notes": "UniqueFactorizationMonoid and its properties in Mathlib.",
+      "mathlib_declarations": [
+        "UniqueFactorizationMonoid", "UniqueFactorizationMonoid.factors"
+      ]
+    },
+    "ext_local_rings": {
+      "coverage": "fully_covered",
+      "notes": "IsLocalRing, maximalIdeal, localization at prime gives local ring.",
+      "mathlib_declarations": [
+        "IsLocalRing", "IsLocalRing.maximalIdeal",
+        "Localization.AtPrime.instIsLocalRing"
+      ]
+    },
+    "ext_krull_dimension": {
+      "coverage": "fully_covered",
+      "notes": "Krull dimension via Order.krullDim and ringKrullDim. Ring.DimensionLEOne for dim ≤ 1.",
+      "mathlib_declarations": [
+        "Order.krullDim", "ringKrullDim", "Ring.DimensionLEOne"
+      ]
+    },
+    "ext_integral_closure": {
+      "coverage": "fully_covered",
+      "notes": "integralClosure, IsIntegrallyClosed, IsIntegralClosure all in Mathlib.",
+      "mathlib_declarations": [
+        "integralClosure", "IsIntegrallyClosed", "IsIntegralClosure"
+      ]
+    },
+    "ext_modules": {
+      "coverage": "fully_covered",
+      "notes": "Module, Submodule, Submodule.FG, module homomorphisms all in Mathlib.",
+      "mathlib_declarations": [
+        "Module", "Submodule", "Submodule.FG", "LinearMap"
+      ]
+    },
+    "ext_tensor_products": {
+      "coverage": "fully_covered",
+      "notes": "TensorProduct and base change in Mathlib.",
+      "mathlib_declarations": [
+        "TensorProduct", "Algebra.TensorProduct"
+      ]
+    },
+    "ext_field_extensions": {
+      "coverage": "fully_covered",
+      "notes": "Algebra.IsAlgebraic, Algebra.IsSeparable, FiniteDimensional all in Mathlib.",
+      "mathlib_declarations": [
+        "Algebra.IsAlgebraic", "Algebra.IsSeparable", "FiniteDimensional"
+      ]
+    },
+    "ext_polynomial_rings": {
+      "coverage": "fully_covered",
+      "notes": "Polynomial rings and fraction fields of polynomial rings in Mathlib.",
+      "mathlib_declarations": [
+        "Polynomial", "RatFunc"
+      ]
+    },
+    "ext_gaussian_integers": {
+      "coverage": "partially_covered",
+      "notes": "GaussianInt (Z[i]) in Mathlib. The subring Z + 2iZ used in Example 2.21 is not directly available.",
+      "mathlib_declarations": [
+        "GaussianInt", "Zsqrtd"
+      ]
+    },
+    "ext_finite_fields": {
+      "coverage": "fully_covered",
+      "notes": "ZMod p, GaloisField, and finite field infrastructure in Mathlib.",
+      "mathlib_declarations": [
+        "ZMod", "GaloisField", "ZMod.instField"
+      ]
+    },
+    "ext_dvr_lecture1": {
+      "coverage": "fully_covered",
+      "notes": "DVR definition, uniformizers, valuations, residue fields all in Mathlib.",
+      "mathlib_declarations": [
+        "IsDiscreteValuationRing", "IsDiscreteValuationRing.HasUnitMulPowIrreducibleFactorization",
+        "IsLocalRing.ResidueField"
+      ]
+    },
+    "ext_theorem_1_16": {
+      "coverage": "fully_covered",
+      "notes": "Theorem 1.16 (integrally closed noetherian local dim 1 → DVR) is the Dedekind domain DVR characterization in Mathlib.",
+      "mathlib_declarations": [
+        "IsDedekindDomainDvr", "IsDedekindDomain.isDedekindDomainDvr"
+      ]
+    },
+    "ext_number_fields_lecture1": {
+      "coverage": "fully_covered",
+      "notes": "Number fields and rings of integers in Mathlib.",
+      "mathlib_declarations": [
+        "NumberField", "NumberField.RingOfIntegers"
+      ]
+    },
+    "ext_global_fields_lecture1": {
+      "coverage": "partially_covered",
+      "notes": "Number fields covered. Global function fields partially covered (FunctionField exists in Mathlib but less developed).",
+      "mathlib_declarations": [
+        "NumberField", "FunctionField"
+      ]
+    },
+    "ext_contraction_extension_props": {
+      "coverage": "fully_covered",
+      "notes": "b^{ce} = b for localizations is IsLocalization.map_comap.",
+      "mathlib_declarations": [
+        "IsLocalization.map_comap"
+      ]
+    },
+    "ext_prime_ideal_correspondence_proof": {
+      "coverage": "fully_covered",
+      "notes": "The proof of the prime ideal correspondence is the content of IsLocalization.orderIsoOfPrime.",
+      "mathlib_declarations": [
+        "IsLocalization.orderIsoOfPrime"
+      ]
+    },
+    "ext_localization_tensor_equivalence": {
+      "coverage": "fully_covered",
+      "notes": "S⁻¹M ≅ M ⊗_A S⁻¹A is LocalizedModule.equivTensorProduct.",
+      "mathlib_declarations": [
+        "LocalizedModule.equivTensorProduct"
+      ]
+    },
+    "ext_z_sqrt_minus_13_not_ufd": {
+      "coverage": "not_covered",
+      "notes": "Z[√(-13)] is not a UFD. Zsqrtd exists but the non-UFD proof would need construction.",
+      "mathlib_declarations": [
+        "Zsqrtd"
+      ]
+    },
+    "ext_k_xy_not_dedekind": {
+      "coverage": "not_covered",
+      "notes": "k[x,y] is a UFD but not Dedekind. Would need to show dim k[x,y] = 2. Mathlib has MvPolynomial but this specific result needs proof.",
+      "mathlib_declarations": [
+        "MvPolynomial"
+      ]
+    },
+    "ext_dvr_integrally_closed": {
+      "coverage": "fully_covered",
+      "notes": "DVR → integrally closed. IsDiscreteValuationRing implies IsDedekindDomain which implies IsIntegrallyClosed.",
+      "mathlib_declarations": [
+        "IsDiscreteValuationRing", "IsDedekindDomain", "IsIntegrallyClosed"
+      ]
+    },
+    "ext_invertible_ideals_abelian_group": {
+      "coverage": "fully_covered",
+      "notes": "Group structure on invertible fractional ideals is the Units of FractionalIdeal in Mathlib.",
+      "mathlib_declarations": [
+        "Units", "FractionalIdeal.instCommMonoid"
+      ]
+    }
+  },
+  "coverage_summary": {
+    "items_fully_covered": 22,
+    "items_partially_covered": 8,
+    "items_not_covered": 1,
+    "items_discussion_only": 8,
+    "items_not_applicable": 1,
+    "external_deps_fully_covered": 19,
+    "external_deps_partially_covered": 2,
+    "external_deps_not_covered": 2,
+    "notes": "The lecture content is very well covered by Mathlib. Core infrastructure (localization, Dedekind domains, fractional ideals, class groups) is fully available. Main gaps are specific examples (Z + 2iZ subring, Z[√(-13)] non-UFD, k[x,y] non-Dedekind) and the general submodule intersection result (Proposition 2.6). Most 'partially_covered' items just need assembly of existing Mathlib pieces rather than fundamentally new proofs."
+  }
+}
