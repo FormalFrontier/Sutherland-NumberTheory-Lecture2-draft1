@@ -349,5 +349,14 @@
     "end_page": "7",
     "start_line": 25,
     "end_line": 29
+  },
+  {
+    "id": "Backmatter/Bibliography",
+    "type": "bibliography",
+    "title": "References",
+    "start_page": "backmatter-1",
+    "end_page": "backmatter-1",
+    "start_line": 1,
+    "end_line": 11
   }
 ]
