@@ -135,6 +135,28 @@ theorem kx_loc_x_sub_2_quotientMap_eq_eval :
       IsLocalRing.residue (kx_loc_x_sub_2 k)
         (algebraMap k[X] (kx_loc_x_sub_2 k) f) =
       algebraMap k (IsLocalRing.ResidueField (kx_loc_x_sub_2 k)) (Polynomial.eval 2 f) := by
-  sorry
+  intro f
+  -- f - C(eval 2 f) is divisible by (X - C 2), hence in 𝔭
+  have hmem : f - C (Polynomial.eval 2 f) ∈ polyPrimeIdeal_x_sub_2 k := by
+    rw [polyPrimeIdeal_x_sub_2, Ideal.mem_span_singleton]
+    exact dvd_iff_isRoot.mpr (by simp [IsRoot])
+  -- So its image under algebraMap is in the maximal ideal, killed by residue
+  have hzero : IsLocalRing.residue (kx_loc_x_sub_2 k)
+      (algebraMap k[X] (kx_loc_x_sub_2 k) (f - C (Polynomial.eval 2 f))) = 0 := by
+    rw [IsLocalRing.residue_eq_zero_iff, kx_loc_x_sub_2_maximalIdeal]
+    exact Ideal.mem_map_of_mem _ hmem
+  -- Expand and rearrange
+  rw [map_sub, map_sub] at hzero
+  rw [sub_eq_zero] at hzero
+  rw [hzero]
+  -- Goal: residue(algebraMap(C(eval 2 f))) = algebraMap k ResidueField (eval 2 f)
+  -- This follows from the scalar tower k → k[X] → loc → ResidueField
+  -- Goal: residue(algebraMap_{k[X]}(C(eval 2 f))) = residue(algebraMap_{k}(eval 2 f))
+  -- C a = algebraMap k k[X] a, and scalar tower gives the rest
+  rw [Polynomial.C_eq_algebraMap,
+      ← IsScalarTower.algebraMap_apply k k[X] (kx_loc_x_sub_2 k),
+      IsScalarTower.algebraMap_apply k (kx_loc_x_sub_2 k)
+        (IsLocalRing.ResidueField (kx_loc_x_sub_2 k)),
+      IsLocalRing.ResidueField.algebraMap_eq]
 
 end Example_2_4
