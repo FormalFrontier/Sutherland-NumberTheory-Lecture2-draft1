@@ -141,22 +141,22 @@
     "notes": "Claims: (1) when A noetherian, ideals = f.g. A-submodules of A, (2) every ideal is a fractional ideal, (3) fractional ideals need not be contained in A."
   },
   "Lecture2/02_14_Lemma": {
-    "status": "scaffolding_ready",
+    "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": ""
+    "notes": "Fully covered by Mathlib. IsFractional is the 'aI ⊆ A' predicate; fg_of_isNoetherianRing gives the backward direction. Both directions of the iff proven (no sorry). Includes den/num decomposition recalls."
   },
   "Lecture2/02_15_Remark": {
-    "status": "scaffolding_ready",
+    "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Remark 2.15. Claims: (1) alternative def: A-submodule I of K with nonzero r\u2208A s.t. rI\u2286A, (2) when A noetherian this coincides with f.g. definition."
+    "notes": "Mathlib uses the alternative (IsFractional) definition as primary. Coincidence with f.g. for noetherian A proven via fg_of_isNoetherianRing. No sorry."
   },
   "Lecture2/02_16_Corollary": {
-    "status": "scaffolding_ready",
+    "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": ""
+    "notes": "Every fractional ideal = (1/a)I via den/num decomposition. Recalls den, num, den_mul_self_eq_num, den_mul_self_eq_num'. Existential statement with 1 sorry (proof-level)."
   },
   "Lecture2/02_17_Definition": {
     "status": "scaffolded",
