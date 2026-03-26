@@ -216,10 +216,10 @@
     "notes": "Fully covered by Mathlib. Ideal group ℐ_A = (FractionalIdeal A⁰ K)ˣ. Covers: definition, CommGroup instance, group operations, and note that elements need not be ideals."
   },
   "Lecture2/02_22a_Discussion": {
-    "status": "scaffolding_ready",
+    "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Claims: (1) every nonzero principal fractional ideal is invertible, (2) product of principal fractional ideals is principal, (3) P_A is subgroup of I_A."
+    "notes": "All 3 claims covered via toPrincipalIdeal: (1) invertibility via map_inv, (2) multiplicativity via map_mul, (3) subgroup via .range + PrincipalIdeals.normal. No sorries."
   },
   "Lecture2/02_23_Definition": {
     "status": "scaffolded",
@@ -228,16 +228,16 @@
     "notes": "Fully covered by Mathlib ClassGroup. Covers: definition as ℐ_A/𝒫_A, toPrincipalIdeal map, normal subgroup, CommGroup instance, equivalence with explicit quotient, quotient map mk, and class equality criterion."
   },
   "Lecture2/02_24_Example": {
-    "status": "scaffolding_ready",
+    "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": ""
+    "notes": "DVR example scaffolded. Claims: (1) fractional ideals are (π^n) via IsPrincipalIdealRing.principal + ideal_eq_span_pow_irreducible, (2) multiplicativity via spanSingleton_mul_spanSingleton, (3) trivial class group via card_classGroup_eq_one. No sorries."
   },
   "Lecture2/02_25_Remark": {
-    "status": "scaffolding_ready",
+    "status": "scaffolded",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Remark 2.25. Claims: (1) Dedekind domain is UFD iff cl(A) trivial, (2) cl(A) measures how far from UFD. Footnote: (3) Picard group ≅ ideal class group for noetherian domains."
+    "notes": "All 3 claims covered: (1a) Dedekind+UFD→PID via of_isDedekindDomain_of_uniqueFactorizationMonoid + card_classGroup_eq_one, (1b) PID→UFD via PrincipalIdealRing.to_uniqueFactorizationMonoid, (2) conceptual remark documented, (3) Picard ≅ ClassGroup via ClassGroup.equivPic. No sorries."
   },
   "Backmatter/Bibliography": {
     "status": "non_formalizable",
