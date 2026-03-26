@@ -19,10 +19,10 @@
     "notes": "Section 2.2 body. Claims: (1) contraction \u03c6\u207b\u00b9(b) is an A-ideal, (2) extension aB = (ab : a\u2208a, b\u2208B) for injective \u03c6, (3) a \u2286 a^ec, (4) b^ce \u2286 b, (5) if a\u2229S \u2260 \u2205 then a^e = B, (6) when B = S\u207b\u00b9A: b^ce = b."
   },
   "Lecture2/02_01_Theorem": {
-    "status": "scaffolded",
+    "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Fully covered by Mathlib. Uses recall for orderIsoOfPrime, isPrime_of_isPrime_disjoint, map_comap, comap_map_of_isPrime_disjoint."
+    "notes": "Stage 3.2 review passed. All 4 claims mapped: (1) bijection via orderIsoOfPrime, (2) forward map via comap_map_of_isPrime_disjoint, (3) inverse map via isPrime_of_isPrime_disjoint, (4) round-trip via map_comap. No definition-level sorries. No gaps."
   },
   "Lecture2/02_02_Remark": {
     "status": "scaffolding_ready",
@@ -98,10 +98,10 @@
     "notes": "Fully covered by Mathlib. IsDedekindDomainDvr ↔ IsDedekindDomain via mutual instances. Covers: DVR characterization class, both directions of the equivalence, dimension ≤ 1 and integrally closed as consequences, key Mathlib lemmas. No sorries (all recall/example pattern)."
   },
   "Lecture2/02_10_Definition": {
-    "status": "scaffolded",
+    "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Fully covered by Mathlib IsDedekindDomain. Used #check + example pattern (recall has universe issues with polymorphic defs). Covers: definition, three component properties (noetherian, dim \u2264 1, integrally closed), instances, and iff characterization."
+    "notes": "Stage 3.2 review passed. All claims mapped: (1) IsDedekindDomain definition, (2) IsNoetherianRing component, (3) Ring.DimensionLEOne component, (4) IsIntegrallyClosed component, (5) three inferInstance examples, (6) isDedekindRing_iff equivalence. No definition-level sorries. No gaps."
   },
   "Lecture2/02_11_Corollary": {
     "status": "scaffolded",
@@ -129,10 +129,10 @@
     "reason": "Section heading '2.5 Fractional ideals' and context setting: 'Throughout this subsection, A is a noetherian domain and K is its fraction field.' No mathematical claims \u2014 pure scoping statement."
   },
   "Lecture2/02_13_Definition": {
-    "status": "scaffolded",
+    "status": "definition_verified",
     "last_updated": "2026-03-26",
     "pr": "",
-    "notes": "Fully covered by Mathlib FractionalIdeal. Used #check + example pattern. Covers: definition, IsFractional predicate, bridge to f.g. characterization (fg_of_isNoetherianRing), coeIdeal coercion from ideals, algebraic structure (CommSemiring, Lattice)."
+    "notes": "Stage 3.2 review passed. All claims mapped: (1) FractionalIdeal type, (2) IsFractional predicate, (3) fg_of_isNoetherianRing bridge, (4) coeIdeal coercion from ideals, (5) coeIdeal_le_one, (6) spanSingleton_mul_spanSingleton witness for exceeding A, (7) CommSemiring and Lattice instances. No definition-level sorries. No gaps."
   },
   "Lecture2/02_13a_Discussion": {
     "status": "scaffolding_ready",
