@@ -1,235 +1,235 @@
 {
   "Lecture2/02_00_Introduction": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_00a_Discussion": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_00b_Discussion": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_01_Theorem": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_02_Remark": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_02a_Discussion": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_03_Remark": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_04_Example": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_05_Example": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_05a_Discussion": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_06_Proposition": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_06a_Discussion": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_07_Corollary": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_08_Example": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_08a_Discussion": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_09_Proposition": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_10_Definition": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_11_Corollary": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_12_Remark": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_12a_Discussion": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_12b_Discussion": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_13_Definition": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_13a_Discussion": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_14_Lemma": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_15_Remark": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_16_Corollary": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_17_Definition": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_17a_Discussion": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_18_Lemma": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_19_Definition": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_20_Lemma": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_20a_Discussion": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_21_Example": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_21a_Discussion": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_22_Definition": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_22a_Discussion": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_23_Definition": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_24_Example": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   },
   "Lecture2/02_25_Remark": {
-    "status": "identified",
-    "last_updated": "2026-03-25",
+    "status": "extracted",
+    "last_updated": "2026-03-26",
     "pr": "",
     "notes": ""
   }
